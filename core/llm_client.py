@@ -116,6 +116,7 @@ class LLMClient:
                 response = await self.client.chat.completions.create(
                     model=model,
                     messages=messages,
+                    max_tokens=300,  # 限制最大token数，加快响应速度
                 )
                 if response.choices:
                     message = response.choices[0].message
@@ -132,17 +133,19 @@ class LLMClient:
 
     @timer
     async def chat_with_tools(self, user_message, tool_system_prompt):
-        # 第一次调用，让模型决定是否调用工具
+        # 优化：直接使用 main_llm 进行工具判断和回复生成，合并为一次调用
 
         async with self.llm_semaphore:
             raw_msg = copy.deepcopy(user_message)
             raw_msg[0] = {"role": "system", "content": tool_system_prompt}
 
-            llm_logger.info(f"checking whether to call tools using {DEFAULT_TOOL_LLM} from {TOOL_PROVIDER}")
-            resp1 = await self.tool_client.chat.completions.create(
-                model=DEFAULT_TOOL_LLM,
+            # 直接使用 main_llm 进行工具判断和回复生成（一次调用完成）
+            llm_logger.info(f"checking tools and generating response using {DEFAULT_LLM} from {MAIN_PROVIDER}")
+            resp1 = await self.client.chat.completions.create(
+                model=DEFAULT_LLM,
                 messages=raw_msg,
-                tools=self.tools_definitions
+                tools=self.tools_definitions if self.tools_definitions else None,
+                max_tokens=300,  # 限制最大token数，加快响应速度
             )
 
             message = resp1.choices[0].message
@@ -176,10 +179,11 @@ class LLMClient:
                 user_message.extend(tool_messages)
 
                 try:
-                    llm_logger.info(f"generating response using {DEFAULT_LLM} from {MAIN_PROVIDER}")
+                    llm_logger.info(f"generating response after tool calls using {DEFAULT_LLM} from {MAIN_PROVIDER}")
                     resp2 = await self.client.chat.completions.create(
                         model=DEFAULT_LLM,
-                        messages=user_message
+                        messages=user_message,
+                        max_tokens=300,  # 限制最大token数，加快响应速度
                     )
 
                     return resp2.choices[0].message.content, tool_messages
@@ -189,18 +193,9 @@ class LLMClient:
                     print(e)
                     return None, None
             else:
-                # model did not use tools
-                try:
-                    llm_logger.info(f"generating response using {DEFAULT_LLM} from {MAIN_PROVIDER}")
-                    resp2 = await self.client.chat.completions.create(
-                        model=DEFAULT_LLM,
-                        messages=user_message
-                    )
-                    message2 = resp2.choices[0].message
-                    return message2.content, None
-                except Exception as e:
-                    llm_logger.error(f"error while generating response when tools are not called: {str(e)}")
-                    return "", None
+                # model did not use tools, 直接返回回复
+                content = message.content if message.content else ""
+                return content, None
 
     async def desc_img(self, image, model=DEFAULT_VLM, prompt="描述这张图片的内容，如果有文字请将其输出", is_base64=False):
         """

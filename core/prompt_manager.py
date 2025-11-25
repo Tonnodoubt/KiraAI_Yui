@@ -84,9 +84,10 @@ class PromptManager:
         if MessageType.Emoji in message_types:
             # 需要传入 emoji_json 参数
             supported_format_prompt += "<emoji>emoji_id</emoji> # 发送一个emoji（中文一般叫做表情）消息，通常和文字在同一个msg标签中，可以使用的emoji如下：{emoji_json}\n"
-        if MessageType.Sticker in message_types:
-            # 需要传入 sticker_prompt 参数
-            supported_format_prompt += "<sticker>sticker_id</sticker> # 发送一个sticker（中文一般叫做表情包）消息，通常单独在一条消息里，你需要在聊天中主动自然使用这些sticker，可以使用的sticker id和描述如下：{sticker_prompt}\n"
+        # 表情包功能已禁用
+        # if MessageType.Sticker in message_types:
+        #     # 需要传入 sticker_prompt 参数
+        #     supported_format_prompt += "<sticker>sticker_id</sticker> # 发送一个sticker（中文一般叫做表情包）消息，通常单独在一条消息里，你需要在聊天中主动自然使用这些sticker，可以使用的sticker id和描述如下：{sticker_prompt}\n"
         if MessageType.Poke in message_types:
             supported_format_prompt += "<poke>user_id</poke> # 发送戳一戳消息（一个社交平台的小功能用于引起用户注意），只能单独一条消息，不能和其他元素出现在一条消息中。可以在别人对你戳一戳（捏一捏）时使用，也可以在日常交流中自然使用\n"
         return supported_format_prompt

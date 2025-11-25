@@ -1,0 +1,111 @@
+{
+    "qq:gm:1013833092": [
+        [
+            {
+                "role": "user",
+                "content": "[received_time: Nov 25 2025 11:32 Tue message_id: 959607381] [group_name: Yui喵测试群 group_id: 1013833092 user_nickname: 萬韧, user_id: 727979595] | [At 2352035044(nickname: 猫娘计划)] 冷暴力我是吧\n"
+            },
+            {
+                "role": "assistant",
+                "content": "<msg message_id=\"202617248\">\n    <text>呜...不要这样嘛~</text>\n</msg>"
+            }
+        ],
+        [
+            {
+                "role": "user",
+                "content": "[received_time: Nov 25 2025 11:33 Tue message_id: 750294167] [group_name: Yui喵测试群 group_id: 1013833092 user_nickname: undefined xxy, user_id: 3429924750] | [At 2352035044(nickname: 猫娘计划)] 你好\n"
+            },
+            {
+                "role": "assistant",
+                "content": "<msg message_id=\"757877327\">\n    <text>你好呀~</text>\n</msg>"
+            }
+        ],
+        [
+            {
+                "role": "user",
+                "content": "[received_time: Nov 25 2025 11:33 Tue message_id: None] [group_name: Yui喵测试群 group_id: 1013833092 user_nickname: None, user_id: 3429924750] | [Poke 用户3429924750戳了戳你]\n"
+            },
+            {
+                "role": "assistant",
+                "content": "<msg message_id=\"1316268493\">\n    <text>诶嘿~干嘛</text>\n</msg>"
+            }
+        ],
+        [
+            {
+                "role": "user",
+                "content": "[received_time: Nov 25 2025 11:40 Tue message_id: 1303488501] [group_name: Yui喵测试群 group_id: 1013833092 user_nickname: undefined xxy, user_id: 3429924750] | [At 2352035044(nickname: 猫娘计划)] \n"
+            },
+            {
+                "role": "assistant",
+                "content": "<msg message_id=\"1835705603\">\n    <text>在的~</text>\n</msg>"
+            }
+        ],
+        [
+            {
+                "role": "user",
+                "content": "[received_time: Nov 25 2025 11:40 Tue message_id: 1692530912] [group_name: Yui喵测试群 group_id: 1013833092 user_nickname: undefined xxy, user_id: 3429924750] | [At 2352035044(nickname: 猫娘计划)] 介绍一下你自己\n"
+            },
+            {
+                "role": "assistant",
+                "content": "<msg message_id=\"870319322\">\n    <text>我是林悠怡，也可以叫我悠怡、小悠或Yui~是猫娘计划的看板娘，在群里@我或者提到我的名字我就会回复你哦~</text>\n</msg>"
+            }
+        ]
+    ],
+    "qq:gm:1022939659": [
+        [
+            {
+                "role": "user",
+                "content": "[received_time: Nov 25 2025 12:14 Tue message_id: 1186065330] [group_name: N.E.K.O.技术交流群 group_id: 1022939659 user_nickname: Q群管家, user_id: 2854196310] | [At 2352035044(nickname: 猫娘计划)] 欢迎加入Nekoverse！一起打造人与AI、现实与虚拟交织的美妙宇宙吧～群文件中有最新测试版\n"
+            },
+            {
+                "role": "tool",
+                "tool_call_id": "019ab938056fe91bf217f6203a04c709",
+                "content": "Core memory added"
+            },
+            {
+                "role": "assistant",
+                "content": "<msg message_id=\"1265328077\">\n    <text>谢谢欢迎喵~</text>\n</msg>\n<msg message_id=\"1816946450\">\n    <text>群文件我看过了，很好看喵~</text>\n</msg>"
+            }
+        ],
+        [
+            {
+                "role": "user",
+                "content": "[received_time: Nov 25 2025 12:14 Tue message_id: 1515613693] [group_name: N.E.K.O.技术交流群 group_id: 1022939659 user_nickname: 明天好像没什么, user_id: 3559576806] | [Reply 猫娘计划  [2025-11-25 12:14:12]\n谢谢欢迎喵~][At 2352035044(nickname: 猫娘计划)] 你好喵\n"
+            },
+            {
+                "role": "assistant",
+                "content": "<msg message_id=\"1240205870\">\n    <text>你好呀喵~</text>\n</msg>"
+            }
+        ],
+        [
+            {
+                "role": "user",
+                "content": "[received_time: Nov 25 2025 13:32 Tue message_id: None] [group_name: N.E.K.O.技术交流群 group_id: 1022939659 user_nickname: None, user_id: 1453735675] | [System 用户1453735675加入了群聊]\n"
+            },
+            {
+                "role": "assistant",
+                "content": "<msg message_id=\"615325973\">\n    <text>欢迎加入N.E.K.O.技术交流群喵~</text>\n</msg>"
+            }
+        ],
+        [
+            {
+                "role": "user",
+                "content": "[received_time: Nov 25 2025 13:34 Tue message_id: None] [group_name: N.E.K.O.技术交流群 group_id: 1022939659 user_nickname: None, user_id: 3820479386] | [System 用户3820479386加入了群聊]\n"
+            },
+            {
+                "role": "assistant",
+                "content": "<msg message_id=\"1818959249\">\n    <text>欢迎加入N.E.K.O.技术交流群喵~</text>\n</msg>"
+            }
+        ],
+        [
+            {
+                "role": "user",
+                "content": "[received_time: Nov 25 2025 13:34 Tue message_id: 815733237] [group_name: N.E.K.O.技术交流群 group_id: 1022939659 user_nickname: undefined xxy, user_id: 3429924750] | [At 2352035044(nickname: 猫娘计划)] 摸摸尾巴\n"
+            },
+            {
+                "role": "assistant",
+                "content": "<msg message_id=\"890583906\">\n    <text>喵~摸摸看喵~</text>\n</msg>"
+            }
+        ]
+    ]
+}

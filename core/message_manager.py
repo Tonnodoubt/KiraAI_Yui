@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 from typing import Union, Dict, Any, List
 from asyncio import Semaphore
 import random
+import re
 
 from core.llm_manager import llm_api
 from core.logging_manager import get_logger
@@ -11,6 +12,7 @@ from core.tts.siliconflow.sftts import generate_speech, speech_to_text
 from core.memory_manager import MemoryManager
 from core.prompt_manager import PromptManager
 from core.services.runtime import get_adapter_by_name
+from core.message_filter import message_filter
 from utils.common_utils import image_to_base64
 from utils.message_utils import BotDirectMessage, BotGroupMessage, MessageSending, MessageType
 
@@ -130,6 +132,15 @@ class MessageProcessor:
             formatted_messages_str += f"{formatted_message}\n"
         logger.info(f"processing message(s) from {msg.adapter_name}:\n{formatted_messages_str}")
 
+        # 使用filter检查消息并计算回复意愿（不带上下文，只看当前消息）
+        should_respond, filter_reason, response_willingness = await message_filter.filter_message(formatted_messages_str)
+        
+        if not should_respond:
+            logger.info(f"消息被filter拒绝: {filter_reason}, 回复意愿: {response_willingness:.2f}")
+            return None  # 不处理此消息，直接返回
+        
+        logger.info(f"消息通过filter检查: {filter_reason}, 回复意愿: {response_willingness:.2f}")
+
         # 获取存在的会话
         session_list = self.get_session_list_prompt()
 
@@ -214,6 +225,15 @@ class MessageProcessor:
             formatted_message = self.prompt_manager.format_user_message(message)
             formatted_messages_str += f"{formatted_message}\n"
         logger.info(f"processing message(s) from {msg.adapter_name}:\n{formatted_messages_str}")
+
+        # 使用filter检查消息并计算回复意愿（不带上下文，只看当前消息）
+        should_respond, filter_reason, response_willingness = await message_filter.filter_message(formatted_messages_str)
+        
+        if not should_respond:
+            logger.info(f"消息被filter拒绝: {filter_reason}, 回复意愿: {response_willingness:.2f}")
+            return None  # 不处理此消息，直接返回
+        
+        logger.info(f"消息通过filter检查: {filter_reason}, 回复意愿: {response_willingness:.2f}")
 
         # 获取存在的会话
         session_list = self.get_session_list_prompt()
@@ -347,17 +367,26 @@ class MessageProcessor:
                     
                     # build MessageType object
                     if tag == "text":
+                        # 确保文本以"喵~"结尾，移除末尾标点符号后添加
+                        if value:
+                            value = value.rstrip()
+                            # 如果已经以"喵~"结尾，不做处理
+                            if not value.endswith("喵~"):
+                                # 移除末尾的标点符号（。！？，、；：等）
+                                import string
+                                punctuation = "。！？，、；："
+                                while value and (value[-1] in punctuation or value[-1] in string.punctuation):
+                                    value = value[:-1].rstrip()
+                                # 添加"喵~"
+                                value = value + "喵~"
                         message_elements.append(MessageType.Text(value))
                     elif tag == "emoji":
-                        message_elements.append(MessageType.Emoji(value))
+                        # 直接忽略表情包，不添加（不记录日志以提升性能）
+                        continue
                     elif tag == "sticker":
-                        sticker_id = value
-                        try:
-                            sticker_path = self.prompt_manager.sticker_dict[sticker_id].get("path")
-                            sticker_bs64 = image_to_base64(f"data/sticker/{sticker_path}")
-                            message_elements.append(MessageType.Sticker(sticker_id, sticker_bs64))
-                        except Exception as e:
-                            logger.error(f"error while parsing sticker: {str(e)}")
+                        # 表情包功能已禁用，直接跳过
+                        logger.info(f"检测到sticker标签，但表情包功能已禁用，已忽略: {value}")
+                        continue
                     elif tag == "at":
                         message_elements.append(MessageType.At(value))
                     elif tag == "img":
@@ -374,9 +403,18 @@ class MessageProcessor:
                             message_elements.append(MessageType.Text(f"<record>{value}</record>"))
                     elif tag == "poke":
                         message_elements.append(MessageType.Poke(value))
+                    else:
+                        # 忽略未知标签，记录警告但不中断处理
+                        logger.warning(f"未知的XML标签，已忽略: {tag}")
+                        continue
                 
                 if message_elements:
                     message_list.append(message_elements)
+
+            # 限制消息数量：最多只发送2条消息
+            if len(message_list) > 2:
+                logger.warning(f"LLM生成了{len(message_list)}条消息，已限制为2条")
+                message_list = message_list[:2]
 
             return message_list
         except Exception as e:

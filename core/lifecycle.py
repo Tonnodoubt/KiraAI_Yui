@@ -36,7 +36,10 @@ class KiraLifecycle:
         loop = asyncio.get_running_loop()
 
         # ====== init adapter mapping ======
-        ada_mapping = {'QQ': QQAdapter, 'Telegram': TelegramAdapter}
+        ada_mapping = {
+            'QQ': QQAdapter, 
+            'Telegram': TelegramAdapter,
+        }
         adapters: Dict[str, Any] = {}
 
         # ====== load adapter config ======

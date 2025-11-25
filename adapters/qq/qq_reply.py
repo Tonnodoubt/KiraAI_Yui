@@ -19,6 +19,8 @@ import json
 import time
 import threading
 import logging
+import random
+import re
 from datetime import datetime
 import asyncio
 from typing import Any, Dict, Union, List
@@ -207,6 +209,12 @@ class QQAdapter(IMAdapter):
         self.message_types = [MessageType.Text, MessageType.Image, MessageType.At, MessageType.Reply, MessageType.Emoji, MessageType.Sticker, MessageType.Record, MessageType.Poke, MessageType.Notice]
         self.bot: BotClient = BotClient()
         # self._log = get_log()  # 已禁用适配器日志
+        
+        # 响应限制配置
+        self.response_probability = float(self.config.get("response_probability", 1.0))  # 响应概率，0.0-1.0
+        self.cooldown_seconds = int(self.config.get("cooldown_seconds", 0))  # 冷却时间（秒）
+        self.require_strict_match = self.config.get("require_strict_match", "false").lower() == "true"  # 是否需要严格匹配关键词
+        self.last_response_time: Dict[int, float] = {}  # 记录每个群/用户的上次响应时间
 
     @staticmethod
     def _load_dict(path: str) -> Dict[str, Any]:
@@ -371,29 +379,58 @@ class QQAdapter(IMAdapter):
             # self._log.info(msg)
 
             should_respond = False
+            trigger_type = None  # 'at', 'reply', 'keyword'
 
             for m in msg.message:
                 if m.get("type") == "at" and (
                         m.get("data", {}).get("qq", "") == str(msg.self_id) or m.get("data", {}).get("qq",
                                                                                                      "") == "all"):
                     should_respond = True
+                    trigger_type = 'at'
                     break
                 elif m.get("type") == "reply":
                     reply_msg_info = await self.bot.api.get_msg(m.get("data", {}).get("id", ""))
                     if reply_msg_info.get("data", {}).get("user_id") == msg.self_id:  # int int
                         should_respond = True
+                        trigger_type = 'reply'
                         break
                 elif m.get("type") == "text":
-                    message_text = m.get("data").get("text")
+                    message_text = m.get("data").get("text", "")
                     if self.config.get("waking_keywords", ""):
                         waking_keywords = [kw.strip() for kw in self.config.get("waking_keywords", "").split(",")]
-                        if any(kw in message_text for kw in waking_keywords):
-                            should_respond = True
-                            break
+                        if self.require_strict_match:
+                            # 严格匹配：关键词必须是独立的词（前后是空格、标点或字符串边界）
+                            for kw in waking_keywords:
+                                pattern = r'(^|[^\w])' + re.escape(kw) + r'([^\w]|$)'
+                                if re.search(pattern, message_text):
+                                    should_respond = True
+                                    trigger_type = 'keyword'
+                                    break
+                        else:
+                            # 宽松匹配：包含关键词即可
+                            if any(kw in message_text for kw in waking_keywords):
+                                should_respond = True
+                                trigger_type = 'keyword'
+                                break
 
-            # should_respond = True
+            # 检查冷却时间（@和回复不受冷却时间限制，只有关键词触发才受限制）
+            if should_respond and trigger_type == 'keyword':
+                current_time = time.time()
+                last_time = self.last_response_time.get(msg.group_id, 0)
+                if self.cooldown_seconds > 0 and (current_time - last_time) < self.cooldown_seconds:
+                    should_respond = False
+                    logger.info(f"Group {msg.group_id} 关键词触发在冷却中，跳过回复")
+                    return
+
+            # 检查响应概率（@和回复总是响应，关键词按概率响应）
+            if should_respond and trigger_type == 'keyword':
+                if random.random() > self.response_probability:
+                    should_respond = False
+                    # 概率未命中，不响应
 
             if should_respond:
+                # 更新最后响应时间
+                self.last_response_time[msg.group_id] = time.time()
                 # 仅进行 Adapter 层职责：打包消息并发布到事件总线，等待主循环回复
                 message_list = await process_incoming_message(self.bot, msg)
                 group_info = self.bot.api.get_group_info_sync(msg.group_id)
