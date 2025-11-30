@@ -310,7 +310,7 @@ class BilibiliAdapter(IMAdapter):
                             first_run = False
                         
                         # 使用get_comments_lazy获取评论（这个函数可以正确获取评论）
-                        logger.debug(f"正在获取视频 {video_id} (aid: {video_aid}) 的评论，凭证: {'已配置' if self.credential else '未配置'}")
+                        logger.info(f"[轮询] 正在检查视频 {video_id} (aid: {video_aid}) 的评论...")
                         comments = await get_comments_lazy(
                             oid=video_aid,
                             type_=CommentResourceType.VIDEO,
@@ -348,10 +348,10 @@ class BilibiliAdapter(IMAdapter):
                         
                         # 处理replies为None的情况
                         if not all_replies:
-                            logger.debug(f"视频 {video_id} 暂无评论")
+                            logger.info(f"[轮询] 视频 {video_id} 暂无评论")
                             continue
                         
-                        logger.debug(f"获取到 {len(all_replies)} 条顶级评论（包含置顶评论）")
+                        logger.info(f"[轮询] 获取到 {len(all_replies)} 条顶级评论（包含置顶评论）")
                         
                         # 递归提取所有评论（包括子评论）
                         all_comments = []
@@ -367,17 +367,17 @@ class BilibiliAdapter(IMAdapter):
                                     extract_all_comments(sub_replies)
                         
                         extract_all_comments(all_replies)
-                        logger.debug(f"提取到 {len(all_comments)} 条评论（包括子评论）")
+                        logger.info(f"[轮询] 提取到 {len(all_comments)} 条评论（包括子评论），将检查最新20条")
                         
-                        # 只处理最新的评论（包括子评论）
-                        for comment_data in all_comments[:20]:  # 增加到20条，因为包括子评论
+                        # 第一步：先标记所有新评论为已处理，避免遗漏
+                        new_comments_to_process = []
+                        for comment_data in all_comments[:20]:  # 检查最新20条
                             if not self.running:
                                 break
                             
                             try:
                                 # 检查comment_data是否为有效字典
                                 if not comment_data or not isinstance(comment_data, dict):
-                                    logger.debug(f"跳过无效的评论数据: {comment_data}")
                                     continue
                                 
                                 comment_id = comment_data.get('rpid')
@@ -386,19 +386,44 @@ class BilibiliAdapter(IMAdapter):
                                 
                                 # 检查是否已处理（包括历史评论）
                                 if comment_id in self.processed_comments:
-                                    logger.debug(f"评论 {comment_id} 已处理过，跳过")
                                     continue
                                 
                                 # 检查是否是历史评论（在初始列表中）
                                 if comment_id in self.initial_comment_ids:
-                                    logger.debug(f"评论 {comment_id} 是历史评论，跳过")
                                     self.processed_comments.add(comment_id)  # 标记为已处理，避免重复检查
                                     continue
                                 
                                 # 检查是否是机器人自己发送的评论（避免回复自己）
+                                # 方法1: 检查评论ID是否在机器人发送的评论列表中
                                 if comment_id in self.bot_sent_comments:
-                                    logger.debug(f"评论 {comment_id} 是机器人发送的，跳过")
                                     self.processed_comments.add(comment_id)  # 标记为已处理
+                                    continue
+                                
+                                # 方法2: 检查评论的作者ID是否等于机器人的用户ID
+                                comment_mid = comment_data.get('mid') or comment_data.get('uid')
+                                if comment_mid and self.dedeuserid and str(comment_mid) == str(self.dedeuserid):
+                                    logger.debug(f"跳过机器人自己的评论: {comment_id} (mid: {comment_mid})")
+                                    self.processed_comments.add(comment_id)  # 标记为已处理
+                                    continue
+                                
+                                # 这是新评论，先标记为已处理，避免遗漏
+                                self.processed_comments.add(comment_id)
+                                new_comments_to_process.append(comment_data)
+                                
+                            except Exception as e:
+                                logger.error(f"预处理评论失败: {e}")
+                                continue
+                        
+                        logger.info(f"[轮询] 发现 {len(new_comments_to_process)} 条新评论，开始处理...")
+                        
+                        # 第二步：处理所有新评论（按顺序处理，但已经标记为已处理，不会遗漏）
+                        for comment_data in new_comments_to_process:
+                            if not self.running:
+                                break
+                            
+                            try:
+                                comment_id = comment_data.get('rpid')
+                                if not comment_id:
                                     continue
                                 
                                 # 检查是否是回复机器人的评论
@@ -440,12 +465,13 @@ class BilibiliAdapter(IMAdapter):
                     except Exception as e:
                         logger.error(f"处理视频 {video_id} 的评论失败: {e}")
                 
-                # 每60秒检查一次
-                await asyncio.sleep(60)
+                # 每45秒检查一次
+                logger.info(f"[轮询] 本次检查完成，45秒后再次检查...")
+                await asyncio.sleep(45)
                 
             except Exception as e:
                 logger.error(f"监听评论出错: {e}")
-                await asyncio.sleep(120)
+                await asyncio.sleep(60)  # 出错后等待60秒再重试
     
     async def _process_private_message(self, session_id: int, message: Dict):
         """处理私信消息，发布到事件总线"""
@@ -493,6 +519,12 @@ class BilibiliAdapter(IMAdapter):
         try:
             comment_id = comment_data.get('rpid')
             if not comment_id:
+                return
+            
+            # 再次检查是否是机器人自己的评论（双重保险）
+            comment_mid = comment_data.get('mid') or comment_data.get('uid')
+            if comment_mid and self.dedeuserid and str(comment_mid) == str(self.dedeuserid):
+                logger.debug(f"跳过机器人自己的评论: {comment_id} (mid: {comment_mid})")
                 return
             
             # 获取评论内容
