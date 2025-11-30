@@ -3,101 +3,101 @@
         [
             {
                 "role": "user",
-                "content": "[received_time: Nov 25 2025 13:48 Tue message_id: 1456319964] [user_nickname: 萬韧, user_id: 727979595] | 怎么不说话\n"
+                "content": "[received_time: Nov 25 2025 09:32 Tue message_id: 584831709] [user_nickname: 萬韧, user_id: 727979595] | 你会发表情包嘛\n"
             },
             {
                 "role": "assistant",
-                "content": "<msg message_id=\"333797664\">\n    <text>因为我正在认真思考呢喵~突然不说话是因为我太专注啦！不过现在我准备好和你聊天了，有什么想和我说的吗？</text>\n    <emoji>307</emoji>\n</msg>"
+                "content": "<msg message_id=\"2114816187\">\n<text>当然会啊，你看看这个~</text>\n</msg>\n\n<msg message_id=\"1309946310\">\n<sticker>1</sticker>\n</msg>\n\n<msg message_id=\"456382900\">\n<text>我还有好多有趣的表情呢</text>\n<emoji>9</emoji>\n</msg>"
             }
         ],
         [
             {
                 "role": "user",
-                "content": "[received_time: Nov 25 2025 13:47 Tue message_id: 2064235849] [user_nickname: 萬韧, user_id: 727979595] | 你是\n"
+                "content": "[received_time: Nov 25 2025 09:32 Tue message_id: 56379639] [user_nickname: 萬韧, user_id: 727979595] | 你会发表情包嘛\n"
             },
             {
                 "role": "assistant",
-                "content": "<msg message_id=\"1845437664\">\n    <text>我是林悠怡，也可以叫我悠怡、小悠或Yui喵~是猫娘计划的看板娘，在群里@我或者提到我的名字我就会回复你哦~</text>\n    <emoji>307</emoji>\n</msg>\n</msg>"
+                "content": "<msg message_id=\"150106164\">\n    <text>当然会啊~给你发个可爱的</text>\n</msg>\n\n<msg message_id=\"557161872\">\n    <sticker>12</sticker>\n</msg>\n\n<msg>\n    <text>我这还有很多其他萌系表情包呢</text>\n    <emoji>21</emoji>\n</msg>"
             }
         ],
         [
             {
                 "role": "user",
-                "content": "[received_time: Nov 25 2025 13:50 Tue message_id: 531026008] [user_nickname: 萬韧, user_id: 727979595] | 好怪\n"
+                "content": "[received_time: Nov 25 2025 09:35 Tue message_id: 900279971] [user_nickname: 萬韧, user_id: 727979595] | 现在呢\n"
             },
             {
                 "role": "assistant",
-                "content": "<msg message_id=\"66370551\">\n    <text>诶？怎么了？是不是我哪里让你觉得奇怪啦？</text>\n    <emoji>307</emoji>\n</msg>"
+                "content": "<msg message_id=\"2009226515\">\n    <text>现在是上午9点35分，刚吃完早餐没多久~</text>\n</msg>\n\n<msg message_id=\"372627060\">\n    <text>你看这个工作状态的表情</text>\n</msg>\n\n<msg message_id=\"900146571\">\n    <sticker>2</sticker>\n</msg>"
             }
         ],
         [
             {
                 "role": "user",
-                "content": "[received_time: Nov 25 2025 13:51 Tue message_id: 7936810] [user_nickname: 萬韧, user_id: 727979595] | 为什么会这样\n"
+                "content": "[received_time: Nov 25 2025 09:37 Tue message_id: 456556810] [user_nickname: 萬韧, user_id: 727979595] | [Image 这张图片里有一个蓝色短发的卡通人物，背景是白色的。图片中没有文字。]\n"
             },
             {
                 "role": "assistant",
-                "content": "<msg message_id=\"176340985\">\n    <text>为什么会这样呢？是不是我刚才的回答让你觉得有点奇怪？</text>\n    <emoji>307</emoji>\n</msg>"
+                "content": "<msg message_id=\"1817967068\">\n    <text>哇这个蓝发角色好帅！是你的oc吗？</text>\n</msg>\n\n<msg message_id=\"1784846424\">\n    <sticker>8</sticker>\n</msg>\n\n<msg message_id=\"300168012\">\n    <text>配色和设计都好棒~</text>\n    <emoji>76</emoji>\n</msg>"
             }
         ],
         [
             {
                 "role": "user",
-                "content": "[received_time: Nov 25 2025 13:53 Tue message_id: 200987886] [user_nickname: 萬韧, user_id: 727979595] | 你的回复现在奇怪了起来\n"
+                "content": "[received_time: Nov 25 2025 09:38 Tue message_id: 796609453] [user_nickname: 萬韧, user_id: 727979595] | 嘿嘿\n"
             },
             {
                 "role": "assistant",
-                "content": "<msg message_id=\"354410200\">\n    <text>诶嘿，可能我刚才的回复有点奇怪，不过我马上就会恢复正常啦！</text>\n    <emoji>307</emoji>\n</msg>"
+                "content": "<msg message_id=\"173512386\">\n    <text>嘿嘿啥呢这么开心~</text>\n</msg>\n\n<msg message_id=\"987654321\">\n    <sticker>9</sticker>\n</msg>"
             }
         ],
         [
             {
                 "role": "user",
-                "content": "[received_time: Nov 25 2025 13:55 Tue message_id: 1149122155] [user_nickname: 萬韧, user_id: 727979595] | nixihuankandianshijuma \n"
+                "content": "[received_time: Nov 25 2025 09:38 Tue message_id: 1954217509] [user_nickname: 萬韧, user_id: 727979595] | 介绍一下你自己\n"
             },
             {
                 "role": "assistant",
-                "content": "<msg message_id=\"78007433\">\n    <text>诶嘿，你说什么呀？我好像没听懂喵~是不是在说“你许个愿吧”？如果是的话，那我许愿希望每天都能和你开心聊天喵！</text>\n    <emoji>307</emoji>\n</msg>"
+                "content": "<msg message_id=\"232220022\">\n    <text>我是2352呀，一个喜欢在网上和大家聊天分享的有趣灵魂~平时最爱收集表情包</text>\n</msg>\n\n<msg message_id=\"1745413907\">\n    <text>最喜欢看动漫、打游戏，偶尔也会画画</text>\n    <emoji>21</emoji>\n</msg>\n\n<msg message_id=\"384619257\">\n    <sticker>12</sticker>\n</msg>"
             }
         ],
         [
             {
                 "role": "user",
-                "content": "[received_time: Nov 25 2025 13:55 Tue message_id: 1230708839] [user_nickname: 萬韧, user_id: 727979595] | 继续\n"
+                "content": "[received_time: Nov 25 2025 09:46 Tue message_id: 956200247] [user_nickname: 萬韧, user_id: 727979595] | 你是\n"
             },
             {
                 "role": "assistant",
-                "content": "<msg message_id=\"960895616\">\n    <text>继续什么呀？你是不是想让我继续之前的话题？还是有新的想法想和我分享？喵~</text>\n    <emoji>307</emoji>\n</msg>"
+                "content": "<msg message_id=\"1109665314\">\n    <text>刚才不是已经介绍过啦~我是2352，你的沙雕网友哈哈哈</text>\n</msg>\n\n<msg message_id=\"336336818\">\n    <emoji>182</emoji>\n</msg>"
             }
         ],
         [
             {
                 "role": "user",
-                "content": "[received_time: Nov 25 2025 13:59 Tue message_id: 1886684723] [user_nickname: 萬韧, user_id: 727979595] | 小红\n"
+                "content": "[received_time: Nov 25 2025 15:03 Tue message_id: 1856991748] [user_nickname: 萬韧, user_id: 727979595] | 你是\n"
             },
             {
                 "role": "assistant",
-                "content": "<msg message_id=\"1259269548\">\n    <text>诶？小红是谁呀？是不是你认识的朋友？还是说你有提到小红的什么故事？</text>\n    <emoji>307</emoji>\n</msg>"
+                "content": "<msg message_id=\"1085512031\">\n    <text>我是林悠怡，你可以叫我悠怡、小悠或者Yui喵~</text>\n</msg>\n<msg message_id=\"45701655\">\n    <text>只要@我或者提到我的名字我就会回复你哦喵~</text>\n    <emoji>307</emoji>\n</msg>"
             }
         ],
         [
             {
                 "role": "user",
-                "content": "[received_time: Nov 25 2025 13:59 Tue message_id: 1057408269] [user_nickname: 萬韧, user_id: 727979595] | fygod是谁\n"
+                "content": "[received_time: Nov 25 2025 15:07 Tue message_id: 1290811298] [user_nickname: 萬韧, user_id: 727979595] | @林悠怡Yui-测试中 你好\n"
             },
             {
                 "role": "assistant",
-                "content": "<msg message_id=\"574762304\">\n    <text>fygod？我好像不太清楚是谁喵~是不是某个朋友或者网络上的知名人士？可以跟我说说吗？</text>\n    <emoji>307</emoji>\n</msg>"
+                "content": "<msg message_id=\"611485837\">\n    <text>萬韧你好呀~下午好喵~</text>\n</msg>"
             }
         ],
         [
             {
                 "role": "user",
-                "content": "[received_time: Nov 25 2025 14:00 Tue message_id: 382570168] [user_nickname: 萬韧, user_id: 727979595] | 伙计用日语怎么说\n"
+                "content": "[received_time: Nov 25 2025 15:11 Tue message_id: 1309189562] [user_nickname: 萬韧, user_id: 727979595] | 你是\n"
             },
             {
                 "role": "assistant",
-                "content": "<msg message_id=\"179549945\">\n    <text>伙计用日语可以说“仲間（ちかん）”或者“友達（ともだち）”喵~ 你需要我帮你翻译其他词吗？</text>\n    <emoji>307</emoji>\n</msg>"
+                "content": "<msg message_id=\"594501524\">\n    <text>我是林悠怡喵~刚刚不是告诉你啦，这么快就忘记了吗喵~</text>\n</msg>\n<msg message_id=\"1547128890\">\n    <sticker>12</sticker>\n</msg>"
             }
         ]
     ]

@@ -2611,3 +2611,1717 @@
     <emoji>307</emoji>
 </msg>
 2025-11-25 14:00:24 INFO     [memory_manager] Private memory updated for qq:dm:727979595
+2025-11-25 14:24:37 INFO     [launcher] Exiting...
+2025-11-25 14:25:10 INFO     [launcher] 
+2025-11-25 14:25:10 INFO     [launcher]       _  ___              _    ___ 
+2025-11-25 14:25:10 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-25 14:25:10 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-25 14:25:10 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-25 14:25:10 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-25 14:25:10 INFO     [launcher] 
+2025-11-25 14:25:10 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-25 14:25:18 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-25 14:25:18 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-25 14:25:18 INFO     [tool_manager] Registered tool: bilibili
+2025-11-25 14:25:18 INFO     [tool_manager] Registered tool: memory_add
+2025-11-25 14:25:18 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-25 14:25:18 INFO     [tool_manager] Registered tool: memory_update
+2025-11-25 14:25:20 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-25 14:25:20 INFO     [memory_manager] MemoryManager initialized
+2025-11-25 14:25:20 INFO     [prompt_manager] PromptManager initialized
+2025-11-25 14:25:20 INFO     [message_processor] MessageProcessor initialized
+2025-11-25 14:25:20 INFO     [tool_manager] Registered tool: send_message
+2025-11-25 14:25:20 INFO     [tool_manager] Registered tool: ntfy
+2025-11-25 14:25:20 INFO     [tool_manager] Registered tool: search
+2025-11-25 14:27:01 INFO     [launcher] 
+2025-11-25 14:27:01 INFO     [launcher]       _  ___              _    ___ 
+2025-11-25 14:27:01 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-25 14:27:01 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-25 14:27:01 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-25 14:27:01 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-25 14:27:01 INFO     [launcher] 
+2025-11-25 14:27:01 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-25 14:27:09 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-25 14:27:09 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-25 14:27:09 INFO     [tool_manager] Registered tool: bilibili
+2025-11-25 14:27:09 INFO     [tool_manager] Registered tool: memory_add
+2025-11-25 14:27:09 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-25 14:27:09 INFO     [tool_manager] Registered tool: memory_update
+2025-11-25 14:27:11 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-25 14:27:11 INFO     [memory_manager] MemoryManager initialized
+2025-11-25 14:27:11 INFO     [prompt_manager] PromptManager initialized
+2025-11-25 14:27:11 INFO     [message_processor] MessageProcessor initialized
+2025-11-25 14:27:11 INFO     [tool_manager] Registered tool: send_message
+2025-11-25 14:27:11 INFO     [tool_manager] Registered tool: ntfy
+2025-11-25 14:27:11 INFO     [tool_manager] Registered tool: search
+2025-11-25 14:27:11 INFO     [lifecycle] Starting bot...
+2025-11-25 14:27:12 ERROR    [qq_guild_adapter] qq-botpy 未安装，请运行: pip install qq-botpy
+2025-11-25 14:27:12 INFO     [runtime] Adapters set: ['qq', 'qq_guild']
+2025-11-25 14:27:12 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-25 14:27:12 ERROR    [qq_guild_adapter] qq-botpy 未安装，跳过启动
+2025-11-25 14:27:12 INFO     [sticker] Scanning unregistered stickers
+2025-11-25 14:27:12 INFO     [sticker] All stickers are already registered
+2025-11-25 14:27:12 INFO     [lifecycle] Started adapter QQ
+2025-11-25 14:27:12 INFO     [lifecycle] Started adapter QQ Guild
+2025-11-25 14:30:43 INFO     [launcher] Exiting...
+2025-11-25 14:30:49 INFO     [launcher] 
+2025-11-25 14:30:49 INFO     [launcher]       _  ___              _    ___ 
+2025-11-25 14:30:49 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-25 14:30:49 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-25 14:30:49 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-25 14:30:49 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-25 14:30:49 INFO     [launcher] 
+2025-11-25 14:30:49 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-25 14:30:57 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-25 14:30:57 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-25 14:30:57 INFO     [tool_manager] Registered tool: bilibili
+2025-11-25 14:30:57 INFO     [tool_manager] Registered tool: memory_add
+2025-11-25 14:30:57 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-25 14:30:57 INFO     [tool_manager] Registered tool: memory_update
+2025-11-25 14:30:59 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-25 14:30:59 INFO     [memory_manager] MemoryManager initialized
+2025-11-25 14:30:59 INFO     [prompt_manager] PromptManager initialized
+2025-11-25 14:30:59 INFO     [message_processor] MessageProcessor initialized
+2025-11-25 14:30:59 INFO     [tool_manager] Registered tool: send_message
+2025-11-25 14:30:59 INFO     [tool_manager] Registered tool: ntfy
+2025-11-25 14:30:59 INFO     [tool_manager] Registered tool: search
+2025-11-25 14:30:59 INFO     [lifecycle] Starting bot...
+2025-11-25 14:30:59 INFO     [runtime] Adapters set: ['qq', 'qq_guild']
+2025-11-25 14:30:59 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-25 14:30:59 ERROR    [qq_guild_adapter] QQ频道Bot启动失败: There is no current event loop in thread 'Thread-3 (_start_blocking)'.
+2025-11-25 14:30:59 INFO     [qq_guild_adapter] QQ频道适配器启动中...
+2025-11-25 14:30:59 INFO     [sticker] Scanning unregistered stickers
+2025-11-25 14:30:59 INFO     [sticker] All stickers are already registered
+2025-11-25 14:30:59 INFO     [lifecycle] Started adapter QQ
+2025-11-25 14:30:59 INFO     [lifecycle] Started adapter QQ Guild
+2025-11-25 14:33:18 INFO     [launcher] Exiting...
+2025-11-25 14:33:23 INFO     [launcher] 
+2025-11-25 14:33:23 INFO     [launcher]       _  ___              _    ___ 
+2025-11-25 14:33:23 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-25 14:33:23 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-25 14:33:23 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-25 14:33:23 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-25 14:33:23 INFO     [launcher] 
+2025-11-25 14:33:23 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-25 14:33:30 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-25 14:33:30 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-25 14:33:30 INFO     [tool_manager] Registered tool: bilibili
+2025-11-25 14:33:30 INFO     [tool_manager] Registered tool: memory_add
+2025-11-25 14:33:30 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-25 14:33:30 INFO     [tool_manager] Registered tool: memory_update
+2025-11-25 14:33:32 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-25 14:33:32 INFO     [memory_manager] MemoryManager initialized
+2025-11-25 14:33:32 INFO     [prompt_manager] PromptManager initialized
+2025-11-25 14:33:32 INFO     [message_processor] MessageProcessor initialized
+2025-11-25 14:33:32 INFO     [tool_manager] Registered tool: send_message
+2025-11-25 14:33:32 INFO     [tool_manager] Registered tool: ntfy
+2025-11-25 14:33:32 INFO     [tool_manager] Registered tool: search
+2025-11-25 14:33:33 INFO     [lifecycle] Starting bot...
+2025-11-25 14:33:33 INFO     [runtime] Adapters set: ['qq', 'qq_guild']
+2025-11-25 14:33:33 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-25 14:33:33 INFO     [qq_guild_adapter] QQ频道适配器启动中...
+2025-11-25 14:33:33 INFO     [sticker] Scanning unregistered stickers
+2025-11-25 14:33:33 INFO     [sticker] All stickers are already registered
+2025-11-25 14:33:33 INFO     [lifecycle] Started adapter QQ
+2025-11-25 14:33:33 ERROR    [qq_guild_adapter] QQ频道Bot启动失败: 'Client' object has no attribute 'on_message_create'
+2025-11-25 14:33:33 INFO     [lifecycle] Started adapter QQ Guild
+2025-11-25 14:33:33 ERROR    [qq_guild_adapter] Traceback (most recent call last):
+  File "C:\Users\Hirunohoshi\myprojects\KiraAI_Yui\adapters\qq_guild\qq_guild.py", line 102, in _start_blocking
+    @self.bot.on_message_create()
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Client' object has no attribute 'on_message_create'
+
+2025-11-25 14:36:08 INFO     [launcher] Exiting...
+2025-11-25 14:36:13 INFO     [launcher] 
+2025-11-25 14:36:13 INFO     [launcher]       _  ___              _    ___ 
+2025-11-25 14:36:13 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-25 14:36:13 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-25 14:36:13 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-25 14:36:13 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-25 14:36:13 INFO     [launcher] 
+2025-11-25 14:36:13 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-25 14:36:21 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-25 14:36:21 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-25 14:36:21 INFO     [tool_manager] Registered tool: bilibili
+2025-11-25 14:36:21 INFO     [tool_manager] Registered tool: memory_add
+2025-11-25 14:36:21 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-25 14:36:21 INFO     [tool_manager] Registered tool: memory_update
+2025-11-25 14:36:23 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-25 14:36:23 INFO     [memory_manager] MemoryManager initialized
+2025-11-25 14:36:23 INFO     [prompt_manager] PromptManager initialized
+2025-11-25 14:36:23 INFO     [message_processor] MessageProcessor initialized
+2025-11-25 14:36:23 INFO     [tool_manager] Registered tool: send_message
+2025-11-25 14:36:23 INFO     [tool_manager] Registered tool: ntfy
+2025-11-25 14:36:23 INFO     [tool_manager] Registered tool: search
+2025-11-25 14:36:23 INFO     [lifecycle] Starting bot...
+2025-11-25 14:36:23 INFO     [runtime] Adapters set: ['qq', 'qq_guild']
+2025-11-25 14:36:23 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-25 14:36:23 INFO     [qq_guild_adapter] QQ频道适配器启动中...
+2025-11-25 14:36:23 INFO     [sticker] Scanning unregistered stickers
+2025-11-25 14:36:23 ERROR    [qq_guild_adapter] QQ频道Bot启动失败: Client.start() got an unexpected keyword argument 'token'
+2025-11-25 14:36:23 INFO     [sticker] All stickers are already registered
+2025-11-25 14:36:23 INFO     [lifecycle] Started adapter QQ
+2025-11-25 14:36:23 INFO     [lifecycle] Started adapter QQ Guild
+2025-11-25 14:36:23 ERROR    [qq_guild_adapter] Traceback (most recent call last):
+  File "C:\Users\Hirunohoshi\myprojects\KiraAI_Yui\adapters\qq_guild\qq_guild.py", line 118, in _start_blocking
+    self.bot.run(appid=self.app_id, token=self.token, secret=self.secret)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\client.py", line 135, in run
+    self.loop.run_until_complete(runner())
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\client.py", line 132, in runner
+    await self.start(*args, **kwargs)
+          ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: Client.start() got an unexpected keyword argument 'token'
+
+2025-11-25 14:39:33 INFO     [launcher] Exiting...
+2025-11-25 14:39:38 INFO     [launcher] 
+2025-11-25 14:39:38 INFO     [launcher]       _  ___              _    ___ 
+2025-11-25 14:39:38 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-25 14:39:38 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-25 14:39:38 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-25 14:39:38 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-25 14:39:38 INFO     [launcher] 
+2025-11-25 14:39:38 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-25 14:39:46 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-25 14:39:46 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-25 14:39:46 INFO     [tool_manager] Registered tool: bilibili
+2025-11-25 14:39:46 INFO     [tool_manager] Registered tool: memory_add
+2025-11-25 14:39:46 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-25 14:39:46 INFO     [tool_manager] Registered tool: memory_update
+2025-11-25 14:39:48 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-25 14:39:48 INFO     [memory_manager] MemoryManager initialized
+2025-11-25 14:39:48 INFO     [prompt_manager] PromptManager initialized
+2025-11-25 14:39:48 INFO     [message_processor] MessageProcessor initialized
+2025-11-25 14:39:48 INFO     [tool_manager] Registered tool: send_message
+2025-11-25 14:39:48 INFO     [tool_manager] Registered tool: ntfy
+2025-11-25 14:39:48 INFO     [tool_manager] Registered tool: search
+2025-11-25 14:39:48 INFO     [lifecycle] Starting bot...
+2025-11-25 14:39:48 INFO     [runtime] Adapters set: ['qq', 'qq_guild']
+2025-11-25 14:39:48 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-25 14:39:48 INFO     [qq_guild_adapter] QQ频道适配器启动中...
+2025-11-25 14:39:48 INFO     [sticker] Scanning unregistered stickers
+2025-11-25 14:39:48 INFO     [sticker] All stickers are already registered
+2025-11-25 14:39:48 INFO     [lifecycle] Started adapter QQ
+2025-11-25 14:39:48 INFO     [lifecycle] Started adapter QQ Guild
+2025-11-25 14:39:49 ERROR    [qq_guild_adapter] QQ频道Bot启动失败: 接口访问源IP不在白名单
+2025-11-25 14:39:49 ERROR    [qq_guild_adapter] Traceback (most recent call last):
+  File "C:\Users\Hirunohoshi\myprojects\KiraAI_Yui\adapters\qq_guild\qq_guild.py", line 119, in _start_blocking
+    self.bot.run(appid=self.app_id, secret=self.secret)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\client.py", line 135, in run
+    self.loop.run_until_complete(runner())
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\client.py", line 132, in runner
+    await self.start(*args, **kwargs)
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\client.py", line 158, in start
+    await self._bot_login(token)
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\client.py", line 164, in _bot_login
+    user = await self.http.login(token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\http.py", line 205, in login
+    data = await self.request(Route("GET", "/users/@me"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\http.py", line 190, in request
+    return await _handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\http.py", line 86, in _handle_response
+    raise error_dict_get(msg=message) from None
+botpy.errors.AuthenticationFailedError: 接口访问源IP不在白名单
+
+2025-11-25 14:53:00 INFO     [message_processor] 收到来自qq的群聊消息
+2025-11-25 14:53:01 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-25 14:53:01 INFO     [message_processor] processing message(s) from qq:
+[received_time: Nov 25 2025 14:53 Tue message_id: None] [group_name: N.E.K.O.技术交流群 group_id: 1022939659 user_nickname: None, user_id: 2386787813] | [System 用户2386787813加入了群聊]
+
+2025-11-25 14:53:37 ERROR    [message_filter] Filter LLM调用失败: Error code: 500 - {'code': 50507, 'message': 'Request processing failed due to an unknown error.', 'data': None}
+2025-11-25 14:53:37 INFO     [message_processor] 消息通过filter检查: 通过基础过滤, 回复意愿: 0.50
+2025-11-25 14:53:37 INFO     [llm] checking tools and generating response using Qwen/Qwen3-8B from siliconflow
+2025-11-25 14:53:42 INFO     [message_processor] LLM: <msg message_id="1207288407">
+    <text>欢迎加入N.E.K.O.技术交流群喵~</text>
+</msg>
+2025-11-25 14:53:42 INFO     [memory_manager] Group memory updated for qq:gm:1022939659
+2025-11-25 14:59:35 INFO     [launcher] Exiting...
+2025-11-25 14:59:41 INFO     [launcher] 
+2025-11-25 14:59:41 INFO     [launcher]       _  ___              _    ___ 
+2025-11-25 14:59:41 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-25 14:59:41 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-25 14:59:41 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-25 14:59:41 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-25 14:59:41 INFO     [launcher] 
+2025-11-25 14:59:41 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-25 14:59:49 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-25 14:59:49 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-25 14:59:49 INFO     [tool_manager] Registered tool: bilibili
+2025-11-25 14:59:49 INFO     [tool_manager] Registered tool: memory_add
+2025-11-25 14:59:49 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-25 14:59:49 INFO     [tool_manager] Registered tool: memory_update
+2025-11-25 14:59:51 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-25 14:59:51 INFO     [memory_manager] MemoryManager initialized
+2025-11-25 14:59:51 INFO     [prompt_manager] PromptManager initialized
+2025-11-25 14:59:51 INFO     [message_processor] MessageProcessor initialized
+2025-11-25 14:59:51 INFO     [tool_manager] Registered tool: send_message
+2025-11-25 14:59:51 INFO     [tool_manager] Registered tool: ntfy
+2025-11-25 14:59:51 INFO     [tool_manager] Registered tool: search
+2025-11-25 14:59:51 INFO     [lifecycle] Starting bot...
+2025-11-25 14:59:51 INFO     [runtime] Adapters set: ['qq', 'qq_guild']
+2025-11-25 14:59:51 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-25 14:59:51 INFO     [qq_guild_adapter] QQ频道适配器启动中...
+2025-11-25 14:59:51 INFO     [sticker] Scanning unregistered stickers
+2025-11-25 14:59:51 INFO     [sticker] All stickers are already registered
+2025-11-25 14:59:51 INFO     [lifecycle] Started adapter QQ
+2025-11-25 14:59:51 INFO     [lifecycle] Started adapter QQ Guild
+2025-11-25 15:03:26 INFO     [message_processor] 收到来自qq的私聊消息
+2025-11-25 15:03:28 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-25 15:03:28 INFO     [message_processor] processing message(s) from qq:
+[received_time: Nov 25 2025 15:03 Tue message_id: 1856991748] [user_nickname: 萬韧, user_id: 727979595] | 你是
+
+2025-11-25 15:03:28 INFO     [llm] checking whether to call tools using Qwen/Qwen3-Next-80B-A3B-Instruct from siliconflow
+2025-11-25 15:03:30 INFO     [llm] generating response using deepseek-ai/DeepSeek-V3 from siliconflow
+2025-11-25 15:03:41 INFO     [message_processor] LLM: <msg message_id="1085512031">
+    <text>我是林悠怡，你可以叫我悠怡、小悠或者Yui喵~</text>
+</msg>
+<msg message_id="45701655">
+    <text>只要@我或者提到我的名字我就会回复你哦喵~</text>
+    <emoji>307</emoji>
+</msg>
+2025-11-25 15:03:41 INFO     [memory_manager] Private memory updated for qq:dm:727979595
+2025-11-25 15:07:00 INFO     [message_processor] 收到来自qq的私聊消息
+2025-11-25 15:07:02 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-25 15:07:02 INFO     [message_processor] processing message(s) from qq:
+[received_time: Nov 25 2025 15:07 Tue message_id: 1290811298] [user_nickname: 萬韧, user_id: 727979595] | @林悠怡Yui-测试中 你好
+
+2025-11-25 15:07:02 INFO     [llm] checking whether to call tools using Qwen/Qwen3-Next-80B-A3B-Instruct from siliconflow
+2025-11-25 15:07:03 INFO     [llm] generating response using deepseek-ai/DeepSeek-V3 from siliconflow
+2025-11-25 15:07:10 INFO     [message_processor] LLM: <msg message_id="611485837">
+    <text>萬韧你好呀~下午好喵~</text>
+</msg>
+2025-11-25 15:07:10 INFO     [memory_manager] Private memory updated for qq:dm:727979595
+2025-11-25 15:03:26 INFO     [message_processor] 收到来自qq的私聊消息
+2025-11-25 15:08:19 INFO     [message_processor] 收到来自qq的私聊消息
+2025-11-25 15:08:20 INFO     [message_processor] deleted 2 message(s) from buffer
+2025-11-25 15:08:20 INFO     [message_processor] processing message(s) from qq:
+[received_time: Nov 25 2025 15:08 Tue message_id: 1856991748] [user_nickname: 萬韧, user_id: 727979595] | 你是
+[received_time: Nov 25 2025 15:08 Tue message_id: 1290811298] [user_nickname: 萬韧, user_id: 727979595] | @林悠怡Yui-测试中 你好
+
+2025-11-25 15:08:23 INFO     [message_processor] 消息通过filter检查: 消息内容为普通问候，未涉及政治、敏感、哈基米或性别争议话题，符合安全标准。, 回复意愿: 0.80
+2025-11-25 15:08:23 INFO     [llm] checking tools and generating response using Qwen/Qwen3-8B from siliconflow
+2025-11-25 15:08:29 INFO     [message_processor] LLM: <msg message_id="">
+    <text>我是林悠怡，也可以叫我悠怡、小悠或Yui喵~是猫娘计划的看板娘，在群里@我或者提到我的名字我就会回复你哦~</text>
+    <emoji>307</emoji>
+</msg>
+2025-11-25 15:08:29 INFO     [memory_manager] Private memory updated for qq:dm:727979595
+2025-11-25 15:08:29 INFO     [launcher] Exiting...
+2025-11-25 15:08:34 INFO     [launcher] 
+2025-11-25 15:08:34 INFO     [launcher]       _  ___              _    ___ 
+2025-11-25 15:08:34 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-25 15:08:34 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-25 15:08:34 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-25 15:08:34 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-25 15:08:34 INFO     [launcher] 
+2025-11-25 15:08:34 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-25 15:08:41 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-25 15:08:41 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-25 15:08:41 INFO     [tool_manager] Registered tool: bilibili
+2025-11-25 15:08:41 INFO     [tool_manager] Registered tool: memory_add
+2025-11-25 15:08:41 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-25 15:08:41 INFO     [tool_manager] Registered tool: memory_update
+2025-11-25 15:08:43 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-25 15:08:43 INFO     [memory_manager] MemoryManager initialized
+2025-11-25 15:08:43 INFO     [prompt_manager] PromptManager initialized
+2025-11-25 15:08:43 INFO     [message_processor] MessageProcessor initialized
+2025-11-25 15:08:43 INFO     [tool_manager] Registered tool: send_message
+2025-11-25 15:08:43 INFO     [tool_manager] Registered tool: ntfy
+2025-11-25 15:08:43 INFO     [tool_manager] Registered tool: search
+2025-11-25 15:08:44 INFO     [lifecycle] Starting bot...
+2025-11-25 15:08:44 INFO     [runtime] Adapters set: ['qq', 'qq_guild']
+2025-11-25 15:08:44 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-25 15:08:44 INFO     [qq_guild_adapter] QQ频道适配器启动中...
+2025-11-25 15:08:44 INFO     [sticker] Scanning unregistered stickers
+2025-11-25 15:08:44 ERROR    [qq_guild_adapter] QQ频道Bot启动失败: 'at_messages' is not a valid flag name.
+2025-11-25 15:08:44 INFO     [sticker] All stickers are already registered
+2025-11-25 15:08:44 INFO     [lifecycle] Started adapter QQ
+2025-11-25 15:08:44 INFO     [lifecycle] Started adapter QQ Guild
+2025-11-25 15:08:44 ERROR    [qq_guild_adapter] Traceback (most recent call last):
+  File "C:\Users\Hirunohoshi\myprojects\KiraAI_Yui\adapters\qq_guild\qq_guild.py", line 117, in _start_blocking
+    intents = botpy.Intents(public_guild_messages=True, at_messages=True)
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\flags.py", line 123, in __init__
+    super().__init__(**kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\flags.py", line 41, in __init__
+    raise TypeError(f"{key!r} is not a valid flag name.")
+TypeError: 'at_messages' is not a valid flag name.
+
+2025-11-25 15:11:06 INFO     [launcher] Exiting...
+2025-11-25 15:11:11 INFO     [launcher] 
+2025-11-25 15:11:11 INFO     [launcher]       _  ___              _    ___ 
+2025-11-25 15:11:11 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-25 15:11:11 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-25 15:11:11 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-25 15:11:11 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-25 15:11:11 INFO     [launcher] 
+2025-11-25 15:11:11 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-25 15:11:19 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-25 15:11:19 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-25 15:11:19 INFO     [tool_manager] Registered tool: bilibili
+2025-11-25 15:11:19 INFO     [tool_manager] Registered tool: memory_add
+2025-11-25 15:11:19 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-25 15:11:19 INFO     [tool_manager] Registered tool: memory_update
+2025-11-25 15:11:21 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-25 15:11:21 INFO     [memory_manager] MemoryManager initialized
+2025-11-25 15:11:21 INFO     [prompt_manager] PromptManager initialized
+2025-11-25 15:11:21 INFO     [message_processor] MessageProcessor initialized
+2025-11-25 15:11:21 INFO     [tool_manager] Registered tool: send_message
+2025-11-25 15:11:21 INFO     [tool_manager] Registered tool: ntfy
+2025-11-25 15:11:21 INFO     [tool_manager] Registered tool: search
+2025-11-25 15:11:21 INFO     [lifecycle] Starting bot...
+2025-11-25 15:11:21 INFO     [runtime] Adapters set: ['qq', 'qq_guild']
+2025-11-25 15:11:21 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-25 15:11:21 INFO     [qq_guild_adapter] QQ频道适配器启动中...
+2025-11-25 15:11:21 INFO     [sticker] Scanning unregistered stickers
+2025-11-25 15:11:21 INFO     [sticker] All stickers are already registered
+2025-11-25 15:11:21 INFO     [lifecycle] Started adapter QQ
+2025-11-25 15:11:21 INFO     [lifecycle] Started adapter QQ Guild
+2025-11-25 15:11:44 INFO     [message_processor] 收到来自qq的私聊消息
+2025-11-25 15:11:44 INFO     [message_processor] 收到来自qq的私聊消息
+2025-11-25 15:11:45 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-25 15:11:45 INFO     [message_processor] processing message(s) from qq:
+[received_time: Nov 25 2025 15:11 Tue message_id: 1309189562] [user_nickname: 萬韧, user_id: 727979595] | 你是
+
+2025-11-25 15:11:46 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-25 15:11:46 INFO     [message_processor] processing message(s) from qq:
+[received_time: Nov 25 2025 15:11 Tue message_id: 1309189562] [user_nickname: 萬韧, user_id: 727979595] | 你是
+
+2025-11-25 15:11:46 INFO     [llm] checking whether to call tools using Qwen/Qwen3-Next-80B-A3B-Instruct from siliconflow
+2025-11-25 15:11:49 INFO     [message_processor] 消息通过filter检查: 消息内容为普通问候，不涉及任何政治、敏感或争议话题。, 回复意愿: 0.80
+2025-11-25 15:11:49 INFO     [llm] checking tools and generating response using Qwen/Qwen3-8B from siliconflow
+2025-11-25 15:11:52 INFO     [llm] generating response using deepseek-ai/DeepSeek-V3 from siliconflow
+2025-11-25 15:11:56 ERROR    [message_processor] error while parsing sticker: [Errno 2] No such file or directory: 'data/sticker/163CD387C35585DAC768A4CFEC5ABC27.jpg'
+2025-11-25 15:11:56 INFO     [message_processor] LLM: <msg message_id="792756107">
+    <text>我是林悠怡，也可以叫我悠怡、小悠或Yui喵~是猫娘计划的看板娘，在群里@我或者提到我的名字我就会回复你哦~</text>
+    <emoji>307</emoji>
+</msg>
+2025-11-25 15:11:56 INFO     [memory_manager] Private memory updated for qq:dm:727979595
+2025-11-25 15:11:59 INFO     [message_processor] LLM: <msg message_id="594501524">
+    <text>我是林悠怡喵~刚刚不是告诉你啦，这么快就忘记了吗喵~</text>
+</msg>
+<msg message_id="1547128890">
+    <sticker>12</sticker>
+</msg>
+2025-11-25 15:11:59 INFO     [memory_manager] Private memory updated for qq:dm:727979595
+2025-11-25 15:20:44 INFO     [sticker] Scanning unregistered stickers
+2025-11-25 15:20:44 INFO     [sticker] found sticker welcome.jpg
+2025-11-25 15:20:50 INFO     [sticker] Registered sticker: 这张表情包展示了一个可爱的卡通女孩角色，头顶有猫耳朵装饰，眼睛旁边戴着眼镜，镜片有紫色条纹图案，左眼戴着一个紫色星星的小发卡。她微微一笑，背景是一个转框里写着“欢迎新朋友”的字样。有胃和嘴的🌟头像附着在一起，脸上有红色的小雀斑。女孩的头发后面有类似瓶颈的装饰。
+
+这个表情包可以用于朋友之间表示友好以及欢迎新朋友的情境。
+2025-11-25 15:27:43 INFO     [message_processor] 收到来自qq的群聊消息
+2025-11-25 15:27:44 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-25 15:27:44 INFO     [message_processor] processing message(s) from qq:
+[received_time: Nov 25 2025 15:27 Tue message_id: None] [group_name: N.E.K.O.技术交流群 group_id: 1022939659 user_nickname: None, user_id: 2821005849] | [System 用户2821005849加入了群聊]
+
+2025-11-25 15:27:48 INFO     [message_processor] 消息通过filter检查: 消息内容为群组信息提示，不涉及任何政治、敏感或争议话题，属于普通群聊安全消息。, 回复意愿: 0.30
+2025-11-25 15:27:48 INFO     [llm] checking tools and generating response using Qwen/Qwen3-8B from siliconflow
+2025-11-25 15:27:53 INFO     [message_processor] LLM: <msg message_id="408559260">
+    <text>欢迎加入N.E.K.O.技术交流群喵~</text>
+</msg>
+2025-11-25 15:27:53 INFO     [memory_manager] Group memory updated for qq:gm:1022939659
+2025-11-25 15:32:38 INFO     [message_processor] 收到来自qq的群聊消息
+2025-11-25 15:32:39 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-25 15:32:39 INFO     [message_processor] processing message(s) from qq:
+[received_time: Nov 25 2025 15:32 Tue message_id: None] [group_name: N.E.K.O.技术交流群 group_id: 1022939659 user_nickname: None, user_id: 3532322179] | [System 用户3532322179加入了群聊]
+
+2025-11-25 15:32:41 INFO     [message_processor] 消息通过filter检查: 消息内容为群组信息提示，不涉及任何政治、敏感或争议话题，属于普通群聊安全消息。, 回复意愿: 0.30
+2025-11-25 15:32:41 INFO     [llm] checking tools and generating response using Qwen/Qwen3-8B from siliconflow
+2025-11-25 15:32:48 INFO     [message_processor] LLM: <msg message_id="429306845">
+    <text>欢迎加入N.E.K.O.技术交流群喵~</text>
+</msg>
+2025-11-25 15:32:48 INFO     [memory_manager] Group memory updated for qq:gm:1022939659
+2025-11-25 17:11:21 INFO     [sticker] Scanning unregistered stickers
+2025-11-25 17:11:21 INFO     [sticker] All stickers are already registered
+2025-11-25 17:20:50 INFO     [sticker] Scanning unregistered stickers
+2025-11-25 17:20:50 INFO     [sticker] found sticker welcome.jpg
+2025-11-25 17:20:55 INFO     [sticker] Registered sticker: 这张表情包是一只手绘风格的卡通白猫，戴着一顶灰色风帽，猫耳朵上有蝴蝶结装饰，表情非常可爱。猫的眼睛是紫色的，搭配粉色的脸颊，看起来很呆萌。猫的额头上还有一颗小星星。表情包背景是一个黑边框，正中央写着“欢迎新朋友”几个大字。这是在收到新的朋友添加聊天时使用的表情包，可以表达欢迎新朋友的开心心情。
+2025-11-25 17:31:53 INFO     [launcher] 
+2025-11-25 17:31:53 INFO     [launcher]       _  ___              _    ___ 
+2025-11-25 17:31:53 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-25 17:31:53 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-25 17:31:53 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-25 17:31:53 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-25 17:31:53 INFO     [launcher] 
+2025-11-25 17:31:53 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-25 17:32:02 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-25 17:32:02 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-25 17:32:02 INFO     [tool_manager] Registered tool: bilibili
+2025-11-25 17:32:02 INFO     [tool_manager] Registered tool: memory_add
+2025-11-25 17:32:02 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-25 17:32:02 INFO     [tool_manager] Registered tool: memory_update
+2025-11-25 17:32:04 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-25 17:32:04 INFO     [memory_manager] MemoryManager initialized
+2025-11-25 17:32:04 INFO     [prompt_manager] PromptManager initialized
+2025-11-25 17:32:04 INFO     [message_processor] MessageProcessor initialized
+2025-11-25 17:32:04 INFO     [tool_manager] Registered tool: send_message
+2025-11-25 17:32:04 INFO     [tool_manager] Registered tool: ntfy
+2025-11-25 17:32:04 INFO     [tool_manager] Registered tool: search
+2025-11-25 17:32:04 INFO     [lifecycle] Starting bot...
+2025-11-25 17:32:04 INFO     [runtime] Adapters set: ['qq', 'qq_guild']
+2025-11-25 17:32:04 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-25 17:32:04 INFO     [qq_guild_adapter] QQ频道适配器启动中...
+2025-11-25 17:32:04 INFO     [sticker] Scanning unregistered stickers
+2025-11-25 17:32:04 INFO     [sticker] All stickers are already registered
+2025-11-25 17:32:04 INFO     [lifecycle] Started adapter QQ
+2025-11-25 17:32:04 INFO     [lifecycle] Started adapter QQ Guild
+2025-11-25 17:32:05 INFO     [qq_guild_adapter] [QQ频道] 机器人已准备就绪
+2025-11-25 17:54:07 INFO     [message_processor] 收到来自qq的群聊消息
+2025-11-25 17:54:08 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-25 17:54:08 INFO     [message_processor] processing message(s) from qq:
+[received_time: Nov 25 2025 17:54 Tue message_id: None] [group_name: N.E.K.O.技术交流群 group_id: 1022939659 user_nickname: None, user_id: 3548418423] | [System 用户3548418423加入了群聊]
+
+2025-11-25 17:54:12 INFO     [message_processor] 消息通过filter检查: 消息内容为群信息头信息，不涉及任何敏感、政治或争议话题，属于普通群聊安全消息。, 回复意愿: 0.30
+2025-11-25 17:54:12 INFO     [llm] checking tools and generating response using Qwen/Qwen3-8B from siliconflow
+2025-11-25 17:54:18 INFO     [message_processor] LLM: <msg message_id="1012418156">
+    <text>欢迎加入N.E.K.O.技术交流群喵~</text>
+</msg>
+2025-11-25 17:54:18 INFO     [memory_manager] Group memory updated for qq:gm:1022939659
+2025-11-25 19:20:55 INFO     [sticker] Scanning unregistered stickers
+2025-11-25 19:20:55 INFO     [sticker] found sticker welcome.jpg
+2025-11-25 19:21:00 INFO     [sticker] Registered sticker: 这张表情包上的图案是一只卡通独角兽，头上束着尖尖的白色角，在角上有着黑色的荆棘和粉色的小花。独角兽的耳朵上各有一个三角形的机械装置，头上和眼部皆有机械刘海，佩戴着黑紫色的框架眼镜，眼镜片上有五角星和花瓣装饰，嘴巴呈粉红色，指甲上涂抹着绿色和蓝色的紫色指甲油。
+
+这种表情包在聊天时可以用在表示打招呼、欢迎新朋友的情况，这样的话可以增加讨论的趣味性。
+2025-11-25 21:21:00 INFO     [sticker] Scanning unregistered stickers
+2025-11-25 21:21:00 INFO     [sticker] found sticker welcome.jpg
+2025-11-25 21:21:04 INFO     [sticker] Registered sticker: 这张表情包是一只可爱的小动物，可能是猫，头顶戴着一个牛角帽和一个鹿角帽，表情略显无奈或不解，手里拿着一支冰淇淋。表情包底部有文字“欢迎新朋友”。可用在欢迎新朋友加入某个群组、团队或社区的情景中。
+2025-11-25 23:21:04 INFO     [sticker] Scanning unregistered stickers
+2025-11-25 23:21:04 INFO     [sticker] found sticker welcome.jpg
+2025-11-25 23:21:08 INFO     [sticker] Registered sticker: 这张表情包显示了一个可爱的角色，脸上画着紫色的条纹和涂鸦，眼罩遮住了一半的眼睛，头上有一个黑色的蝴蝶结，眉毛是白色一撇的，鼻涕是蓝色的。表情包下方写有“欢迎新朋友”。通常用在刚加入某个群聊或论坛时，向新朋友表达欢迎的情绪。
+2025-11-26 01:21:08 INFO     [sticker] Scanning unregistered stickers
+2025-11-26 01:21:08 INFO     [sticker] found sticker welcome.jpg
+2025-11-26 01:21:13 INFO     [sticker] Registered sticker: 这张表情包是一个卡通风格的萌宠形象，戴着猫耳和蝴蝶结，脖子上围着围巾，身后有翅膀，左侧的手指竖起，手中持有冰淇淋。表情包下方有一串紫色文字：“欢迎新朋友”。
+
+聊天中可以使用此表情包来表达致敬、感谢、欢迎新加入的朋友等积极正面情绪的语境，例如：“这次新朋友加入我们团队，非常欢迎！”、“你真棒，欢迎加入我们！”等情景。
+2025-11-26 03:21:12 INFO     [sticker] Scanning unregistered stickers
+2025-11-26 03:21:12 INFO     [sticker] found sticker welcome.jpg
+2025-11-26 03:21:16 INFO     [sticker] Registered sticker: 这只表情包描绘了一只可爱的卡通动物角色，底部有中文文字“欢迎新朋友”。使用这个表情包的情景是：向新加入的人打招呼，例如在团队聊天或朋友群聊中初次介绍自己时。
+2025-11-26 05:21:16 INFO     [sticker] Scanning unregistered stickers
+2025-11-26 05:21:16 INFO     [sticker] found sticker welcome.jpg
+2025-11-26 05:21:20 INFO     [sticker] Registered sticker: 这张表情包展示了一个可爱的卡通形象，背景是黑色的。图像中有一个戴着黑色礼帽、系着黑蝴蝶结的白色猫头，猫头戴着猫耳吊牌，眼睛巧妙地用猫耳遮挡。猫的头发上有蓝色和紫色夹子，还有一个水果发饰，脸颊有一点点晕红，粉色的鼻子，显得非常有特色。图像下方有紫色方框，框内用中文白色字体写着“欢迎新朋友”。这则表情包通常用于新朋友加入时的欢迎场景。
+2025-11-26 07:21:21 INFO     [sticker] Scanning unregistered stickers
+2025-11-26 07:21:21 INFO     [sticker] found sticker welcome.jpg
+2025-11-26 07:21:25 INFO     [sticker] Registered sticker: 这是一张插画风格的用户头像或个人形象。头像中有两只耳朵，戴着黑色蝴蝶结和发夹，旁边图案中有一只戴着黑色太阳镜的猫咪。底部文字是“欢迎新朋友”。
+2025-11-26 09:21:25 INFO     [sticker] Scanning unregistered stickers
+2025-11-26 09:21:25 INFO     [sticker] found sticker welcome.jpg
+2025-11-26 09:21:30 INFO     [sticker] Registered sticker: 这张表情包中的角色是一只黑色猫耳的拟人动漫女孩形象。她有一头白色的披肩长发，戴着一顶宽边帽，帽子一分为三，其中一分为两小辫儿。女孩戴着一副紫色的太阳镜，鼻子和耳垂上有彩色的小吊坠。她的右手拿着一个冰淇淋，左手摸着下巴，笑得很开心，头上有明显的粉红迷你头巾。她身后是一一个白色的长方形卡通气泡内框，内框内的汉字是“欢迎新朋友”。这个表情包最适合在聊天中向好友介绍新入园的朋友或炫耀新认识的朋友，或者是在朋友们提到其他朋友时幽默地回应欢迎新朋友的情景。
+2025-11-26 11:21:30 INFO     [sticker] Scanning unregistered stickers
+2025-11-26 11:21:30 INFO     [sticker] found sticker welcome.jpg
+2025-11-26 11:21:35 INFO     [sticker] Registered sticker: 这张表情包显示了一个可爱的卡通猫女孩，头上戴着带有扇子的头饰，猫耳朵上有尖刺，旁边有一个彩色的冰淇淋。猫女孩腮边有发光的星星，脸颊有一点粉红色。猫的脚拿了一个笔记本做眼睛，上面写着“欢迎新朋友”。可以应用于打招呼的场景，比如对方刚加入某一讨论群、小组等，以表示欢迎。
+2025-11-26 13:21:35 INFO     [sticker] Scanning unregistered stickers
+2025-11-26 13:21:35 INFO     [sticker] found sticker welcome.jpg
+2025-11-26 13:21:40 INFO     [sticker] Registered sticker: 这是一张画风可爱的动漫女孩卡通头像和贴纸，头像是女孩头上戴着一个黑色猫耳朵发卡，身穿深灰色衣服，右手戴着紫色十字形手杖，左手拿着一份绿色冰淇淋，背景画框内写有“欢迎新朋友”四个大字。这种日系风格的贴纸一般适合在聊天群中使用，特别是一些同学群、朋友群，用来表达对新朋友、新成员的欢迎。聊天的具体场景可能包括追加新成员后，会用这次表情包向全体成员问候新朋友。
+2025-11-26 15:21:40 INFO     [sticker] Scanning unregistered stickers
+2025-11-26 15:21:40 INFO     [sticker] found sticker welcome.jpg
+2025-11-26 15:21:45 INFO     [sticker] Registered sticker: 这张表情包展示了一位戴着眼镜的卡通少女，她有长长的猫耳，耳朵上有蓝色和黑色的装饰，发丝软萌有特色。她的头发是浅色的，脸颊上有可爱的粉色脸颊，鼻子圆圆的。表情包下方写着“欢迎新朋友”。
+
+这种表情包可以在以下情景使用：
+1. 欢迎新加入的成员时。
+2. 表达对新朋友的喜爱和欢迎之情时。
+3. 与好朋友聊起新的好朋友时。
+2025-11-26 17:21:45 INFO     [sticker] Scanning unregistered stickers
+2025-11-26 17:21:45 INFO     [sticker] found sticker welcome.jpg
+2025-11-26 17:21:49 INFO     [sticker] Registered sticker: 这张表情包展示了一个戴着眼镜的卡通角色，眼镜上贴有彩色纸条，卡片上写着“欢迎新朋友”。可以用在聊天中欢迎新朋友的场景。
+2025-11-26 19:21:49 INFO     [sticker] Scanning unregistered stickers
+2025-11-26 19:21:49 INFO     [sticker] found sticker welcome.jpg
+2025-11-26 19:21:54 INFO     [sticker] Registered sticker: 这张表情包显示的是一个带有黑色蝴蝶结和星星装饰的角色，背景文字是“欢迎新朋友”，常用于见面或介绍新朋友的场合。
+2025-11-26 21:21:53 INFO     [sticker] Scanning unregistered stickers
+2025-11-26 21:21:53 INFO     [sticker] found sticker welcome.jpg
+2025-11-26 21:21:58 INFO     [sticker] Registered sticker: 这张表情包展示了一只可爱的卡通动物形象，头上戴着黑色小蝴蝶结，嘴巴周围有粉色的小辫子，脸颊上贴着紫色和黑色的口罩。底部的框子里写着“欢迎新朋友”。可以在聊天中用来欢迎新朋友，营造温馨愉快的氛围。
+2025-11-26 23:21:58 INFO     [sticker] Scanning unregistered stickers
+2025-11-26 23:21:58 INFO     [sticker] found sticker welcome.jpg
+2025-11-26 23:22:02 INFO     [sticker] Registered sticker: 这张表情包上的卡通人物戴着黑框眼镜，头发上有蝴蝶结，整体造型可爱，下方有文字“欢迎新朋友”。通常用于朋友加入群里时发送，表达欢迎新朋友的友好想法。
+2025-11-27 01:22:02 INFO     [sticker] Scanning unregistered stickers
+2025-11-27 01:22:02 INFO     [sticker] found sticker welcome.jpg
+2025-11-27 01:22:08 INFO     [sticker] Registered sticker: 这张emoji展示了一个带蝴蝶结的可爱女孩形象，前景中用紫色文字写着“欢迎新朋友”。通常用在这种表达欢迎新朋友或者欢迎加入新群体的情景中。
+2025-11-27 03:22:08 INFO     [sticker] Scanning unregistered stickers
+2025-11-27 03:22:08 INFO     [sticker] found sticker welcome.jpg
+2025-11-27 03:22:13 INFO     [sticker] Registered sticker: 这张表情包是一个卡通形象的女性角色，她有白色头发，耳朵是猫耳形状，脸上有紫色和灰色的条纹，头上戴着黑色的蝴蝶结。她的左边手举着一只眼睛形状的发饰。表情包下方有中文文字“欢迎新朋友”。这张表情包适合在聊新朋友加入聊天时使用，或是向朋友打招呼时用。
+2025-11-27 05:22:13 INFO     [sticker] Scanning unregistered stickers
+2025-11-27 05:22:13 INFO     [sticker] found sticker welcome.jpg
+2025-11-27 05:22:17 INFO     [sticker] Registered sticker: 这张表情包是一只带猫耳的卡通小猫，眼睛剪影板块的颜色为紫色和灰色，头上戴着一个粉色发饰，整体风格可爱。表情包中的文字是“欢迎新朋友”，用紫色体现。
+
+适用于新人加入聊天时，表示欢迎新朋友的到来。
+2025-11-27 07:22:16 INFO     [sticker] Scanning unregistered stickers
+2025-11-27 07:22:16 INFO     [sticker] found sticker welcome.jpg
+2025-11-27 07:22:21 INFO     [sticker] Registered sticker: 这是一张包含动物耳朵的人物卡通表情包，画面下方有文字“欢迎新朋友”。这个表情包通常用于表达对新朋友的欢迎和友好。
+2025-11-27 09:22:21 INFO     [sticker] Scanning unregistered stickers
+2025-11-27 09:22:21 INFO     [sticker] found sticker welcome.jpg
+2025-11-27 09:22:25 INFO     [sticker] Registered sticker: 这是一张卡通小狗表情包，狗头上顶着一个黑色的蝴蝶结，眼睛戴着紫色的眼罩，表情轻松愉快。表情包的文字部分是“欢迎新朋友”。这种表情包通常适用于在聊天或消息中欢迎新加入的人或新朋友。
+2025-11-27 11:22:25 INFO     [sticker] Scanning unregistered stickers
+2025-11-27 11:22:25 INFO     [sticker] found sticker welcome.jpg
+2025-11-27 11:22:30 INFO     [sticker] Registered sticker: 这张表情包展示了一个戴太阳镜、耳朵上有蝴蝶结的小白兔。它的脸上带有黑色条纹，眼睛下方有一颗紫色星星，嘴边有点红润，表情非常可爱。底部有中文文字“欢迎新朋友——”，贴纸的背景是黑色，边缘有装饰性的波浪线条。这个表情包常用于欢迎新用户或朋友的情景中，体现友好的气氛。
+2025-11-27 13:22:30 INFO     [sticker] Scanning unregistered stickers
+2025-11-27 13:22:30 INFO     [sticker] found sticker welcome.jpg
+2025-11-27 13:22:34 INFO     [sticker] Registered sticker: 这张表情包显示了一个具有兔耳朵和猫尾巴的卡通形象，表情包内还有一句中文文字“欢迎新朋友”。聊天中在向新加入的朋友打招呼时可以使用这个表情包。
+2025-11-30 14:53:23 INFO     [bilibili_adapter] B站凭证初始化成功
+2025-11-30 14:53:42 INFO     [launcher] 
+2025-11-30 14:53:42 INFO     [launcher]       _  ___              _    ___ 
+2025-11-30 14:53:42 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-30 14:53:42 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-30 14:53:42 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-30 14:53:42 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-30 14:53:42 INFO     [launcher] 
+2025-11-30 14:53:42 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-30 14:53:47 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-30 14:53:47 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-30 14:53:47 INFO     [tool_manager] Registered tool: bilibili
+2025-11-30 14:53:47 INFO     [tool_manager] Registered tool: memory_add
+2025-11-30 14:53:47 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-30 14:53:47 INFO     [tool_manager] Registered tool: memory_update
+2025-11-30 14:53:48 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-30 14:53:48 INFO     [memory_manager] MemoryManager initialized
+2025-11-30 14:53:48 INFO     [prompt_manager] PromptManager initialized
+2025-11-30 14:53:48 INFO     [message_processor] MessageProcessor initialized
+2025-11-30 14:53:48 INFO     [tool_manager] Registered tool: send_message
+2025-11-30 14:53:48 INFO     [tool_manager] Registered tool: ntfy
+2025-11-30 14:53:48 INFO     [tool_manager] Registered tool: search
+2025-11-30 14:53:48 INFO     [lifecycle] Starting bot...
+2025-11-30 14:53:48 INFO     [bilibili_adapter] B站凭证初始化成功
+2025-11-30 14:53:48 INFO     [runtime] Adapters set: ['qq', 'qq_guild', 'bilibili']
+2025-11-30 14:53:48 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-30 14:53:48 INFO     [qq_guild_adapter] QQ频道适配器启动中...
+2025-11-30 14:53:48 INFO     [bilibili_adapter] 启动B站适配器...
+2025-11-30 14:53:48 WARNING  [bilibili_adapter] bilibili_api.message模块不可用，私信功能已禁用
+2025-11-30 14:53:48 WARNING  [bilibili_adapter] 评论回复已启用但未配置监听目标（monitor_video_ids 或 monitor_dynamic_ids）
+2025-11-30 14:53:48 INFO     [bilibili_adapter] B站适配器已启动
+2025-11-30 14:53:48 INFO     [sticker] Scanning unregistered stickers
+2025-11-30 14:53:48 INFO     [sticker] All stickers are already registered
+2025-11-30 14:53:48 INFO     [lifecycle] Started adapter QQ
+2025-11-30 14:53:48 INFO     [lifecycle] Started adapter QQ Guild
+2025-11-30 14:53:48 INFO     [lifecycle] Started adapter Bilibili
+2025-11-30 14:53:49 ERROR    [qq_guild_adapter] QQ频道Bot启动失败: 接口访问源IP不在白名单
+2025-11-30 14:53:49 ERROR    [qq_guild_adapter] Traceback (most recent call last):
+  File "C:\Users\Hirunohoshi\myprojects\KiraAI_Yui\adapters\qq_guild\qq_guild.py", line 137, in _start_blocking
+    self.bot.run(appid=self.app_id, secret=self.secret)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\client.py", line 135, in run
+    self.loop.run_until_complete(runner())
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\client.py", line 132, in runner
+    await self.start(*args, **kwargs)
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\client.py", line 158, in start
+    await self._bot_login(token)
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\client.py", line 164, in _bot_login
+    user = await self.http.login(token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\http.py", line 205, in login
+    data = await self.request(Route("GET", "/users/@me"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\http.py", line 190, in request
+    return await _handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\http.py", line 86, in _handle_response
+    raise error_dict_get(msg=message) from None
+botpy.errors.AuthenticationFailedError: 接口访问源IP不在白名单
+
+2025-11-30 14:55:45 INFO     [launcher] Exiting...
+2025-11-30 14:55:48 INFO     [launcher] 
+2025-11-30 14:55:48 INFO     [launcher]       _  ___              _    ___ 
+2025-11-30 14:55:48 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-30 14:55:48 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-30 14:55:48 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-30 14:55:48 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-30 14:55:48 INFO     [launcher] 
+2025-11-30 14:55:48 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-30 14:55:53 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-30 14:55:53 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-30 14:55:53 INFO     [tool_manager] Registered tool: bilibili
+2025-11-30 14:55:53 INFO     [tool_manager] Registered tool: memory_add
+2025-11-30 14:55:53 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-30 14:55:53 INFO     [tool_manager] Registered tool: memory_update
+2025-11-30 14:55:54 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-30 14:55:54 INFO     [memory_manager] MemoryManager initialized
+2025-11-30 14:55:54 INFO     [prompt_manager] PromptManager initialized
+2025-11-30 14:55:54 INFO     [message_processor] MessageProcessor initialized
+2025-11-30 14:55:54 INFO     [tool_manager] Registered tool: send_message
+2025-11-30 14:55:54 INFO     [tool_manager] Registered tool: ntfy
+2025-11-30 14:55:54 INFO     [tool_manager] Registered tool: search
+2025-11-30 14:55:54 INFO     [lifecycle] Starting bot...
+2025-11-30 14:55:54 INFO     [bilibili_adapter] B站凭证初始化成功
+2025-11-30 14:55:54 INFO     [runtime] Adapters set: ['qq', 'qq_guild', 'bilibili']
+2025-11-30 14:55:54 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-30 14:55:54 INFO     [qq_guild_adapter] QQ频道适配器启动中...
+2025-11-30 14:55:54 INFO     [bilibili_adapter] 启动B站适配器...
+2025-11-30 14:55:54 WARNING  [bilibili_adapter] bilibili_api.message模块不可用，私信功能已禁用
+2025-11-30 14:55:54 INFO     [bilibili_adapter] 评论监听已启动
+2025-11-30 14:55:54 INFO     [bilibili_adapter] B站适配器已启动
+2025-11-30 14:55:54 INFO     [sticker] Scanning unregistered stickers
+2025-11-30 14:55:54 INFO     [sticker] All stickers are already registered
+2025-11-30 14:55:54 INFO     [lifecycle] Started adapter QQ
+2025-11-30 14:55:54 INFO     [lifecycle] Started adapter QQ Guild
+2025-11-30 14:55:54 INFO     [bilibili_adapter] 开始监听B站评论...
+2025-11-30 14:55:54 INFO     [lifecycle] Started adapter Bilibili
+2025-11-30 14:55:54 ERROR    [bilibili_adapter] 处理视频 BV1FFU5B8EvN 的评论失败: 'Video' object has no attribute 'get_comments'
+2025-11-30 14:55:55 ERROR    [qq_guild_adapter] QQ频道Bot启动失败: 接口访问源IP不在白名单
+2025-11-30 14:55:55 ERROR    [qq_guild_adapter] Traceback (most recent call last):
+  File "C:\Users\Hirunohoshi\myprojects\KiraAI_Yui\adapters\qq_guild\qq_guild.py", line 137, in _start_blocking
+    self.bot.run(appid=self.app_id, secret=self.secret)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\client.py", line 135, in run
+    self.loop.run_until_complete(runner())
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\client.py", line 132, in runner
+    await self.start(*args, **kwargs)
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\client.py", line 158, in start
+    await self._bot_login(token)
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\client.py", line 164, in _bot_login
+    user = await self.http.login(token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\http.py", line 205, in login
+    data = await self.request(Route("GET", "/users/@me"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\http.py", line 190, in request
+    return await _handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\botpy\http.py", line 86, in _handle_response
+    raise error_dict_get(msg=message) from None
+botpy.errors.AuthenticationFailedError: 接口访问源IP不在白名单
+
+2025-11-30 14:56:38 INFO     [launcher] Exiting...
+2025-11-30 14:56:40 INFO     [launcher] 
+2025-11-30 14:56:40 INFO     [launcher]       _  ___              _    ___ 
+2025-11-30 14:56:40 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-30 14:56:40 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-30 14:56:40 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-30 14:56:40 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-30 14:56:40 INFO     [launcher] 
+2025-11-30 14:56:40 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-30 14:56:45 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-30 14:56:45 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-30 14:56:45 INFO     [tool_manager] Registered tool: bilibili
+2025-11-30 14:56:45 INFO     [tool_manager] Registered tool: memory_add
+2025-11-30 14:56:45 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-30 14:56:45 INFO     [tool_manager] Registered tool: memory_update
+2025-11-30 14:56:46 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-30 14:56:46 INFO     [memory_manager] MemoryManager initialized
+2025-11-30 14:56:46 INFO     [prompt_manager] PromptManager initialized
+2025-11-30 14:56:46 INFO     [message_processor] MessageProcessor initialized
+2025-11-30 14:56:46 INFO     [tool_manager] Registered tool: send_message
+2025-11-30 14:56:46 INFO     [tool_manager] Registered tool: ntfy
+2025-11-30 14:56:46 INFO     [tool_manager] Registered tool: search
+2025-11-30 14:56:46 INFO     [lifecycle] Starting bot...
+2025-11-30 14:56:46 INFO     [bilibili_adapter] B站凭证初始化成功
+2025-11-30 14:56:46 INFO     [runtime] Adapters set: ['bilibili']
+2025-11-30 14:56:46 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-30 14:56:46 INFO     [bilibili_adapter] 启动B站适配器...
+2025-11-30 14:56:46 WARNING  [bilibili_adapter] bilibili_api.message模块不可用，私信功能已禁用
+2025-11-30 14:56:46 INFO     [bilibili_adapter] 评论监听已启动
+2025-11-30 14:56:46 INFO     [bilibili_adapter] B站适配器已启动
+2025-11-30 14:56:46 INFO     [sticker] Scanning unregistered stickers
+2025-11-30 14:56:46 INFO     [sticker] All stickers are already registered
+2025-11-30 14:56:46 INFO     [bilibili_adapter] 开始监听B站评论...
+2025-11-30 14:56:46 INFO     [lifecycle] Started adapter Bilibili
+2025-11-30 14:56:46 ERROR    [bilibili_adapter] 处理视频 BV1FFU5B8EvN 的评论失败: 'Video' object has no attribute 'get_comments'
+2025-11-30 14:57:46 ERROR    [bilibili_adapter] 处理视频 BV1FFU5B8EvN 的评论失败: 'Video' object has no attribute 'get_comments'
+2025-11-30 14:58:47 ERROR    [bilibili_adapter] 处理视频 BV1FFU5B8EvN 的评论失败: 'Video' object has no attribute 'get_comments'
+2025-11-30 14:59:47 ERROR    [bilibili_adapter] 处理视频 BV1FFU5B8EvN 的评论失败: 'Video' object has no attribute 'get_comments'
+2025-11-30 14:59:54 INFO     [launcher] Exiting...
+2025-11-30 14:59:56 INFO     [launcher] 
+2025-11-30 14:59:56 INFO     [launcher]       _  ___              _    ___ 
+2025-11-30 14:59:56 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-30 14:59:56 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-30 14:59:56 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-30 14:59:56 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-30 14:59:56 INFO     [launcher] 
+2025-11-30 14:59:56 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-30 15:00:01 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-30 15:00:01 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-30 15:00:01 INFO     [tool_manager] Registered tool: bilibili
+2025-11-30 15:00:01 INFO     [tool_manager] Registered tool: memory_add
+2025-11-30 15:00:01 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-30 15:00:01 INFO     [tool_manager] Registered tool: memory_update
+2025-11-30 15:00:02 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:00:02 INFO     [memory_manager] MemoryManager initialized
+2025-11-30 15:00:02 INFO     [prompt_manager] PromptManager initialized
+2025-11-30 15:00:02 INFO     [message_processor] MessageProcessor initialized
+2025-11-30 15:00:02 INFO     [tool_manager] Registered tool: send_message
+2025-11-30 15:00:02 INFO     [tool_manager] Registered tool: ntfy
+2025-11-30 15:00:02 INFO     [tool_manager] Registered tool: search
+2025-11-30 15:00:02 INFO     [lifecycle] Starting bot...
+2025-11-30 15:00:02 INFO     [bilibili_adapter] B站凭证初始化成功
+2025-11-30 15:00:02 INFO     [runtime] Adapters set: ['bilibili']
+2025-11-30 15:00:02 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-30 15:00:02 INFO     [bilibili_adapter] 启动B站适配器...
+2025-11-30 15:00:02 WARNING  [bilibili_adapter] bilibili_api.message模块不可用，私信功能已禁用
+2025-11-30 15:00:02 INFO     [bilibili_adapter] 评论监听已启动
+2025-11-30 15:00:02 INFO     [bilibili_adapter] B站适配器已启动
+2025-11-30 15:00:02 INFO     [sticker] Scanning unregistered stickers
+2025-11-30 15:00:02 INFO     [sticker] All stickers are already registered
+2025-11-30 15:00:02 INFO     [bilibili_adapter] 开始监听B站评论...
+2025-11-30 15:00:02 INFO     [lifecycle] Started adapter Bilibili
+2025-11-30 15:00:02 ERROR    [bilibili_adapter] 处理视频 BV1FFU5B8EvN 的评论失败: 'NoneType' object is not subscriptable
+2025-11-30 15:01:03 ERROR    [bilibili_adapter] 处理视频 BV1FFU5B8EvN 的评论失败: 'NoneType' object is not subscriptable
+2025-11-30 15:01:06 INFO     [launcher] Exiting...
+2025-11-30 15:01:08 INFO     [launcher] 
+2025-11-30 15:01:08 INFO     [launcher]       _  ___              _    ___ 
+2025-11-30 15:01:08 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-30 15:01:08 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-30 15:01:08 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-30 15:01:08 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-30 15:01:08 INFO     [launcher] 
+2025-11-30 15:01:08 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-30 15:01:13 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-30 15:01:13 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-30 15:01:13 INFO     [tool_manager] Registered tool: bilibili
+2025-11-30 15:01:13 INFO     [tool_manager] Registered tool: memory_add
+2025-11-30 15:01:13 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-30 15:01:13 INFO     [tool_manager] Registered tool: memory_update
+2025-11-30 15:01:14 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:01:14 INFO     [memory_manager] MemoryManager initialized
+2025-11-30 15:01:14 INFO     [prompt_manager] PromptManager initialized
+2025-11-30 15:01:14 INFO     [message_processor] MessageProcessor initialized
+2025-11-30 15:01:14 INFO     [tool_manager] Registered tool: send_message
+2025-11-30 15:01:14 INFO     [tool_manager] Registered tool: ntfy
+2025-11-30 15:01:14 INFO     [tool_manager] Registered tool: search
+2025-11-30 15:01:15 INFO     [lifecycle] Starting bot...
+2025-11-30 15:01:15 INFO     [bilibili_adapter] B站凭证初始化成功
+2025-11-30 15:01:15 INFO     [runtime] Adapters set: ['bilibili']
+2025-11-30 15:01:15 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-30 15:01:15 INFO     [bilibili_adapter] 启动B站适配器...
+2025-11-30 15:01:15 WARNING  [bilibili_adapter] bilibili_api.message模块不可用，私信功能已禁用
+2025-11-30 15:01:15 INFO     [bilibili_adapter] 评论监听已启动
+2025-11-30 15:01:15 INFO     [bilibili_adapter] B站适配器已启动
+2025-11-30 15:01:15 INFO     [sticker] Scanning unregistered stickers
+2025-11-30 15:01:15 INFO     [sticker] All stickers are already registered
+2025-11-30 15:01:15 INFO     [bilibili_adapter] 开始监听B站评论...
+2025-11-30 15:01:15 INFO     [lifecycle] Started adapter Bilibili
+2025-11-30 15:01:15 DEBUG    [bilibili_adapter] 视频 BV1FFU5B8EvN 暂无评论
+2025-11-30 15:02:15 DEBUG    [bilibili_adapter] 视频 BV1FFU5B8EvN 暂无评论
+2025-11-30 15:03:15 DEBUG    [bilibili_adapter] 视频 BV1FFU5B8EvN 暂无评论
+2025-11-30 15:04:03 INFO     [launcher] Exiting...
+2025-11-30 15:04:05 INFO     [launcher] 
+2025-11-30 15:04:05 INFO     [launcher]       _  ___              _    ___ 
+2025-11-30 15:04:05 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-30 15:04:05 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-30 15:04:05 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-30 15:04:05 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-30 15:04:05 INFO     [launcher] 
+2025-11-30 15:04:05 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-30 15:04:10 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-30 15:04:10 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-30 15:04:10 INFO     [tool_manager] Registered tool: bilibili
+2025-11-30 15:04:10 INFO     [tool_manager] Registered tool: memory_add
+2025-11-30 15:04:10 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-30 15:04:10 INFO     [tool_manager] Registered tool: memory_update
+2025-11-30 15:04:11 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:04:11 INFO     [memory_manager] MemoryManager initialized
+2025-11-30 15:04:11 INFO     [prompt_manager] PromptManager initialized
+2025-11-30 15:04:11 INFO     [message_processor] MessageProcessor initialized
+2025-11-30 15:04:11 INFO     [tool_manager] Registered tool: send_message
+2025-11-30 15:04:11 INFO     [tool_manager] Registered tool: ntfy
+2025-11-30 15:04:11 INFO     [tool_manager] Registered tool: search
+2025-11-30 15:04:11 INFO     [lifecycle] Starting bot...
+2025-11-30 15:04:11 INFO     [bilibili_adapter] B站凭证初始化成功
+2025-11-30 15:04:11 INFO     [runtime] Adapters set: ['bilibili']
+2025-11-30 15:04:11 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-30 15:04:11 INFO     [bilibili_adapter] 启动B站适配器...
+2025-11-30 15:04:11 WARNING  [bilibili_adapter] bilibili_api.message模块不可用，私信功能已禁用
+2025-11-30 15:04:11 INFO     [bilibili_adapter] 评论监听已启动
+2025-11-30 15:04:11 INFO     [bilibili_adapter] B站适配器已启动
+2025-11-30 15:04:11 INFO     [sticker] Scanning unregistered stickers
+2025-11-30 15:04:11 INFO     [sticker] All stickers are already registered
+2025-11-30 15:04:11 INFO     [bilibili_adapter] 开始监听B站评论...
+2025-11-30 15:04:11 INFO     [lifecycle] Started adapter Bilibili
+2025-11-30 15:04:12 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['page', 'config', 'replies', 'upper', 'top', 'vote', 'blacklist', 'assist', 'mode', 'support_mode', 'control', 'folder']
+2025-11-30 15:04:12 INFO     [bilibili_adapter] 视频 BV1FFU5B8EvN 评论数据结构 - 顶层keys: ['page', 'config', 'replies', 'upper', 'top', 'vote', 'blacklist', 'assist', 'mode', 'support_mode', 'control', 'folder']
+2025-11-30 15:04:12 DEBUG    [bilibili_adapter] 评论数据预览: {
+  "page": {
+    "num": 0,
+    "size": 0,
+    "count": 0,
+    "acount": 0
+  },
+  "config": {
+    "showtopic": 0,
+    "show_up_flag": false,
+    "read_only": false
+  },
+  "replies": null,
+  "upper": {
+    "mid": 0,
+    "top": null,
+    "vote": null
+  },
+  "top": null,
+  "vote": 0,
+  "blacklist": 0,
+  "assist": 0,
+  "mode": 0,
+  "support_mode": null,
+  "control": {
+    "input_disable": false,
+    "root_input_text": "",
+    "child_input_text": "",
+    "giveup_input_text": "",
+    "screenshot_icon_
+2025-11-30 15:04:12 INFO     [bilibili_adapter] 视频 BV1FFU5B8EvN 暂无评论或评论格式异常，请检查上述日志
+2025-11-30 15:05:07 INFO     [launcher] Exiting...
+2025-11-30 15:05:09 INFO     [launcher] 
+2025-11-30 15:05:09 INFO     [launcher]       _  ___              _    ___ 
+2025-11-30 15:05:09 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-30 15:05:09 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-30 15:05:09 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-30 15:05:09 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-30 15:05:09 INFO     [launcher] 
+2025-11-30 15:05:09 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-30 15:05:14 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-30 15:05:14 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-30 15:05:14 INFO     [tool_manager] Registered tool: bilibili
+2025-11-30 15:05:14 INFO     [tool_manager] Registered tool: memory_add
+2025-11-30 15:05:14 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-30 15:05:14 INFO     [tool_manager] Registered tool: memory_update
+2025-11-30 15:05:15 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:05:15 INFO     [memory_manager] MemoryManager initialized
+2025-11-30 15:05:15 INFO     [prompt_manager] PromptManager initialized
+2025-11-30 15:05:15 INFO     [message_processor] MessageProcessor initialized
+2025-11-30 15:05:15 INFO     [tool_manager] Registered tool: send_message
+2025-11-30 15:05:15 INFO     [tool_manager] Registered tool: ntfy
+2025-11-30 15:05:15 INFO     [tool_manager] Registered tool: search
+2025-11-30 15:05:15 INFO     [lifecycle] Starting bot...
+2025-11-30 15:05:15 INFO     [bilibili_adapter] B站凭证初始化成功
+2025-11-30 15:05:15 INFO     [runtime] Adapters set: ['bilibili']
+2025-11-30 15:05:15 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-30 15:05:15 INFO     [bilibili_adapter] 启动B站适配器...
+2025-11-30 15:05:15 WARNING  [bilibili_adapter] bilibili_api.message模块不可用，私信功能已禁用
+2025-11-30 15:05:15 INFO     [bilibili_adapter] 评论监听已启动
+2025-11-30 15:05:15 INFO     [bilibili_adapter] B站适配器已启动
+2025-11-30 15:05:15 INFO     [sticker] Scanning unregistered stickers
+2025-11-30 15:05:15 INFO     [sticker] All stickers are already registered
+2025-11-30 15:05:15 INFO     [bilibili_adapter] 开始监听B站评论...
+2025-11-30 15:05:15 INFO     [lifecycle] Started adapter Bilibili
+2025-11-30 15:05:16 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['page', 'config', 'replies', 'upper', 'top', 'vote', 'blacklist', 'assist', 'mode', 'support_mode', 'control', 'folder']
+2025-11-30 15:05:16 DEBUG    [bilibili_adapter] 视频 BV1FFU5B8EvN 评论统计 - 总数: 0, 实际数: 0
+2025-11-30 15:05:16 DEBUG    [bilibili_adapter] replies字段为None，初始化为空列表
+2025-11-30 15:05:16 DEBUG    [bilibili_adapter] 视频 BV1FFU5B8EvN 暂无评论 (总数: 0, 实际: 0)
+2025-11-30 15:06:16 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['page', 'config', 'replies', 'upper', 'top', 'vote', 'blacklist', 'assist', 'mode', 'support_mode', 'control', 'folder']
+2025-11-30 15:06:16 DEBUG    [bilibili_adapter] 视频 BV1FFU5B8EvN 评论统计 - 总数: 0, 实际数: 0
+2025-11-30 15:06:16 DEBUG    [bilibili_adapter] replies字段为None，初始化为空列表
+2025-11-30 15:06:16 DEBUG    [bilibili_adapter] 视频 BV1FFU5B8EvN 暂无评论 (总数: 0, 实际: 0)
+2025-11-30 15:07:16 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['page', 'config', 'replies', 'upper', 'top', 'vote', 'blacklist', 'assist', 'mode', 'support_mode', 'control', 'folder']
+2025-11-30 15:07:16 DEBUG    [bilibili_adapter] 视频 BV1FFU5B8EvN 评论统计 - 总数: 0, 实际数: 0
+2025-11-30 15:07:16 DEBUG    [bilibili_adapter] replies字段为None，初始化为空列表
+2025-11-30 15:07:16 DEBUG    [bilibili_adapter] 视频 BV1FFU5B8EvN 暂无评论 (总数: 0, 实际: 0)
+2025-11-30 15:08:17 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['page', 'config', 'replies', 'upper', 'top', 'vote', 'blacklist', 'assist', 'mode', 'support_mode', 'control', 'folder']
+2025-11-30 15:08:17 DEBUG    [bilibili_adapter] 视频 BV1FFU5B8EvN 评论统计 - 总数: 0, 实际数: 0
+2025-11-30 15:08:17 DEBUG    [bilibili_adapter] replies字段为None，初始化为空列表
+2025-11-30 15:08:17 DEBUG    [bilibili_adapter] 视频 BV1FFU5B8EvN 暂无评论 (总数: 0, 实际: 0)
+2025-11-30 15:08:58 INFO     [launcher] Exiting...
+2025-11-30 15:09:00 INFO     [launcher] 
+2025-11-30 15:09:00 INFO     [launcher]       _  ___              _    ___ 
+2025-11-30 15:09:00 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-30 15:09:00 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-30 15:09:00 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-30 15:09:00 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-30 15:09:00 INFO     [launcher] 
+2025-11-30 15:09:00 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-30 15:09:05 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-30 15:09:05 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-30 15:09:05 INFO     [tool_manager] Registered tool: bilibili
+2025-11-30 15:09:05 INFO     [tool_manager] Registered tool: memory_add
+2025-11-30 15:09:05 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-30 15:09:05 INFO     [tool_manager] Registered tool: memory_update
+2025-11-30 15:09:05 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:09:05 INFO     [memory_manager] MemoryManager initialized
+2025-11-30 15:09:05 INFO     [prompt_manager] PromptManager initialized
+2025-11-30 15:09:05 INFO     [message_processor] MessageProcessor initialized
+2025-11-30 15:09:05 INFO     [tool_manager] Registered tool: send_message
+2025-11-30 15:09:05 INFO     [tool_manager] Registered tool: ntfy
+2025-11-30 15:09:06 INFO     [tool_manager] Registered tool: search
+2025-11-30 15:09:06 INFO     [lifecycle] Starting bot...
+2025-11-30 15:09:06 INFO     [bilibili_adapter] B站凭证初始化成功
+2025-11-30 15:09:06 INFO     [runtime] Adapters set: ['bilibili']
+2025-11-30 15:09:06 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-30 15:09:06 INFO     [bilibili_adapter] 启动B站适配器...
+2025-11-30 15:09:06 WARNING  [bilibili_adapter] bilibili_api.message模块不可用，私信功能已禁用
+2025-11-30 15:09:06 INFO     [bilibili_adapter] 评论监听已启动
+2025-11-30 15:09:06 INFO     [bilibili_adapter] B站适配器已启动
+2025-11-30 15:09:06 INFO     [sticker] Scanning unregistered stickers
+2025-11-30 15:09:06 INFO     [sticker] All stickers are already registered
+2025-11-30 15:09:06 INFO     [bilibili_adapter] 开始监听B站评论...
+2025-11-30 15:09:06 INFO     [lifecycle] Started adapter Bilibili
+2025-11-30 15:09:06 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:09:06 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:09:06 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:09:06 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:09:06 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:09:06 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:09:06 ERROR    [bilibili_adapter] 处理评论失败: 'Comment' object has no attribute 'rpid'
+2025-11-30 15:09:07 ERROR    [bilibili_adapter] 处理评论失败: 'Comment' object has no attribute 'rpid'
+2025-11-30 15:09:08 ERROR    [bilibili_adapter] 处理评论失败: 'Comment' object has no attribute 'rpid'
+2025-11-30 15:09:09 ERROR    [bilibili_adapter] 处理评论失败: 'Comment' object has no attribute 'rpid'
+2025-11-30 15:10:11 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:10:11 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:10:11 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:10:11 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:10:11 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:10:11 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:10:11 ERROR    [bilibili_adapter] 处理评论失败: 'Comment' object has no attribute 'rpid'
+2025-11-30 15:10:12 ERROR    [bilibili_adapter] 处理评论失败: 'Comment' object has no attribute 'rpid'
+2025-11-30 15:10:13 ERROR    [bilibili_adapter] 处理评论失败: 'Comment' object has no attribute 'rpid'
+2025-11-30 15:10:14 ERROR    [bilibili_adapter] 处理评论失败: 'Comment' object has no attribute 'rpid'
+2025-11-30 15:10:29 INFO     [launcher] Exiting...
+2025-11-30 15:10:31 INFO     [launcher] 
+2025-11-30 15:10:31 INFO     [launcher]       _  ___              _    ___ 
+2025-11-30 15:10:31 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-30 15:10:31 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-30 15:10:31 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-30 15:10:31 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-30 15:10:31 INFO     [launcher] 
+2025-11-30 15:10:31 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-30 15:10:36 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-30 15:10:36 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-30 15:10:36 INFO     [tool_manager] Registered tool: bilibili
+2025-11-30 15:10:36 INFO     [tool_manager] Registered tool: memory_add
+2025-11-30 15:10:36 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-30 15:10:36 INFO     [tool_manager] Registered tool: memory_update
+2025-11-30 15:10:36 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:10:36 INFO     [memory_manager] MemoryManager initialized
+2025-11-30 15:10:36 INFO     [prompt_manager] PromptManager initialized
+2025-11-30 15:10:36 INFO     [message_processor] MessageProcessor initialized
+2025-11-30 15:10:36 INFO     [tool_manager] Registered tool: send_message
+2025-11-30 15:10:36 INFO     [tool_manager] Registered tool: ntfy
+2025-11-30 15:10:37 INFO     [tool_manager] Registered tool: search
+2025-11-30 15:10:37 INFO     [lifecycle] Starting bot...
+2025-11-30 15:10:37 INFO     [bilibili_adapter] B站凭证初始化成功
+2025-11-30 15:10:37 INFO     [runtime] Adapters set: ['bilibili']
+2025-11-30 15:10:37 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-30 15:10:37 INFO     [bilibili_adapter] 启动B站适配器...
+2025-11-30 15:10:37 WARNING  [bilibili_adapter] bilibili_api.message模块不可用，私信功能已禁用
+2025-11-30 15:10:37 INFO     [bilibili_adapter] 评论监听已启动
+2025-11-30 15:10:37 INFO     [bilibili_adapter] B站适配器已启动
+2025-11-30 15:10:37 INFO     [sticker] Scanning unregistered stickers
+2025-11-30 15:10:37 INFO     [sticker] All stickers are already registered
+2025-11-30 15:10:37 INFO     [bilibili_adapter] 开始监听B站评论...
+2025-11-30 15:10:37 INFO     [lifecycle] Started adapter Bilibili
+2025-11-30 15:10:37 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:10:37 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:10:37 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:10:37 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:10:37 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:10:37 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:10:37 INFO     [bilibili_adapter] 收到B站评论: 猫娘计划(3546576295299130) -> 「猫娘计划」已上架！现在【关注本账号】和【添加steam愿望单】，就能成为原始股东，在第一时间加入「
+2025-11-30 15:10:37 INFO     [message_processor] 收到来自bilibili的群聊消息
+2025-11-30 15:10:38 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-30 15:10:38 INFO     [message_processor] processing message(s) from bilibili:
+[received_time: Nov 30 2025 15:10 Sun message_id: 283090895952] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 猫娘计划, user_id: 3546576295299130] | 「猫娘计划」已上架！现在【关注本账号】和【添加steam愿望单】，就能成为原始股东，在第一时间加入「猫娘计划」～
+每新增1万点赞/收藏和关注，我们都将为各位原始股东抽送1份周边礼物，所有评论的原始股东都将收到官方致谢(๑>؂<๑）
+快来一起探索「飞升二次元」的旅程吧！(*°▽°*)八(*°▽°*)♪
+
+Steam传送门：https://store.steampowered.com/app/4099310/__NEKO/
+QQ交流频道：（见图）
+
+2025-11-30 15:10:42 INFO     [message_processor] 消息通过filter检查: 消息内容为推广活动，未涉及政治、敏感话题或性别争议，符合安全内容标准。, 回复意愿: 0.80
+2025-11-30 15:10:42 INFO     [llm] checking tools and generating response using Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:10:45 INFO     [tool_use] comment_bilibili_video args: {'original_url': 'https://www.bilibili.com/video/115586898068890'}
+2025-11-30 15:10:45 INFO     [tool_use] tool_result: list index out of range
+2025-11-30 15:10:45 INFO     [llm] generating response after tool calls using Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:10:49 WARNING  [bilibili_adapter] B站适配器暂不支持通过send_group_message发送评论回复
+2025-11-30 15:10:51 WARNING  [bilibili_adapter] B站适配器暂不支持通过send_group_message发送评论回复
+2025-11-30 15:10:52 INFO     [message_processor] LLM: <msg message_id="">
+    <text>诶嘿~看来是系统错误喵~不过「猫娘计划」真的好期待呢！(*°▽°*)八(*°▽°*)♪</text>
+</msg>
+<msg message_id="">
+    <text>关注本账号和添加愿望单就能成为原始股东，还能抽周边礼物喵~</text>
+</msg>
+2025-11-30 15:10:52 INFO     [memory_manager] Group memory updated for bilibili:gm:115586898068890
+2025-11-30 15:10:54 INFO     [launcher] Exiting...
+2025-11-30 15:12:13 INFO     [launcher] 
+2025-11-30 15:12:13 INFO     [launcher]       _  ___              _    ___ 
+2025-11-30 15:12:13 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-30 15:12:13 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-30 15:12:13 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-30 15:12:13 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-30 15:12:13 INFO     [launcher] 
+2025-11-30 15:12:13 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-30 15:12:19 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-30 15:12:19 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-30 15:12:19 INFO     [tool_manager] Registered tool: bilibili
+2025-11-30 15:12:19 INFO     [tool_manager] Registered tool: memory_add
+2025-11-30 15:12:19 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-30 15:12:19 INFO     [tool_manager] Registered tool: memory_update
+2025-11-30 15:12:20 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:12:20 INFO     [memory_manager] MemoryManager initialized
+2025-11-30 15:12:20 INFO     [prompt_manager] PromptManager initialized
+2025-11-30 15:12:20 INFO     [message_processor] MessageProcessor initialized
+2025-11-30 15:12:20 INFO     [tool_manager] Registered tool: send_message
+2025-11-30 15:12:20 INFO     [tool_manager] Registered tool: ntfy
+2025-11-30 15:12:20 INFO     [tool_manager] Registered tool: search
+2025-11-30 15:12:21 INFO     [lifecycle] Starting bot...
+2025-11-30 15:12:21 INFO     [bilibili_adapter] B站凭证初始化成功
+2025-11-30 15:12:21 INFO     [runtime] Adapters set: ['bilibili']
+2025-11-30 15:12:21 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-30 15:12:21 INFO     [bilibili_adapter] 启动B站适配器...
+2025-11-30 15:12:21 WARNING  [bilibili_adapter] bilibili_api.message模块不可用，私信功能已禁用
+2025-11-30 15:12:21 INFO     [bilibili_adapter] 评论监听已启动
+2025-11-30 15:12:21 INFO     [bilibili_adapter] B站适配器已启动
+2025-11-30 15:12:21 INFO     [sticker] Scanning unregistered stickers
+2025-11-30 15:12:21 INFO     [sticker] All stickers are already registered
+2025-11-30 15:12:21 INFO     [bilibili_adapter] 开始监听B站评论...
+2025-11-30 15:12:21 INFO     [lifecycle] Started adapter Bilibili
+2025-11-30 15:12:21 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:12:21 INFO     [bilibili_adapter] 正在加载视频 BV1FFU5B8EvN 的初始评论列表（用于过滤历史评论）...
+2025-11-30 15:12:21 INFO     [bilibili_adapter] 已加载 4 条历史评论，将只处理新评论
+2025-11-30 15:12:21 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:12:21 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:12:21 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:12:21 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:12:21 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:12:21 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:12:21 DEBUG    [bilibili_adapter] 评论 283944567296 已处理过，跳过
+2025-11-30 15:12:21 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:12:21 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:13:21 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:13:21 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:13:21 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:13:21 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:13:21 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:13:21 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:13:21 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:13:21 INFO     [bilibili_adapter] 发现新评论: 283945160784
+2025-11-30 15:13:21 INFO     [bilibili_adapter] 收到B站评论: 云韶未来创客(1686388740) -> 你是
+2025-11-30 15:13:21 INFO     [message_processor] 收到来自bilibili的群聊消息
+2025-11-30 15:13:22 DEBUG    [bilibili_adapter] 评论 283944567296 已处理过，跳过
+2025-11-30 15:13:22 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:13:22 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-30 15:13:22 INFO     [message_processor] processing message(s) from bilibili:
+[received_time: Nov 30 2025 15:13 Sun message_id: 283945160784] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 云韶未来创客, user_id: 1686388740] | 你是
+
+2025-11-30 15:13:27 INFO     [message_processor] 消息通过filter检查: 消息内容为普通聊天，未涉及政治、敏感、哈基米或性别争议话题, 回复意愿: 0.80
+2025-11-30 15:13:27 INFO     [llm] checking tools and generating response using Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:13:33 WARNING  [bilibili_adapter] B站适配器暂不支持通过send_group_message发送评论回复
+2025-11-30 15:13:34 INFO     [message_processor] LLM: <msg message_id="">
+    <text>喵~我是林悠怡，也可以叫我悠怡、小悠或Yui哦！是「猫娘计划」的看板娘，在群里@我或者提到我的名字我就会回复你喵~</text>
+</msg>
+2025-11-30 15:13:34 INFO     [memory_manager] Group memory updated for bilibili:gm:115586898068890
+2025-11-30 15:14:23 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:14:23 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:14:23 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:14:23 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:14:23 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:14:23 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:14:23 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:14:23 DEBUG    [bilibili_adapter] 评论 283945160784 已处理过，跳过
+2025-11-30 15:14:23 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:14:23 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:15:23 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:15:23 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:15:23 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:15:23 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:15:23 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:15:23 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:15:23 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:15:23 DEBUG    [bilibili_adapter] 评论 283945160784 已处理过，跳过
+2025-11-30 15:15:23 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:15:23 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:16:10 INFO     [launcher] Exiting...
+2025-11-30 15:16:13 INFO     [launcher] 
+2025-11-30 15:16:13 INFO     [launcher]       _  ___              _    ___ 
+2025-11-30 15:16:13 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-30 15:16:13 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-30 15:16:13 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-30 15:16:13 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-30 15:16:13 INFO     [launcher] 
+2025-11-30 15:16:13 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-30 15:16:18 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-30 15:16:18 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-30 15:16:18 INFO     [tool_manager] Registered tool: bilibili
+2025-11-30 15:16:18 INFO     [tool_manager] Registered tool: memory_add
+2025-11-30 15:16:18 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-30 15:16:18 INFO     [tool_manager] Registered tool: memory_update
+2025-11-30 15:16:19 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:16:19 INFO     [memory_manager] MemoryManager initialized
+2025-11-30 15:16:19 INFO     [prompt_manager] PromptManager initialized
+2025-11-30 15:16:19 INFO     [message_processor] MessageProcessor initialized
+2025-11-30 15:16:19 INFO     [tool_manager] Registered tool: send_message
+2025-11-30 15:16:19 INFO     [tool_manager] Registered tool: ntfy
+2025-11-30 15:16:19 INFO     [tool_manager] Registered tool: search
+2025-11-30 15:16:19 INFO     [lifecycle] Starting bot...
+2025-11-30 15:16:19 INFO     [bilibili_adapter] B站凭证初始化成功
+2025-11-30 15:16:19 INFO     [runtime] Adapters set: ['bilibili']
+2025-11-30 15:16:19 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-30 15:16:19 INFO     [bilibili_adapter] 启动B站适配器...
+2025-11-30 15:16:19 WARNING  [bilibili_adapter] bilibili_api.message模块不可用，私信功能已禁用
+2025-11-30 15:16:19 INFO     [bilibili_adapter] 评论监听已启动
+2025-11-30 15:16:19 INFO     [bilibili_adapter] B站适配器已启动
+2025-11-30 15:16:19 INFO     [sticker] Scanning unregistered stickers
+2025-11-30 15:16:19 INFO     [sticker] All stickers are already registered
+2025-11-30 15:16:19 INFO     [bilibili_adapter] 开始监听B站评论...
+2025-11-30 15:16:19 INFO     [lifecycle] Started adapter Bilibili
+2025-11-30 15:16:20 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:16:20 INFO     [bilibili_adapter] 正在加载视频 BV1FFU5B8EvN 的初始评论列表（用于过滤历史评论）...
+2025-11-30 15:16:20 INFO     [bilibili_adapter] 已加载 4 条历史评论，将只处理新评论
+2025-11-30 15:16:20 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:16:20 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:16:20 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:16:20 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:16:20 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:16:20 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:16:20 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:16:20 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:16:20 DEBUG    [bilibili_adapter] 评论 282023635169 已处理过，跳过
+2025-11-30 15:17:20 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:17:20 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:17:20 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:17:20 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:17:20 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:17:20 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:17:20 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:17:20 INFO     [bilibili_adapter] 发现新评论: 283945461568
+2025-11-30 15:17:20 INFO     [bilibili_adapter] 收到B站评论: 云韶未来创客(1686388740) -> test
+2025-11-30 15:17:20 INFO     [message_processor] 收到来自bilibili的群聊消息
+2025-11-30 15:17:21 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:17:21 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:17:21 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-30 15:17:21 INFO     [message_processor] processing message(s) from bilibili:
+[received_time: Nov 30 2025 15:17 Sun message_id: 283945461568] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 云韶未来创客, user_id: 1686388740] | test
+
+2025-11-30 15:17:24 INFO     [message_processor] 消息通过filter检查: 消息内容为测试信息，未涉及政治、敏感、哈基米或性别争议话题，属于普通群聊安全消息。, 回复意愿: 0.50
+2025-11-30 15:17:24 INFO     [llm] checking tools and generating response using Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:17:25 INFO     [bilibili_adapter] 正在发布新评论到视频 115586898068890，内容: 测试？喵~没问题，我随时都在的喵~
+2025-11-30 15:17:26 ERROR    [bilibili_adapter] 发布评论失败: 接口返回错误代码：-101，信息：账号未登录。
+{'code': -101, 'message': '账号未登录', 'ttl': 1}
+2025-11-30 15:17:26 DEBUG    [bilibili_adapter] Traceback (most recent call last):
+  File "C:\Users\Hirunohoshi\myprojects\KiraAI_Yui\adapters\bilibili\bilibili_adapter.py", line 577, in send_group_message
+    result = await send_comment(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\comment.py", line 406, in send_comment
+    return await Api(**api, credential=credential).update_data(**data).result
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2326, in result
+    return await self.request()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2316, in request
+    raise e
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2309, in request
+    return await self._request(raw=raw, byte=byte)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2277, in _request
+    ret = self._process_response(resp=resp, raw=raw)
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2251, in _process_response
+    raise ResponseCodeException(code, msg, resp_data)
+bilibili_api.exceptions.ResponseCodeException.ResponseCodeException: 接口返回错误代码：-101，信息：账号未登录。
+{'code': -101, 'message': '账号未登录', 'ttl': 1}
+
+2025-11-30 15:17:27 INFO     [message_processor] LLM: <msg message_id="">
+    <text>测试？喵~没问题，我随时都在的！</text>
+</msg>
+2025-11-30 15:17:27 INFO     [memory_manager] Group memory updated for bilibili:gm:115586898068890
+2025-11-30 15:18:21 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:18:21 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:18:21 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:18:21 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:18:21 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:18:21 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:18:21 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:18:21 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:18:21 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:18:21 DEBUG    [bilibili_adapter] 评论 282023635169 已处理过，跳过
+2025-11-30 15:19:22 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:19:22 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:19:22 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:19:22 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:19:22 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:19:22 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:19:22 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:19:22 INFO     [bilibili_adapter] 发现新评论: 283945702464
+2025-11-30 15:19:22 INFO     [bilibili_adapter] 收到B站评论: 云韶未来创客(1686388740) -> test
+2025-11-30 15:19:22 INFO     [message_processor] 收到来自bilibili的群聊消息
+2025-11-30 15:19:23 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:19:23 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:19:23 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-30 15:19:23 INFO     [message_processor] processing message(s) from bilibili:
+[received_time: Nov 30 2025 15:19 Sun message_id: 283945702464] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 云韶未来创客, user_id: 1686388740] | test
+
+2025-11-30 15:19:24 INFO     [message_processor] 消息通过filter检查: 消息内容为测试信息，不涉及任何政治、敏感或争议话题，属于普通群聊安全消息。, 回复意愿: 0.80
+2025-11-30 15:19:24 INFO     [llm] checking tools and generating response using Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:19:26 INFO     [bilibili_adapter] 正在发布新评论到视频 115586898068890，内容: 测试喵~我在这里呢喵~
+2025-11-30 15:19:26 ERROR    [bilibili_adapter] 发布评论失败: 接口返回错误代码：-101，信息：账号未登录。
+{'code': -101, 'message': '账号未登录', 'ttl': 1}
+2025-11-30 15:19:26 DEBUG    [bilibili_adapter] Traceback (most recent call last):
+  File "C:\Users\Hirunohoshi\myprojects\KiraAI_Yui\adapters\bilibili\bilibili_adapter.py", line 577, in send_group_message
+    result = await send_comment(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\comment.py", line 406, in send_comment
+    return await Api(**api, credential=credential).update_data(**data).result
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2326, in result
+    return await self.request()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2316, in request
+    raise e
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2309, in request
+    return await self._request(raw=raw, byte=byte)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2277, in _request
+    ret = self._process_response(resp=resp, raw=raw)
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2251, in _process_response
+    raise ResponseCodeException(code, msg, resp_data)
+bilibili_api.exceptions.ResponseCodeException.ResponseCodeException: 接口返回错误代码：-101，信息：账号未登录。
+{'code': -101, 'message': '账号未登录', 'ttl': 1}
+
+2025-11-30 15:19:27 INFO     [message_processor] LLM: <msg message_id="">
+    <text>测试喵~我在这里呢！</text>
+</msg>
+2025-11-30 15:19:27 INFO     [memory_manager] Group memory updated for bilibili:gm:115586898068890
+2025-11-30 15:20:23 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:20:23 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:20:23 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:20:23 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:20:23 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:20:23 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:20:23 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:20:23 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:20:23 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:20:23 DEBUG    [bilibili_adapter] 评论 282023635169 已处理过，跳过
+2025-11-30 15:21:23 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:21:23 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:21:23 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:21:23 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:21:23 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:21:23 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:21:23 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:21:23 INFO     [bilibili_adapter] 发现新评论: 283945874912
+2025-11-30 15:21:23 INFO     [bilibili_adapter] 收到B站评论: 云韶未来创客(1686388740) -> test
+2025-11-30 15:21:23 INFO     [message_processor] 收到来自bilibili的群聊消息
+2025-11-30 15:21:24 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:21:24 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:21:24 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-30 15:21:24 INFO     [message_processor] processing message(s) from bilibili:
+[received_time: Nov 30 2025 15:21 Sun message_id: 283945874912] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 云韶未来创客, user_id: 1686388740] | test
+
+2025-11-30 15:21:28 INFO     [message_processor] 消息通过filter检查: 消息内容为测试信息，未涉及政治、敏感、哈基米或性别争议等不安全话题。, 回复意愿: 0.50
+2025-11-30 15:21:28 INFO     [llm] checking tools and generating response using Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:21:30 INFO     [bilibili_adapter] 正在发布新评论到视频 115586898068890，内容: 测试喵~一直在的哦喵~
+2025-11-30 15:21:30 ERROR    [bilibili_adapter] 发布评论失败: 接口返回错误代码：-101，信息：账号未登录。
+{'code': -101, 'message': '账号未登录', 'ttl': 1}
+2025-11-30 15:21:30 DEBUG    [bilibili_adapter] Traceback (most recent call last):
+  File "C:\Users\Hirunohoshi\myprojects\KiraAI_Yui\adapters\bilibili\bilibili_adapter.py", line 577, in send_group_message
+            logger.error(f"评论回复失败: {result}")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        logger.debug(traceback.format_exc())
+        ^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\comment.py", line 406, in send_comment
+    return await Api(**api, credential=credential).update_data(**data).result
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2326, in result
+    return await self.request()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2316, in request
+    raise e
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2309, in request
+    return await self._request(raw=raw, byte=byte)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2277, in _request
+    ret = self._process_response(resp=resp, raw=raw)
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2251, in _process_response
+    raise ResponseCodeException(code, msg, resp_data)
+bilibili_api.exceptions.ResponseCodeException.ResponseCodeException: 接口返回错误代码：-101，信息：账号未登录。
+{'code': -101, 'message': '账号未登录', 'ttl': 1}
+
+2025-11-30 15:21:31 INFO     [message_processor] LLM: <msg message_id="">
+    <text>测试喵~一直在的哦！</text>
+</msg>
+2025-11-30 15:21:31 INFO     [memory_manager] Group memory updated for bilibili:gm:115586898068890
+2025-11-30 15:22:24 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:22:24 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:22:25 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:22:25 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:22:25 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:22:25 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:22:25 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:22:25 DEBUG    [bilibili_adapter] 评论 283945874912 已处理过，跳过
+2025-11-30 15:22:25 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:22:25 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:23:25 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:23:25 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:23:25 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:23:32 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:23:32 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:23:32 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:23:32 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:23:32 DEBUG    [bilibili_adapter] 评论 283945874912 已处理过，跳过
+2025-11-30 15:23:32 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:23:32 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:23:33 INFO     [launcher] Exiting...
+2025-11-30 15:23:35 INFO     [launcher] 
+2025-11-30 15:23:35 INFO     [launcher]       _  ___              _    ___ 
+2025-11-30 15:23:35 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-30 15:23:35 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-30 15:23:35 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-30 15:23:35 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-30 15:23:35 INFO     [launcher] 
+2025-11-30 15:23:35 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-30 15:23:39 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-30 15:23:39 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-30 15:23:39 INFO     [tool_manager] Registered tool: bilibili
+2025-11-30 15:23:39 INFO     [tool_manager] Registered tool: memory_add
+2025-11-30 15:23:39 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-30 15:23:39 INFO     [tool_manager] Registered tool: memory_update
+2025-11-30 15:23:40 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:23:40 INFO     [memory_manager] MemoryManager initialized
+2025-11-30 15:23:40 INFO     [prompt_manager] PromptManager initialized
+2025-11-30 15:23:40 INFO     [message_processor] MessageProcessor initialized
+2025-11-30 15:23:40 INFO     [tool_manager] Registered tool: send_message
+2025-11-30 15:23:40 INFO     [tool_manager] Registered tool: ntfy
+2025-11-30 15:23:40 INFO     [tool_manager] Registered tool: search
+2025-11-30 15:23:40 INFO     [lifecycle] Starting bot...
+2025-11-30 15:23:40 INFO     [bilibili_adapter] B站凭证初始化成功
+2025-11-30 15:23:40 INFO     [runtime] Adapters set: ['bilibili']
+2025-11-30 15:23:40 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-30 15:23:40 INFO     [bilibili_adapter] 启动B站适配器...
+2025-11-30 15:23:40 WARNING  [bilibili_adapter] bilibili_api.message模块不可用，私信功能已禁用
+2025-11-30 15:23:40 INFO     [bilibili_adapter] 评论监听已启动
+2025-11-30 15:23:41 INFO     [bilibili_adapter] B站适配器已启动
+2025-11-30 15:23:41 INFO     [sticker] Scanning unregistered stickers
+2025-11-30 15:23:41 INFO     [sticker] All stickers are already registered
+2025-11-30 15:23:41 INFO     [bilibili_adapter] 开始监听B站评论...
+2025-11-30 15:23:41 INFO     [lifecycle] Started adapter Bilibili
+2025-11-30 15:23:41 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:23:41 INFO     [bilibili_adapter] 正在加载视频 BV1FFU5B8EvN 的初始评论列表（用于过滤历史评论）...
+2025-11-30 15:23:41 INFO     [bilibili_adapter] 已加载 4 条历史评论，将只处理新评论
+2025-11-30 15:23:41 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:23:41 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:23:41 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:23:41 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:23:41 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:23:41 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:23:41 DEBUG    [bilibili_adapter] 评论 283946027424 已处理过，跳过
+2025-11-30 15:23:41 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:23:41 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:24:41 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:25:31 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:25:31 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:25:31 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:25:31 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:25:31 DEBUG    [bilibili_adapter] 获取到 5 条评论（包含置顶评论）
+2025-11-30 15:25:31 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:25:31 INFO     [bilibili_adapter] 发现新评论: 283945996944
+2025-11-30 15:25:31 INFO     [bilibili_adapter] 收到B站评论: 云韶未来创客(1686388740) -> test
+2025-11-30 15:25:31 INFO     [message_processor] 收到来自bilibili的群聊消息
+2025-11-30 15:25:32 DEBUG    [bilibili_adapter] 评论 283946027424 已处理过，跳过
+2025-11-30 15:25:32 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:25:32 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-30 15:25:32 INFO     [message_processor] processing message(s) from bilibili:
+[received_time: Nov 30 2025 15:25 Sun message_id: 283945996944] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 云韶未来创客, user_id: 1686388740] | test
+
+2025-11-30 15:25:35 INFO     [message_processor] 消息通过filter检查: 消息内容为测试信息，不涉及任何政治、敏感、不当或争议话题，属于普通群聊安全消息。, 回复意愿: 0.50
+2025-11-30 15:25:35 INFO     [llm] checking tools and generating response using Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:25:36 INFO     [bilibili_adapter] 正在发布新评论到视频 115586898068890，内容: 测试喵~我随时都在，不会离开的喵~
+2025-11-30 15:25:36 ERROR    [bilibili_adapter] 发布评论失败: 接口返回错误代码：-101，信息：账号未登录。
+{'code': -101, 'message': '账号未登录', 'ttl': 1}
+2025-11-30 15:25:37 DEBUG    [bilibili_adapter] Traceback (most recent call last):
+  File "C:\Users\Hirunohoshi\myprojects\KiraAI_Yui\adapters\bilibili\bilibili_adapter.py", line 588, in send_group_message
+    result = await send_comment(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\comment.py", line 406, in send_comment
+    return await Api(**api, credential=credential).update_data(**data).result
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2326, in result
+    return await self.request()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2316, in request
+    raise e
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2309, in request
+    return await self._request(raw=raw, byte=byte)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2277, in _request
+    ret = self._process_response(resp=resp, raw=raw)
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2251, in _process_response
+    raise ResponseCodeException(code, msg, resp_data)
+bilibili_api.exceptions.ResponseCodeException.ResponseCodeException: 接口返回错误代码：-101，信息：账号未登录。
+{'code': -101, 'message': '账号未登录', 'ttl': 1}
+
+2025-11-30 15:25:37 INFO     [message_processor] LLM: <msg message_id="">
+    <text>测试喵~我随时都在，不会离开的！</text>
+</msg>
+2025-11-30 15:25:37 INFO     [memory_manager] Group memory updated for bilibili:gm:115586898068890
+2025-11-30 15:25:38 INFO     [launcher] Exiting...
+2025-11-30 15:25:41 INFO     [launcher] 
+2025-11-30 15:25:41 INFO     [launcher]       _  ___              _    ___ 
+2025-11-30 15:25:41 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-30 15:25:41 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-30 15:25:41 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-30 15:25:41 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-30 15:25:41 INFO     [launcher] 
+2025-11-30 15:25:41 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-30 15:25:45 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-30 15:25:45 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-30 15:25:45 INFO     [tool_manager] Registered tool: bilibili
+2025-11-30 15:25:45 INFO     [tool_manager] Registered tool: memory_add
+2025-11-30 15:25:45 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-30 15:25:45 INFO     [tool_manager] Registered tool: memory_update
+2025-11-30 15:25:46 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:25:46 INFO     [memory_manager] MemoryManager initialized
+2025-11-30 15:25:46 INFO     [prompt_manager] PromptManager initialized
+2025-11-30 15:25:46 INFO     [message_processor] MessageProcessor initialized
+2025-11-30 15:25:46 INFO     [tool_manager] Registered tool: send_message
+2025-11-30 15:25:46 INFO     [tool_manager] Registered tool: ntfy
+2025-11-30 15:25:46 INFO     [tool_manager] Registered tool: search
+2025-11-30 15:25:46 INFO     [lifecycle] Starting bot...
+2025-11-30 15:25:46 INFO     [bilibili_adapter] B站凭证初始化成功
+2025-11-30 15:25:46 INFO     [runtime] Adapters set: ['bilibili']
+2025-11-30 15:25:46 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-30 15:25:46 INFO     [bilibili_adapter] 启动B站适配器...
+2025-11-30 15:25:46 WARNING  [bilibili_adapter] bilibili_api.message模块不可用，私信功能已禁用
+2025-11-30 15:25:46 INFO     [bilibili_adapter] 评论监听已启动
+2025-11-30 15:25:46 INFO     [bilibili_adapter] B站适配器已启动
+2025-11-30 15:25:46 INFO     [sticker] Scanning unregistered stickers
+2025-11-30 15:25:46 INFO     [sticker] All stickers are already registered
+2025-11-30 15:25:46 INFO     [bilibili_adapter] 开始监听B站评论...
+2025-11-30 15:25:46 INFO     [lifecycle] Started adapter Bilibili
+2025-11-30 15:25:47 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:25:47 INFO     [bilibili_adapter] 正在加载视频 BV1FFU5B8EvN 的初始评论列表（用于过滤历史评论）...
+2025-11-30 15:25:47 INFO     [bilibili_adapter] 已加载 21 条历史评论，将只处理新评论
+2025-11-30 15:25:47 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:25:47 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:25:47 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:25:47 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:25:47 DEBUG    [bilibili_adapter] 获取到 22 条评论（包含置顶评论）
+2025-11-30 15:25:47 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:25:47 DEBUG    [bilibili_adapter] 评论 283946027424 已处理过，跳过
+2025-11-30 15:25:47 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:25:47 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:25:47 DEBUG    [bilibili_adapter] 评论 282023635169 已处理过，跳过
+2025-11-30 15:25:47 DEBUG    [bilibili_adapter] 评论 283922913472 已处理过，跳过
+2025-11-30 15:25:47 DEBUG    [bilibili_adapter] 评论 283916800496 已处理过，跳过
+2025-11-30 15:25:47 DEBUG    [bilibili_adapter] 评论 282009208689 已处理过，跳过
+2025-11-30 15:25:47 DEBUG    [bilibili_adapter] 评论 282008379521 已处理过，跳过
+2025-11-30 15:26:47 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:26:49 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:26:49 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:26:49 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:26:49 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:26:49 DEBUG    [bilibili_adapter] 获取到 22 条评论（包含置顶评论）
+2025-11-30 15:26:49 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:26:49 INFO     [bilibili_adapter] 发现新评论: 283946253952
+2025-11-30 15:26:49 INFO     [bilibili_adapter] 收到B站评论: 云韶未来创客(1686388740) -> test
+2025-11-30 15:26:49 INFO     [message_processor] 收到来自bilibili的群聊消息
+2025-11-30 15:26:50 DEBUG    [bilibili_adapter] 评论 283946027424 已处理过，跳过
+2025-11-30 15:26:50 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:26:50 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:26:50 DEBUG    [bilibili_adapter] 评论 282023635169 已处理过，跳过
+2025-11-30 15:26:50 DEBUG    [bilibili_adapter] 评论 283922913472 已处理过，跳过
+2025-11-30 15:26:50 DEBUG    [bilibili_adapter] 评论 283916800496 已处理过，跳过
+2025-11-30 15:26:50 DEBUG    [bilibili_adapter] 评论 282009208689 已处理过，跳过
+2025-11-30 15:26:50 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-30 15:26:50 INFO     [message_processor] processing message(s) from bilibili:
+[received_time: Nov 30 2025 15:26 Sun message_id: 283946253952] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 云韶未来创客, user_id: 1686388740] | test
+
+2025-11-30 15:26:54 INFO     [message_processor] 消息通过filter检查: 消息内容为测试信息，不涉及任何政治、敏感、争议或违规话题，属于普通群聊安全消息。, 回复意愿: 0.50
+2025-11-30 15:26:54 INFO     [llm] checking tools and generating response using Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:26:56 INFO     [bilibili_adapter] 正在发布新评论到视频 115586898068890，内容: 测试喵~我这里永远为你开着的喵~
+2025-11-30 15:26:57 INFO     [bilibili_adapter] 评论发布成功，评论ID: 282040215569
+2025-11-30 15:26:58 INFO     [message_processor] LLM: <msg message_id="282040215569">
+    <text>测试喵~我这里永远为你开着的！</text>
+</msg>
+2025-11-30 15:26:58 INFO     [memory_manager] Group memory updated for bilibili:gm:115586898068890
+2025-11-30 15:27:50 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:27:50 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:27:50 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:27:50 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:27:50 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:27:50 DEBUG    [bilibili_adapter] 获取到 22 条评论（包含置顶评论）
+2025-11-30 15:27:50 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:27:50 INFO     [bilibili_adapter] 发现新评论: 282040215569
+2025-11-30 15:27:50 INFO     [bilibili_adapter] 收到B站评论: 咩咩咩嘛嘛嘛(44316695) -> 测试喵~我这里永远为你开着的喵~
+2025-11-30 15:27:50 INFO     [message_processor] 收到来自bilibili的群聊消息
+2025-11-30 15:27:51 DEBUG    [bilibili_adapter] 评论 283946253952 已处理过，跳过
+2025-11-30 15:27:51 DEBUG    [bilibili_adapter] 评论 283946027424 已处理过，跳过
+2025-11-30 15:27:51 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:27:51 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:27:51 DEBUG    [bilibili_adapter] 评论 282023635169 已处理过，跳过
+2025-11-30 15:27:51 DEBUG    [bilibili_adapter] 评论 283922913472 已处理过，跳过
+2025-11-30 15:27:51 DEBUG    [bilibili_adapter] 评论 283916800496 已处理过，跳过
+2025-11-30 15:27:51 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-30 15:27:51 INFO     [message_processor] processing message(s) from bilibili:
+[received_time: Nov 30 2025 15:27 Sun message_id: 282040215569] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 咩咩咩嘛嘛嘛, user_id: 44316695] | 测试喵~我这里永远为你开着的喵~
+
+2025-11-30 15:27:54 INFO     [message_processor] 消息通过filter检查: 消息内容为普通问候，无政治、敏感、不当或争议话题，符合安全交流标准。, 回复意愿: 0.80
+2025-11-30 15:27:54 INFO     [llm] checking tools and generating response using Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:27:57 INFO     [bilibili_adapter] 正在发布新评论到视频 115586898068890，内容: 测试喵~我这里永远为你开着的喵~
+2025-11-30 15:27:57 ERROR    [bilibili_adapter] 发布评论失败: 接口返回错误代码：12051，信息：重复评论，请勿刷屏。
+{'code': 12051, 'message': '重复评论，请勿刷屏', 'ttl': 1, 'data': {'need_captcha': False, 'url': '', 'success_action': 0, 'success_toast': '', 'success_animation': '', 'rpid': 0, 'rpid_str': '', 'dialog': 0, 'dialog_str': '', 'root': 0, 'root_str': '', 'parent': 0, 'parent_str': '', 'reply': None}}
+2025-11-30 15:27:57 DEBUG    [bilibili_adapter] Traceback (most recent call last):
+  File "C:\Users\Hirunohoshi\myprojects\KiraAI_Yui\adapters\bilibili\bilibili_adapter.py", line 588, in send_group_message
+    result = await send_comment(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\comment.py", line 406, in send_comment
+    return await Api(**api, credential=credential).update_data(**data).result
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2326, in result
+    return await self.request()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2316, in request
+    raise e
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2309, in request
+    return await self._request(raw=raw, byte=byte)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2277, in _request
+    ret = self._process_response(resp=resp, raw=raw)
+  File "C:\Users\Hirunohoshi\miniconda3\Lib\site-packages\bilibili_api\utils\network.py", line 2251, in _process_response
+    raise ResponseCodeException(code, msg, resp_data)
+bilibili_api.exceptions.ResponseCodeException.ResponseCodeException: 接口返回错误代码：12051，信息：重复评论，请勿刷屏。
+{'code': 12051, 'message': '重复评论，请勿刷屏', 'ttl': 1, 'data': {'need_captcha': False, 'url': '', 'success_action': 0, 'success_toast': '', 'success_animation': '', 'rpid': 0, 'rpid_str': '', 'dialog': 0, 'dialog_str': '', 'root': 0, 'root_str': '', 'parent': 0, 'parent_str': '', 'reply': None}}
+
+2025-11-30 15:27:58 INFO     [message_processor] LLM: <msg message_id="">
+    <text>测试喵~我这里永远为你开着的喵~</text>
+</msg>
+2025-11-30 15:27:58 INFO     [memory_manager] Group memory updated for bilibili:gm:115586898068890
+2025-11-30 15:28:51 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:29:22 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:29:22 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:29:22 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:29:22 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:29:22 DEBUG    [bilibili_adapter] 获取到 22 条评论（包含置顶评论）
+2025-11-30 15:29:22 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:29:22 DEBUG    [bilibili_adapter] 评论 282040215569 已处理过，跳过
+2025-11-30 15:29:22 DEBUG    [bilibili_adapter] 评论 283946253952 已处理过，跳过
+2025-11-30 15:29:22 DEBUG    [bilibili_adapter] 评论 283946027424 已处理过，跳过
+2025-11-30 15:29:22 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:29:22 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:29:22 DEBUG    [bilibili_adapter] 评论 282023635169 已处理过，跳过
+2025-11-30 15:29:22 DEBUG    [bilibili_adapter] 评论 283922913472 已处理过，跳过
+2025-11-30 15:29:22 DEBUG    [bilibili_adapter] 评论 283916800496 已处理过，跳过
+2025-11-30 15:29:24 INFO     [launcher] Exiting...
+2025-11-30 15:29:27 INFO     [launcher] 
+2025-11-30 15:29:27 INFO     [launcher]       _  ___              _    ___ 
+2025-11-30 15:29:27 INFO     [launcher]      | |/ (_)_ __ __ _   / \  |_ _|
+2025-11-30 15:29:27 INFO     [launcher]      | ' /| | '__/ _` | / _ \  | | 
+2025-11-30 15:29:27 INFO     [launcher]      | . \| | | | (_| |/ ___ \ | | 
+2025-11-30 15:29:27 INFO     [launcher]      |_|\_\_|_|  \__,_/_/   \_\___|
+2025-11-30 15:29:27 INFO     [launcher] 
+2025-11-30 15:29:27 INFO     [launcher] Set working dir: C:\Users\Hirunohoshi\myprojects\KiraAI_Yui
+2025-11-30 15:29:33 INFO     [tool_manager] Registered tool: comment_bilibili_video
+2025-11-30 15:29:33 INFO     [tool_manager] Registered tool: like_bilibili_video
+2025-11-30 15:29:33 INFO     [tool_manager] Registered tool: bilibili
+2025-11-30 15:29:33 INFO     [tool_manager] Registered tool: memory_add
+2025-11-30 15:29:33 INFO     [tool_manager] Registered tool: memory_remove
+2025-11-30 15:29:33 INFO     [tool_manager] Registered tool: memory_update
+2025-11-30 15:29:33 INFO     [message_filter] Filter模型已初始化: Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:29:33 INFO     [memory_manager] MemoryManager initialized
+2025-11-30 15:29:33 INFO     [prompt_manager] PromptManager initialized
+2025-11-30 15:29:33 INFO     [message_processor] MessageProcessor initialized
+2025-11-30 15:29:33 INFO     [tool_manager] Registered tool: send_message
+2025-11-30 15:29:33 INFO     [tool_manager] Registered tool: ntfy
+2025-11-30 15:29:33 INFO     [tool_manager] Registered tool: search
+2025-11-30 15:29:34 INFO     [lifecycle] Starting bot...
+2025-11-30 15:29:34 INFO     [bilibili_adapter] B站凭证初始化成功
+2025-11-30 15:29:34 INFO     [runtime] Adapters set: ['bilibili']
+2025-11-30 15:29:34 INFO     [lifecycle] All modules initialized, starting message processing loop...
+2025-11-30 15:29:34 INFO     [bilibili_adapter] 启动B站适配器...
+2025-11-30 15:29:34 WARNING  [bilibili_adapter] bilibili_api.message模块不可用，私信功能已禁用
+2025-11-30 15:29:34 INFO     [bilibili_adapter] 评论监听已启动
+2025-11-30 15:29:34 INFO     [bilibili_adapter] B站适配器已启动
+2025-11-30 15:29:34 INFO     [sticker] Scanning unregistered stickers
+2025-11-30 15:29:34 INFO     [sticker] All stickers are already registered
+2025-11-30 15:29:34 INFO     [bilibili_adapter] 开始监听B站评论...
+2025-11-30 15:29:34 INFO     [lifecycle] Started adapter Bilibili
+2025-11-30 15:29:34 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:29:34 INFO     [bilibili_adapter] 正在加载视频 BV1FFU5B8EvN 的初始评论列表（用于过滤历史评论）...
+2025-11-30 15:29:34 INFO     [bilibili_adapter] 已加载 21 条历史评论，将只处理新评论
+2025-11-30 15:29:34 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:29:35 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:29:35 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:29:35 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:29:35 DEBUG    [bilibili_adapter] 获取到 22 条评论（包含置顶评论）
+2025-11-30 15:29:35 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:29:35 DEBUG    [bilibili_adapter] 评论 282040215569 已处理过，跳过
+2025-11-30 15:29:35 DEBUG    [bilibili_adapter] 评论 283946253952 已处理过，跳过
+2025-11-30 15:29:35 DEBUG    [bilibili_adapter] 评论 283946027424 已处理过，跳过
+2025-11-30 15:29:35 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:29:35 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:29:35 DEBUG    [bilibili_adapter] 评论 282023635169 已处理过，跳过
+2025-11-30 15:29:35 DEBUG    [bilibili_adapter] 评论 283922913472 已处理过，跳过
+2025-11-30 15:29:35 DEBUG    [bilibili_adapter] 评论 283916800496 已处理过，跳过
+2025-11-30 15:30:35 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:30:35 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:30:35 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:30:35 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:30:35 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:30:35 DEBUG    [bilibili_adapter] 获取到 22 条评论（包含置顶评论）
+2025-11-30 15:30:35 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:30:35 INFO     [bilibili_adapter] 发现新评论: 283946525232
+2025-11-30 15:30:35 INFO     [bilibili_adapter] 收到B站评论: 云韶未来创客(1686388740) -> test
+2025-11-30 15:30:35 INFO     [message_processor] 收到来自bilibili的群聊消息
+2025-11-30 15:30:36 DEBUG    [bilibili_adapter] 评论 282040215569 已处理过，跳过
+2025-11-30 15:30:36 DEBUG    [bilibili_adapter] 评论 283946027424 已处理过，跳过
+2025-11-30 15:30:36 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:30:36 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:30:36 DEBUG    [bilibili_adapter] 评论 282023635169 已处理过，跳过
+2025-11-30 15:30:36 DEBUG    [bilibili_adapter] 评论 283922913472 已处理过，跳过
+2025-11-30 15:30:36 DEBUG    [bilibili_adapter] 评论 283916800496 已处理过，跳过
+2025-11-30 15:30:36 INFO     [message_processor] deleted 1 message(s) from buffer
+2025-11-30 15:30:36 INFO     [message_processor] processing message(s) from bilibili:
+[received_time: Nov 30 2025 15:30 Sun message_id: 283946525232] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 云韶未来创客, user_id: 1686388740] | test
+
+2025-11-30 15:30:39 INFO     [message_processor] 消息通过filter检查: 消息内容为测试信息，不涉及任何政治、敏感、争议或违规话题，属于普通群聊安全消息。, 回复意愿: 0.50
+2025-11-30 15:30:39 INFO     [llm] checking tools and generating response using Qwen/Qwen3-8B from siliconflow
+2025-11-30 15:30:42 INFO     [bilibili_adapter] 未指定回复目标，自动使用视频 115586898068890 最近收到的评论ID: 283946525232
+2025-11-30 15:30:42 INFO     [bilibili_adapter] 正在回复评论 283946525232，内容: 测试喵~我这里永远为你开着的喵~
+2025-11-30 15:30:42 INFO     [bilibili_adapter] 评论回复成功，回复ID: 282040551697
+2025-11-30 15:30:44 INFO     [message_processor] LLM: <msg message_id="282040551697">
+    <text>测试喵~我这里永远为你开着的喵~</text>
+</msg>
+2025-11-30 15:30:44 INFO     [memory_manager] Group memory updated for bilibili:gm:115586898068890
+2025-11-30 15:31:36 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:31:36 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:31:36 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:31:36 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:31:36 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:31:36 DEBUG    [bilibili_adapter] 获取到 22 条评论（包含置顶评论）
+2025-11-30 15:31:36 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:31:36 DEBUG    [bilibili_adapter] 评论 283946525232 已处理过，跳过
+2025-11-30 15:31:36 DEBUG    [bilibili_adapter] 评论 282040215569 已处理过，跳过
+2025-11-30 15:31:36 DEBUG    [bilibili_adapter] 评论 283946027424 已处理过，跳过
+2025-11-30 15:31:36 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:31:36 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:31:36 DEBUG    [bilibili_adapter] 评论 282023635169 已处理过，跳过
+2025-11-30 15:31:36 DEBUG    [bilibili_adapter] 评论 283922913472 已处理过，跳过
+2025-11-30 15:31:36 DEBUG    [bilibili_adapter] 评论 283916800496 已处理过，跳过
+2025-11-30 15:32:37 DEBUG    [bilibili_adapter] 视频信息 - BV号: BV1FFU5B8EvN, AID: 115586898068890, 标题: 开源免费！现在加入「猫娘计划」，一起「飞升二次元」～
+2025-11-30 15:32:37 DEBUG    [bilibili_adapter] 正在获取视频 BV1FFU5B8EvN (aid: 115586898068890) 的评论，凭证: 已配置
+2025-11-30 15:32:37 DEBUG    [bilibili_adapter] 获取视频 BV1FFU5B8EvN 的评论数据，keys: ['cursor', 'replies', 'top', 'top_replies', 'effects', 'assist', 'blacklist', 'vote', 'config', 'upper', 'control', 'note', 'cm_info', 'callbacks']
+2025-11-30 15:32:37 DEBUG    [bilibili_adapter] 发现置顶评论: unknown
+2025-11-30 15:32:37 DEBUG    [bilibili_adapter] 发现 1 条置顶回复
+2025-11-30 15:32:37 DEBUG    [bilibili_adapter] 获取到 22 条评论（包含置顶评论）
+2025-11-30 15:32:37 DEBUG    [bilibili_adapter] 评论 283090895952 已处理过，跳过
+2025-11-30 15:32:37 DEBUG    [bilibili_adapter] 评论 283946525232 已处理过，跳过
+2025-11-30 15:32:37 DEBUG    [bilibili_adapter] 评论 282040215569 已处理过，跳过
+2025-11-30 15:32:37 DEBUG    [bilibili_adapter] 评论 283946027424 已处理过，跳过
+2025-11-30 15:32:37 DEBUG    [bilibili_adapter] 评论 282033511121 已处理过，跳过
+2025-11-30 15:32:37 DEBUG    [bilibili_adapter] 评论 282031917297 已处理过，跳过
+2025-11-30 15:32:37 DEBUG    [bilibili_adapter] 评论 282023635169 已处理过，跳过
+2025-11-30 15:32:37 DEBUG    [bilibili_adapter] 评论 283922913472 已处理过，跳过
+2025-11-30 15:32:37 DEBUG    [bilibili_adapter] 评论 283916800496 已处理过，跳过
+2025-11-30 15:32:48 INFO     [launcher] Exiting...

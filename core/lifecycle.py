@@ -7,6 +7,22 @@ from core.config_loader import global_config
 from adapters.qq.qq_reply import QQAdapter
 from adapters.telegram.tg import TelegramAdapter
 
+# QQ频道适配器（可选）
+try:
+    from adapters.qq_guild.qq_guild import QQGuildAdapter
+    QQ_GUILD_AVAILABLE = True
+except ImportError:
+    QQ_GUILD_AVAILABLE = False
+    QQGuildAdapter = None
+
+# B站适配器（可选）
+try:
+    from adapters.bilibili.bilibili_adapter import BilibiliAdapter
+    BILIBILI_AVAILABLE = True
+except ImportError:
+    BILIBILI_AVAILABLE = False
+    BilibiliAdapter = None
+
 from utils.message_utils import BotDirectMessage, BotGroupMessage
 from core.sticker_manager import sticker_manager
 
@@ -40,6 +56,14 @@ class KiraLifecycle:
             'QQ': QQAdapter, 
             'Telegram': TelegramAdapter,
         }
+        
+        # 如果QQ频道适配器可用，添加到映射
+        if QQ_GUILD_AVAILABLE and QQGuildAdapter:
+            ada_mapping['QQ Guild'] = QQGuildAdapter
+        
+        # 如果B站适配器可用，添加到映射
+        if BILIBILI_AVAILABLE and BilibiliAdapter:
+            ada_mapping['Bilibili'] = BilibiliAdapter
         adapters: Dict[str, Any] = {}
 
         # ====== load adapter config ======

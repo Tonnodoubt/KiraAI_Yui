@@ -1,0 +1,6 @@
+2025-11-30 14:53:48,855	[INFO]	(client.py:162)_bot_login	[botpy] 登录机器人账号中...
+2025-11-30 14:53:49,262	[INFO]	(robot.py:65)update_access_token	[botpy] access_token expires_in 7200
+2025-11-30 14:53:49,419	[ERROR]	(http.py:76)_handle_response	[botpy] 接口请求异常，请求连接: https://api.sgroup.qq.com/users/@me, 错误代码: 401, 返回内容: {'message': '接口访问源IP不在白名单', 'code': 11298, 'err_code': 40023002, 'trace_id': '8ea2ff78e9e91d49e71bad0c183279a2'}, trace_id:8ea2ff78e9e91d49e71bad0c183279a2
+2025-11-30 14:55:54,550	[INFO]	(client.py:162)_bot_login	[botpy] 登录机器人账号中...
+2025-11-30 14:55:54,764	[INFO]	(robot.py:65)update_access_token	[botpy] access_token expires_in 7075
+2025-11-30 14:55:55,112	[ERROR]	(http.py:76)_handle_response	[botpy] 接口请求异常，请求连接: https://api.sgroup.qq.com/users/@me, 错误代码: 401, 返回内容: {'message': '接口访问源IP不在白名单', 'code': 11298, 'err_code': 40023002, 'trace_id': '62b7d99cd7890e6ac60ac430278e6740'}, trace_id:62b7d99cd7890e6ac60ac430278e6740
