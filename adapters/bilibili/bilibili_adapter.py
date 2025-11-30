@@ -113,6 +113,11 @@ class BilibiliAdapter(IMAdapter):
         # 视频AID到最近收到的评论ID的映射（用于自动回复）
         # key: 视频AID (oid), value: 最近收到的评论ID (rpid)
         self.video_to_latest_comment: Dict[int, int] = {}
+        
+        # 机器人发送的评论ID集合（用于检测是否有用户回复了机器人的评论）
+        # 当机器人回复评论时，会记录被回复的评论ID和机器人发送的评论ID
+        self.bot_sent_comments: Set[int] = set()  # 机器人发送的评论ID
+        self.comment_to_parent: Dict[int, int] = {}  # 评论ID到父评论ID的映射
     
     def _check_rate_limit(self) -> bool:
         """检查是否超过频率限制"""
@@ -346,10 +351,26 @@ class BilibiliAdapter(IMAdapter):
                             logger.debug(f"视频 {video_id} 暂无评论")
                             continue
                         
-                        logger.debug(f"获取到 {len(all_replies)} 条评论（包含置顶评论）")
-                        replies = all_replies
+                        logger.debug(f"获取到 {len(all_replies)} 条顶级评论（包含置顶评论）")
                         
-                        for comment_data in replies[:10]:  # 只处理最新10条
+                        # 递归提取所有评论（包括子评论）
+                        all_comments = []
+                        def extract_all_comments(comment_list):
+                            """递归提取所有评论，包括子评论"""
+                            for comment in comment_list:
+                                if not isinstance(comment, dict):
+                                    continue
+                                all_comments.append(comment)
+                                # 如果有子评论，递归处理
+                                sub_replies = comment.get('replies', [])
+                                if sub_replies and isinstance(sub_replies, list):
+                                    extract_all_comments(sub_replies)
+                        
+                        extract_all_comments(all_replies)
+                        logger.debug(f"提取到 {len(all_comments)} 条评论（包括子评论）")
+                        
+                        # 只处理最新的评论（包括子评论）
+                        for comment_data in all_comments[:20]:  # 增加到20条，因为包括子评论
                             if not self.running:
                                 break
                             
@@ -374,7 +395,31 @@ class BilibiliAdapter(IMAdapter):
                                     self.processed_comments.add(comment_id)  # 标记为已处理，避免重复检查
                                     continue
                                 
-                                logger.info(f"发现新评论: {comment_id}")
+                                # 检查是否是机器人自己发送的评论（避免回复自己）
+                                if comment_id in self.bot_sent_comments:
+                                    logger.debug(f"评论 {comment_id} 是机器人发送的，跳过")
+                                    self.processed_comments.add(comment_id)  # 标记为已处理
+                                    continue
+                                
+                                # 检查是否是回复机器人的评论
+                                # B站的评论结构中，parent 是直接父评论ID，root 是根评论ID
+                                parent_id = comment_data.get('parent', 0) or comment_data.get('root', 0)
+                                is_reply_to_bot = False
+                                
+                                if parent_id:
+                                    # 检查父评论是否是机器人发送的
+                                    if parent_id in self.bot_sent_comments:
+                                        is_reply_to_bot = True
+                                        logger.info(f"发现用户回复了机器人的评论 {parent_id}，新评论ID: {comment_id}")
+                                    # 或者检查根评论是否是机器人发送的（如果是回复的回复）
+                                    elif parent_id in self.comment_to_parent:
+                                        root_id = self.comment_to_parent.get(parent_id)
+                                        if root_id and root_id in self.bot_sent_comments:
+                                            is_reply_to_bot = True
+                                            logger.info(f"发现用户回复了机器人评论的回复 {parent_id}，新评论ID: {comment_id}")
+                                
+                                if not is_reply_to_bot:
+                                    logger.info(f"发现新评论: {comment_id}")
                                 
                                 # 检查频率限制
                                 if not self._check_rate_limit():
@@ -582,9 +627,14 @@ class BilibiliAdapter(IMAdapter):
                     )
                     
                     if result and result.get('rpid'):
-                        reply_id = str(result.get('rpid'))
+                        reply_id = int(result.get('rpid'))
                         logger.info(f"评论回复成功，回复ID: {reply_id}")
-                        return reply_id
+                        # 记录机器人发送的评论
+                        self.bot_sent_comments.add(reply_id)
+                        # 记录回复关系
+                        if reply_to_rpid:
+                            self.comment_to_parent[reply_id] = reply_to_rpid
+                        return str(reply_id)
                     else:
                         logger.error(f"评论回复失败: {result}")
                         return None
@@ -605,11 +655,13 @@ class BilibiliAdapter(IMAdapter):
                     )
                     
                     if result and result.get('rpid'):
-                        comment_id = str(result.get('rpid'))
+                        comment_id = int(result.get('rpid'))
                         logger.info(f"评论发布成功，评论ID: {comment_id}")
                         # 保存映射关系
-                        self.comment_to_video[int(comment_id)] = video_aid
-                        return comment_id
+                        self.comment_to_video[comment_id] = video_aid
+                        # 记录机器人发送的评论
+                        self.bot_sent_comments.add(comment_id)
+                        return str(comment_id)
                     else:
                         logger.error(f"评论发布失败: {result}")
                         return None
@@ -652,11 +704,11 @@ class BilibiliAdapter(IMAdapter):
             text_content = ""
             for msg_part in send_message_obj.message_list:
                 if isinstance(msg_part, MessageType.Text):
-                    text_content += msg_part.content
+                    text_content += msg_part.text  # 修复：使用 text 而不是 content
                 elif isinstance(msg_part, MessageType.Image):
                     text_content += "[图片]"
                 elif isinstance(msg_part, MessageType.Reply):
-                    text_content += f"[回复:{msg_part.reply_id}]"
+                    text_content += f"[回复:{msg_part.message_id}]"  # 修复：使用 message_id 而不是 reply_id
             
             if not text_content:
                 logger.warning("消息内容为空，跳过发送")
