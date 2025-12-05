@@ -107,51 +107,88 @@
         [
             {
                 "role": "user",
-                "content": "[received_time: Nov 30 2025 15:21 Sun message_id: 283945874912] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 云韶未来创客, user_id: 1686388740] | test\n"
+                "content": "[received_time: Dec 05 2025 18:44 Fri message_id: 282517117073] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 咩咩咩嘛嘛嘛, user_id: 44316695] | 期待\n"
             },
             {
                 "role": "assistant",
-                "content": "<msg message_id=\"\">\n    <text>测试喵~一直在的哦！</text>\n</msg>"
+                "content": "<msg message_id=\"282517286417\">\n    <text>期待什么呢？是不是有什么特别的事情要发生？喵～</text>\n</msg>"
             }
         ],
         [
             {
                 "role": "user",
-                "content": "[received_time: Nov 30 2025 15:25 Sun message_id: 283945996944] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 云韶未来创客, user_id: 1686388740] | test\n"
+                "content": "[received_time: Dec 05 2025 18:47 Fri message_id: 282517448945] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 咩咩咩嘛嘛嘛, user_id: 44316695] | 期待\n"
+            },
+            {
+                "role": "tool",
+                "tool_call_id": "019aee1f62358ae6438a6e22611a4a89",
+                "content": "Core memory updated"
+            },
+            {
+                "role": "tool",
+                "tool_call_id": "019aee1f62358ae6438a6e22611a4a8a",
+                "content": "{'error': '工具 msg 未实现'}"
             },
             {
                 "role": "assistant",
-                "content": "<msg message_id=\"\">\n    <text>测试喵~我随时都在，不会离开的！</text>\n</msg>"
+                "content": "<msg message_id=\"282517404929\">\n    <text>期待什么呢？是不是有什么特别的事情要发生？喵～</text>\n</msg>"
             }
         ],
         [
             {
                 "role": "user",
-                "content": "[received_time: Nov 30 2025 15:26 Sun message_id: 283946253952] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 云韶未来创客, user_id: 1686388740] | test\n"
+                "content": "[received_time: Dec 05 2025 18:49 Fri message_id: 282517592657] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 咩咩咩嘛嘛嘛, user_id: 44316695] | 期待期待\n"
             },
             {
                 "role": "assistant",
-                "content": "<msg message_id=\"282040215569\">\n    <text>测试喵~我这里永远为你开着的！</text>\n</msg>"
+                "content": "<msg message_id=\"282517700721\">\n    <text>喵～看起来你非常期待一些事情呢，是不是有什么特别的计划或事件要发生？喵～</text>\n</msg>"
             }
         ],
         [
             {
                 "role": "user",
-                "content": "[received_time: Nov 30 2025 15:27 Sun message_id: 282040215569] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 咩咩咩嘛嘛嘛, user_id: 44316695] | 测试喵~我这里永远为你开着的喵~\n"
+                "content": "[received_time: Dec 05 2025 18:54 Fri message_id: 282518132001] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 咩咩咩嘛嘛嘛, user_id: 44316695] | 期待期待\n"
             },
             {
                 "role": "assistant",
-                "content": "<msg message_id=\"\">\n    <text>测试喵~我这里永远为你开着的喵~</text>\n</msg>"
+                "content": "<msg message_id=\"282518149601\">\n    <text>感谢您的早期支持喵～</text>\n</msg>"
             }
         ],
         [
             {
                 "role": "user",
-                "content": "[received_time: Nov 30 2025 15:30 Sun message_id: 283946525232] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 云韶未来创客, user_id: 1686388740] | test\n"
+                "content": "[received_time: Dec 05 2025 18:58 Fri message_id: 282518466193] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 咩咩咩嘛嘛嘛, user_id: 44316695] | 期待期待\n"
             },
             {
                 "role": "assistant",
-                "content": "<msg message_id=\"282040551697\">\n    <text>测试喵~我这里永远为你开着的喵~</text>\n</msg>"
+                "content": "<msg message_id=\"282518605041\">\n    <text>感谢对「猫娘计划」的支持喵～期待是动力，我会继续努力的！喵～</text>\n</msg>"
+            }
+        ]
+    ],
+    "bilibili:gm:dyn_1081460146556633096": [
+        [
+            {
+                "role": "user",
+                "content": "[received_time: Dec 05 2025 08:46 Fri message_id: 282470388689] [group_name: 动态1081460146556633096 group_id: dyn_1081460146556633096 user_nickname: 咩咩咩嘛嘛嘛, user_id: 44316695] | 孩子们 我回来了\n"
+            },
+            {
+                "role": "tool",
+                "tool_call_id": "019aebf9bfaca76c92f6f1eebc5337fb",
+                "content": "Core memory added"
+            },
+            {
+                "role": "assistant",
+                "content": "<msg message_id=\"282470305761\">\n    <text>诶嘿~欢迎回来喵~</text>\n</msg>"
+            }
+        ],
+        [
+            {
+                "role": "user",
+                "content": "[received_time: Dec 05 2025 08:56 Fri message_id: 282470864225] [group_name: 动态1081460146556633096 group_id: dyn_1081460146556633096 user_nickname: 咩咩咩嘛嘛嘛, user_id: 44316695] | 孩子们，你们喜欢我嘛\n"
+            },
+            {
+                "role": "assistant",
+                "content": "<msg message_id=\"282470927937\">\n    <text>诶嘿~当然喜欢啦！你可是我们群里的开心果喵~</text>\n</msg>"
             }
         ]
     ]

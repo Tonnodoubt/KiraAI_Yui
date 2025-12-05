@@ -1,5 +1,6 @@
 from openai import OpenAI, AsyncOpenAI
 from asyncio import Semaphore
+import asyncio
 import requests
 import functools
 import copy
@@ -141,12 +142,23 @@ class LLMClient:
 
             # 直接使用 main_llm 进行工具判断和回复生成（一次调用完成）
             llm_logger.info(f"checking tools and generating response using {DEFAULT_LLM} from {MAIN_PROVIDER}")
-            resp1 = await self.client.chat.completions.create(
-                model=DEFAULT_LLM,
-                messages=raw_msg,
-                tools=self.tools_definitions if self.tools_definitions else None,
-                max_tokens=300,  # 限制最大token数，加快响应速度
-            )
+            try:
+                resp1 = await asyncio.wait_for(
+                    self.client.chat.completions.create(
+                        model=DEFAULT_LLM,
+                        messages=raw_msg,
+                        tools=self.tools_definitions if self.tools_definitions else None,
+                        max_tokens=300,  # 限制最大token数，加快响应速度
+                    ),
+                    timeout=60.0  # 60秒超时
+                )
+                llm_logger.info(f"LLM第一次调用成功，响应token数: {resp1.usage.total_tokens if hasattr(resp1, 'usage') and resp1.usage else 'unknown'}")
+            except asyncio.TimeoutError:
+                llm_logger.error(f"LLM第一次调用超时（60秒），模型: {DEFAULT_LLM}, provider: {MAIN_PROVIDER}")
+                raise
+            except Exception as e:
+                llm_logger.error(f"LLM第一次调用失败: {e}")
+                raise
 
             message = resp1.choices[0].message
 
@@ -180,14 +192,22 @@ class LLMClient:
 
                 try:
                     llm_logger.info(f"generating response after tool calls using {DEFAULT_LLM} from {MAIN_PROVIDER}")
-                    resp2 = await self.client.chat.completions.create(
-                        model=DEFAULT_LLM,
-                        messages=user_message,
-                        max_tokens=300,  # 限制最大token数，加快响应速度
+                    resp2 = await asyncio.wait_for(
+                        self.client.chat.completions.create(
+                            model=DEFAULT_LLM,
+                            messages=user_message,
+                            max_tokens=300,  # 限制最大token数，加快响应速度
+                        ),
+                        timeout=60.0  # 60秒超时
                     )
+                    llm_logger.info(f"LLM第二次调用成功，响应token数: {resp2.usage.total_tokens if hasattr(resp2, 'usage') and resp2.usage else 'unknown'}")
 
                     return resp2.choices[0].message.content, tool_messages
+                except asyncio.TimeoutError:
+                    llm_logger.error(f"LLM第二次调用超时（60秒），模型: {DEFAULT_LLM}, provider: {MAIN_PROVIDER}")
+                    return None, None
                 except Exception as e:
+                    llm_logger.error(f"LLM第二次调用失败: {e}")
                     print("messages:")
                     print(json.dumps(user_message, ensure_ascii=False, indent=2))
                     print(e)
