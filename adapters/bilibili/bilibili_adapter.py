@@ -118,7 +118,7 @@ class BilibiliAdapter(IMAdapter):
         
         # 记录已获取的评论页数（用于分批获取）
         self.last_fetched_page: Dict[int, int] = {}  # key: video_aid, value: 最后获取的页数
-        self.batch_fetch_size = 200  # 每批获取200条评论
+        self.batch_fetch_size = 100  # 每批获取100条评论
         self.batch_wait_minutes = 10  # 每批处理完后等待10分钟
         
         # 频率限制
@@ -769,8 +769,9 @@ class BilibiliAdapter(IMAdapter):
             if self._is_bot_comment(comment_data):
                 continue
             
-            # 【重要】跳过已经回复过的评论（避免重复回复）
-            if comment_id in self.replied_comments:
+            # 【修复】使用 _has_bot_reply 检查是否已回复，而不是直接检查 replied_comments
+            # 这样可以自动同步状态（如果用户手动删除了回复，会自动从 replied_comments 中移除）
+            if self._has_bot_reply(comment_data, all_comments):
                 continue
             
             # 跳过已处理且已回复的评论（避免重复检查）
@@ -914,11 +915,7 @@ class BilibiliAdapter(IMAdapter):
                 
                 # 处理回复机器人的评论
                 await self._process_comment_dict(comment_data, video_aid)
-                # 【关键】标记为已回复和已处理，避免重复回复
-                self.replied_comments.add(comment_id)
-                self.processed_comments.add(comment_id)
-                # 保存到文件
-                self._save_replied_comments()
+                # 注意：不在这里标记为已回复，只有在send_group_message返回成功时才标记
                 await asyncio.sleep(1)
     
     async def _check_and_process_new_comments(self, all_comments: List[Dict], video_aid: int):
@@ -972,10 +969,10 @@ class BilibiliAdapter(IMAdapter):
             else:
                 skipped_sub += 1
         
-        logger.info(f"[新评论检查] 评论统计 - 总顶级评论: {total_top_level}，待处理（光秃秃）: {len(top_level_comments)}，已有回复: {skipped_has_replies}，机器人: {skipped_bot}，子评论: {skipped_sub}")
+        logger.debug(f"[新评论检查] 评论统计 - 总顶级评论: {total_top_level}，待处理（光秃秃）: {len(top_level_comments)}，已有回复: {skipped_has_replies}，机器人: {skipped_bot}，子评论: {skipped_sub}")
         
         if not top_level_comments:
-            logger.info(f"[新评论检查] 没有找到光秃秃的评论（总顶级: {total_top_level}，已有回复: {skipped_has_replies}）")
+            logger.debug(f"[新评论检查] 没有找到光秃秃的评论（总顶级: {total_top_level}，已有回复: {skipped_has_replies}）")
             return
         
         # 按时间排序，最新的在前（倒序）
@@ -984,7 +981,7 @@ class BilibiliAdapter(IMAdapter):
         except Exception as e:
             logger.warning(f"[新评论检查] 排序评论失败: {e}")
         
-        logger.info(f"[新评论检查] 找到 {len(top_level_comments)} 条光秃秃的评论，从最新的评论开始处理...")
+        logger.debug(f"[新评论检查] 找到 {len(top_level_comments)} 条光秃秃的评论，从最新的评论开始处理...")
         
         # 【简化逻辑】逐条检查并回复光秃秃的评论
         # 每次检查10条评论
@@ -1058,7 +1055,7 @@ class BilibiliAdapter(IMAdapter):
             # 计算合理的回复间隔：确保8条评论都能回复
             # 假设每小时最多回复20条，那么每条评论间隔至少 3600/20 = 180秒
             # 【优化】增加间隔到至少30秒，避免触发验证码风控
-            min_interval = max(self.reply_interval, 30)  # 至少30秒间隔，降低触发验证码的概率
+            min_interval = max(self.reply_interval, 60)  # 至少60秒间隔，给LLM更多思考时间，降低触发验证码的概率
             
             # 处理筛选后的评论
             replied_count = 0
@@ -1098,7 +1095,7 @@ class BilibiliAdapter(IMAdapter):
                     
                     # 【修复重复回复】检查该评论是否已经有悠怡的回复
                     if self._has_bot_reply(comment_data, all_comments):
-                        logger.info(f"[新评论检查] 跳过评论 {comment_id}：已有悠怡回复")
+                        logger.debug(f"[新评论检查] 跳过评论 {comment_id}：已有悠怡回复")
                         continue
                     
                     # 标记为正在处理（记录开始时间）
@@ -1136,23 +1133,32 @@ class BilibiliAdapter(IMAdapter):
                         'comment_content': comment_content[:50] if comment_content else ''
                     }
                     
-                    # 处理评论
-                    logger.info(f"[新评论检查] 正在回复第 {i}/{len(comments_to_reply)} 条评论: 用户 {user_name}({user_id}) 的评论 {comment_id}（内容: {comment_content[:30]}...，回复意愿: {willingness:.2f}, {reason}）")
+                    # 获取父评论信息（如果有）
+                    parent_id = comment_data.get('parent', 0) or 0
+                    parent_info = ""
+                    if parent_id and parent_id != 0 and parent_id != comment_id:
+                        parent_comment_info = self.comment_to_user_info.get(parent_id, {})
+                        if parent_comment_info:
+                            parent_user_name = parent_comment_info.get('user_name', '未知用户')
+                            parent_comment_content = parent_comment_info.get('comment_content', '')
+                            if parent_comment_content:
+                                parent_info = f" | 父评论: {parent_user_name} - {parent_comment_content[:50]}"
+                    
+                    # 处理评论（简化日志，不同处理之间换行）
+                    logger.info(f"\n[处理评论]\n用户: {user_name}\n评论: {comment_content[:100]}{parent_info}\n")
                     
                     # 记录评论ID到video_to_latest_comment，用于后续发送回复
                     self.video_to_latest_comment[video_aid] = comment_id
                     
-                    # 【简化】不再提前标记为已回复，直接处理
                     # 处理评论（发送到消息处理器）
+                    # 注意：不在这里标记为已回复，只有在send_group_message返回成功时才标记
                     try:
                         await self._process_comment_dict(comment_data, video_aid)
                         replied_count += 1
                     finally:
                         # 处理完成后，从正在处理集合中移除（无论成功或失败）
                         if comment_id and comment_id in self.processing_comments:
-                            elapsed = time.time() - self.processing_comments[comment_id]
                             del self.processing_comments[comment_id]
-                            logger.debug(f"[新评论检查] 评论 {comment_id} 处理完成（耗时 {elapsed:.1f} 秒）")
                     
                     # 等待间隔（除了最后一条）
                     if i < len(comments_to_reply):
@@ -1229,15 +1235,16 @@ class BilibiliAdapter(IMAdapter):
         if not comment_id:
             return False
         
-        # 如果已经在已回复列表中，直接返回True
-        if comment_id in self.replied_comments:
-            return True
+        # 【修复】先实际检查评论下是否有机器人回复，而不是直接依赖 replied_comments
+        # 这样可以处理用户手动删除回复后，replied_comments 中仍有记录的情况
         
         # 【优化】检查 comment_to_parent 映射，看是否有机器人回复了该评论
         # 这样可以检测到刚刚发送的回复（即使 comment_data 的 replies 字段还没有更新）
+        has_bot_reply_in_mapping = False
         for bot_reply_id, parent_id in self.comment_to_parent.items():
             if parent_id == comment_id and bot_reply_id in self.bot_sent_comments:
-                return True
+                has_bot_reply_in_mapping = True
+                break
         
         # 递归检查该评论及其所有子回复中是否有机器人的回复
         def check_bot_reply_recursive(comment_dict):
@@ -1263,8 +1270,23 @@ class BilibiliAdapter(IMAdapter):
             
             return False
         
-        # 检查该评论下是否有机器人的回复
-        return check_bot_reply_recursive(comment_data)
+        # 实际检查该评论下是否有机器人的回复
+        has_actual_bot_reply = has_bot_reply_in_mapping or check_bot_reply_recursive(comment_data)
+        
+        # 【修复】如果 replied_comments 中有记录，但实际检查发现没有机器人回复
+        # 说明用户可能手动删除了回复，需要从 replied_comments 中移除（同步状态）
+        if comment_id in self.replied_comments and not has_actual_bot_reply:
+            logger.info(f"[状态同步] 评论 {comment_id} 在 replied_comments 中，但实际检查未发现机器人回复，已从 replied_comments 中移除（可能用户手动删除了回复）")
+            self.replied_comments.discard(comment_id)
+            self._save_replied_comments()
+        
+        # 如果实际检查发现有机器人回复，但 replied_comments 中没有记录，添加记录
+        if has_actual_bot_reply and comment_id not in self.replied_comments:
+            logger.debug(f"[状态同步] 评论 {comment_id} 实际检查发现有机器人回复，但 replied_comments 中没有记录，已添加")
+            self.replied_comments.add(comment_id)
+            self._save_replied_comments()
+        
+        return has_actual_bot_reply
     
     async def _find_and_reply_earliest_comments_OLD(self, video_id: str, video_aid: int, count: int = 5):
         """
@@ -1328,8 +1350,9 @@ class BilibiliAdapter(IMAdapter):
                 if self._is_bot_comment(comment_data):
                     continue
                 
-                # 跳过已回复的评论
-                if comment_id in self.replied_comments:
+                # 【修复】使用 _has_bot_reply 检查是否已回复，而不是直接检查 replied_comments
+                # 这样可以自动同步状态（如果用户手动删除了回复，会自动从 replied_comments 中移除）
+                if self._has_bot_reply(comment_data, all_comments):
                     continue
                 
                 # 只保留顶级评论（parent=0或root=0）
@@ -1372,12 +1395,9 @@ class BilibiliAdapter(IMAdapter):
                         await asyncio.sleep(self.reply_interval - (now - last_reply_time))
                     
                     # 处理评论
-                    logger.info(f"[最早评论] 正在回复第 {i}/{len(earliest_comments)} 条最早评论: {comment_id}")
+                    logger.info(f"[处理] 最早评论 {i}/{len(earliest_comments)}: {comment_id}")
                     await self._process_comment_dict(comment_data, video_aid)
-                    
-                    # 标记为已回复
-                    self.replied_comments.add(comment_id)
-                    self._save_replied_comments()
+                    # 注意：不在这里标记为已回复，只有在send_group_message返回成功时才标记
                     
                     # 等待间隔
                     await asyncio.sleep(self.reply_interval)
@@ -1436,13 +1456,13 @@ class BilibiliAdapter(IMAdapter):
                             first_run = False
                         
                         # 分批获取评论：每次获取200条，处理完后等待10分钟
-                        logger.info(f"[轮询] 正在检查视频 {video_id} (aid: {video_aid}) 的评论...")
+                        # 简化日志：轮询开始不记录
                         
                         # 获取上次获取到的页数
                         start_page = self.last_fetched_page.get(video_aid, 1)
                         pages_per_batch = self.batch_fetch_size // 20  # 每页20条，200条需要10页
                         
-                        logger.info(f"[轮询] 开始获取第 {start_page} 页开始的评论（每批 {pages_per_batch} 页，共 {self.batch_fetch_size} 条）...")
+                        # 简化日志：获取开始不记录
                         
                         # 分页获取评论
                         all_comments_pages = []
@@ -1469,7 +1489,7 @@ class BilibiliAdapter(IMAdapter):
                                     break  # 没有更多评论了
                                 
                                 all_comments_pages.append(comments_page)
-                                logger.info(f"[轮询] 获取第 {page} 页评论，共 {len(replies)} 条")
+                                # 简化日志：每页获取不记录
                                 
                                 page += 1
                                 await asyncio.sleep(2)  # 每页之间等待2秒，避免请求过快
@@ -1528,11 +1548,11 @@ class BilibiliAdapter(IMAdapter):
                         if checked_count > 0:
                             self._save_replied_comments()
                             self._save_bot_comments()
-                            logger.info(f"[轮询] 检查到 {checked_count} 条评论下已有悠怡回复，已标记为已回复")
+                            # 简化日志：状态同步不记录
                         
                         # 更新最后获取的页数
                         self.last_fetched_page[video_aid] = page
-                        logger.info(f"[轮询] 本批获取完成，共 {len(all_comments_pages)} 页，合并后顶级评论: {len(comments.get('replies', []))} 条，下次从第 {page} 页开始")
+                        # 简化日志：批次完成不记录
                         
                         # 合并置顶评论和普通评论
                         all_replies = []
@@ -1571,7 +1591,7 @@ class BilibiliAdapter(IMAdapter):
                                      extract_all_comments(sub_replies, depth + 1)
                          
                         extract_all_comments(all_replies)
-                        logger.info(f"[轮询] 获取到 {len(all_comments)} 条评论（顶级: {len(all_replies)}，包含子评论，最大嵌套深度: {max_depth}）")
+                        # 简化日志：评论统计不记录
                         
                         # 【优化】检查每条顶级评论下是否有悠怡的回复，如果有则标记为已回复
                         checked_count = 0
@@ -1593,7 +1613,7 @@ class BilibiliAdapter(IMAdapter):
                         if checked_count > 0:
                             self._save_replied_comments()
                             self._save_bot_comments()
-                            logger.info(f"[轮询] 检查到 {checked_count} 条评论下已有悠怡回复，已标记为已回复")
+                            # 简化日志：状态同步不记录
                         
                         # 【重要】主动获取机器人评论的所有回复（因为API可能不会返回所有层级的嵌套评论）
                         # 只获取最近发送的机器人评论的回复（避免处理所有历史评论）
@@ -1653,7 +1673,7 @@ class BilibiliAdapter(IMAdapter):
                         # 处理完一批评论后，等待一段时间再获取下一批（减少等待时间，提高响应速度）
                         # 注意：这里等待时间应该较短，避免长时间阻塞
                         wait_seconds = min(self.batch_wait_minutes * 60, 60)  # 最多等待1分钟，而不是10分钟
-                        logger.info(f"[轮询] 本批评论处理完成，等待 {wait_seconds} 秒后获取下一批评论...")
+                        # 简化日志：等待不记录
                         await asyncio.sleep(wait_seconds)
                         
                     except Exception as e:
@@ -1714,13 +1734,34 @@ class BilibiliAdapter(IMAdapter):
                 return
             
             # 【重要】检查是否已经处理过或回复过，避免重复处理
+            # 【修复】如果评论在processed_comments中但没有在replied_comments中，且没有实际机器人回复，说明处理过但回复失败了，应该重新处理
             if comment_id in self.processed_comments:
-                logger.info(f"跳过评论 {comment_id}：已经处理过")
+                # 检查是否真的有机器人回复
+                if not self._has_bot_reply(comment_data, []):
+                    # 没有机器人回复，说明之前的处理可能失败了，重新处理
+                    logger.info(f"评论 {comment_id} 之前处理过但未成功回复，重新处理")
+                    self.processed_comments.discard(comment_id)
+                else:
+                    # 有机器人回复，跳过
+                    logger.debug(f"跳过评论 {comment_id}：已经处理过且已有回复")
+                    return
+            
+            # 【重要】检查是否是光秃秃的顶级评论（parent=0且root=0，且没有回复）
+            parent_id = comment_data.get('parent', 0) or 0
+            root_id = comment_data.get('root', 0) or 0
+            if not (parent_id == 0 and root_id == 0):
+                logger.debug(f"跳过评论 {comment_id}：不是顶级评论（parent={parent_id}, root={root_id}）")
+                return
+            
+            # 检查是否有回复（光秃秃检查）
+            replies = comment_data.get('replies', [])
+            if replies and isinstance(replies, list) and len(replies) > 0:
+                logger.debug(f"跳过评论 {comment_id}：已有回复（共 {len(replies)} 条），不是光秃秃的评论")
                 return
             
             # 【修复重复回复】检查该评论是否已经有悠怡的回复
             if self._has_bot_reply(comment_data, []):
-                logger.info(f"跳过评论 {comment_id}：已有悠怡回复（在_process_comment_dict中检查）")
+                logger.debug(f"跳过评论 {comment_id}：已有悠怡回复")
                 return
             
             # 再次检查是否是机器人自己的评论（双重保险）
@@ -1749,7 +1790,7 @@ class BilibiliAdapter(IMAdapter):
             else:
                 sender_name = str(member) if member else sender_uid
             
-            logger.info(f"收到B站评论: {sender_name}({sender_uid}) -> {content[:50]}")
+            # 简化日志：不在这里记录，在_check_and_process_new_comments中统一记录
             
             # 记录评论信息到文件
             self._log_comment(comment_id, sender_name, sender_uid, content, video_aid)
@@ -1924,7 +1965,12 @@ class BilibiliAdapter(IMAdapter):
                         return None
                     logger.info(f"未指定回复目标，自动使用视频 {video_aid} 最近收到的评论ID: {reply_to_rpid}")
             
-            # 如果有回复目标，使用回复API；否则作为新评论发布
+            # 【重要】只允许回复评论，不允许发送顶级评论
+            if not reply_to_rpid:
+                logger.warning(f"[评论发送] 没有回复目标，禁止发送顶级评论。视频AID: {video_aid}，内容: {text_content[:50]}")
+                return None
+            
+            # 如果有回复目标，使用回复API
             if reply_to_rpid:
                 # 【优化】获取被回复评论的用户信息
                 user_info = self.comment_to_user_info.get(reply_to_rpid, {})
@@ -1932,62 +1978,47 @@ class BilibiliAdapter(IMAdapter):
                 user_id = user_info.get('user_id', '未知ID')
                 comment_content = user_info.get('comment_content', '')
                 
-                # 回复指定评论
-                logger.info(f"[回复评论] 正在回复用户 {user_name}({user_id}) 的评论 {reply_to_rpid}（内容: {comment_content}），回复内容: {text_content[:50]}")
+                # 发送回复
                 try:
                     # B站的回复需要指定root和parent参数
-                    # root: 根评论ID（如果是回复子评论，需要找到根评论）
-                    # parent: 父评论ID（直接回复的评论ID）
                     result = await send_comment(
                         text=text_content,
                         oid=video_aid,
                         type_=CommentResourceType.VIDEO,
-                        root=reply_to_rpid,  # 根评论ID（简化处理，直接使用回复目标）
-                        parent=reply_to_rpid,  # 父评论ID
+                        root=reply_to_rpid,
+                        parent=reply_to_rpid,
                         credential=self.credential
                     )
                     
-                    # 记录API响应的关键信息（不记录完整JSON，避免日志过长）
-                    if result:
-                        rpid = result.get('rpid')
-                        success_toast = result.get('success_toast', '')
-                        logger.debug(f"[评论发送] API响应: rpid={rpid}, success_toast={success_toast}")
-                    
                     if result and result.get('rpid'):
                         reply_id = int(result.get('rpid'))
-                        # 生成评论URL
                         comment_url = f"https://www.bilibili.com/video/av{video_aid}#reply{reply_id}"
-                        # 【优化】日志中显示用户信息
-                        logger.info(f"[评论回复成功] 回复ID: {reply_id}，回复用户 {user_name}({user_id}) 的评论 {reply_to_rpid}（原评论: {comment_content}），回复内容: {text_content[:50]}，URL: {comment_url}")
                         
-                        # 验证评论是否真的存在（等待一小段时间后检查）
-                        # 注意：由于bilibili_api的Comment对象没有get_info或get_replies方法，
-                        # 这里暂时跳过验证，依赖后续的批量验证功能
-                        logger.debug(f"[评论验证] 评论 {reply_id} 已发送，URL: {comment_url}（将在下次批量验证时检查）")
-                        
-                        # 【关键】记录机器人发送的评论（必须在检查回复之前记录）
+                        # 【关键】只有真正发送成功才标记为已回复
                         self.bot_sent_comments.add(reply_id)
-                        logger.info(f"[回复检查] ✓ 已记录机器人发送的评论ID {reply_id} 到bot_sent_comments（总数: {len(self.bot_sent_comments)}）")
-                        # 保存到文件
                         self._save_bot_comments()
-                        # 记录回复关系（仅用于记录，不用于检查）
+                        
                         if reply_to_rpid:
+                            # 标记原评论为已回复
+                            self.replied_comments.add(reply_to_rpid)
+                            self._save_replied_comments()
                             self.comment_to_parent[reply_id] = reply_to_rpid
-                            # 【简化】不再记录replied_comments，重新开始回复
-                            # 【修复重复回复】回复成功后，清除video_to_latest_comment映射，避免重复使用
+                            
+                            # 清除video_to_latest_comment映射，避免重复回复
                             if video_aid in self.video_to_latest_comment and self.video_to_latest_comment[video_aid] == reply_to_rpid:
                                 del self.video_to_latest_comment[video_aid]
-                                logger.debug(f"[回复检查] 已清除video_to_latest_comment映射（视频 {video_aid} -> 评论 {reply_to_rpid}），避免重复回复")
-                            logger.debug(f"[回复检查] 已回复评论 {reply_to_rpid}（回复ID: {reply_id}）")
+                        
                         # 记录回复内容到文件
                         self._log_reply(reply_to_rpid, reply_id, text_content)
+                        
+                        # 日志：显示回复的用户、评论内容和结果，不同回复之间换行
+                        logger.info(f"\n{'='*80}\n[✓回复成功]\n回复用户: {user_name}\n回复评论ID: {reply_to_rpid}\n原评论内容: {comment_content[:100]}\n回复内容: {text_content[:200]}\n新回复ID: {reply_id}\n{'='*80}\n")
                         return str(reply_id)
                     else:
-                        logger.error(f"评论回复失败: API返回结果无效，result: {result}")
-                        # 记录详细的错误信息
-                        if result:
-                            logger.error(f"评论回复失败详情: code={result.get('code')}, message={result.get('message')}, data={result.get('data')}")
-                        # 【简化】不再操作replied_comments
+                        # 发送失败
+                        error_code = result.get('code', 'unknown') if result else 'no_result'
+                        error_msg = result.get('message', 'unknown') if result else 'no_result'
+                        logger.error(f"\n{'='*80}\n[✗回复失败]\n回复用户: {user_name}\n回复评论ID: {reply_to_rpid}\n原评论内容: {comment_content[:100]}\n错误: {error_code} - {error_msg}\n{'='*80}\n")
                         return None
                 except ResponseCodeException as e:
                     error_str = str(e)
@@ -2005,7 +2036,7 @@ class BilibiliAdapter(IMAdapter):
                     
                     # 【关键优化】处理验证码错误（12015）
                     if error_code == 12015 or '12015' in error_str or '验证码' in error_str:
-                        logger.warning(f"[验证码错误] 评论 {reply_to_rpid} 发送失败：需要验证码验证（错误代码12015）")
+                        logger.warning(f"\n{'='*80}\n[验证码错误]\n回复用户: {user_name}\n回复评论ID: {reply_to_rpid}\n原评论内容: {comment_content[:100]}\n需要验证码验证（错误代码12015）\n{'='*80}\n")
                         if error_data and isinstance(error_data, dict):
                             captcha_url = error_data.get('data', {}).get('url', '')
                             if captcha_url:
@@ -2017,93 +2048,18 @@ class BilibiliAdapter(IMAdapter):
                         logger.warning(f"[验证码错误] 检测到验证码错误，建议增加回复间隔或降低回复频率")
                         return None
                     
-                    logger.error(f"回复评论失败: {e}")
+                    logger.error(f"\n{'='*80}\n[✗回复失败]\n回复用户: {user_name}\n回复评论ID: {reply_to_rpid}\n原评论内容: {comment_content[:100]}\n错误: {error_str}\n{'='*80}\n")
                     # 【简化】不再操作replied_comments
                     import traceback
                     logger.debug(traceback.format_exc())
                     return None
                 except Exception as e:
-                    logger.error(f"回复评论失败: {e}")
+                    logger.error(f"\n{'='*80}\n[✗回复失败]\n回复用户: {user_name}\n回复评论ID: {reply_to_rpid}\n原评论内容: {comment_content[:100]}\n错误: {str(e)}\n{'='*80}\n")
                     # 【简化】不再操作replied_comments
                     import traceback
                     logger.debug(traceback.format_exc())
                     return None
-            else:
-                # 作为新评论发布（不回复任何评论）
-                logger.info(f"正在发布新评论到视频 {video_aid}，内容: {text_content[:50]}")
-                try:
-                    result = await send_comment(
-                        text=text_content,
-                        oid=video_aid,
-                        type_=CommentResourceType.VIDEO,
-                        credential=self.credential
-                    )
-                    
-                    # 记录API响应的关键信息（不记录完整JSON，避免日志过长）
-                    if result:
-                        rpid = result.get('rpid')
-                        success_toast = result.get('success_toast', '')
-                        logger.debug(f"[评论发送] API响应: rpid={rpid}, success_toast={success_toast}")
-                    
-                    if result and result.get('rpid'):
-                        comment_id = int(result.get('rpid'))
-                        # 生成评论URL
-                        comment_url = f"https://www.bilibili.com/video/av{video_aid}#reply{comment_id}"
-                        logger.info(f"[评论发布成功] 评论ID: {comment_id}，内容: {text_content[:50]}，URL: {comment_url}")
-                        
-                        # 验证评论是否真的存在（等待一小段时间后检查）
-                        # 注意：由于bilibili_api的Comment对象没有get_info或get_replies方法，
-                        # 这里暂时跳过验证，依赖后续的批量验证功能
-                        logger.debug(f"[评论验证] 评论 {comment_id} 已发送，URL: {comment_url}（将在下次批量验证时检查）")
-                        
-                        # 保存映射关系
-                        self.comment_to_video[comment_id] = video_aid
-                        # 【关键】记录机器人发送的评论（必须在检查回复之前记录）
-                        self.bot_sent_comments.add(comment_id)
-                        logger.info(f"[回复检查] ✓ 已记录机器人发送的评论ID {comment_id} 到bot_sent_comments（总数: {len(self.bot_sent_comments)}）")
-                        # 保存到文件
-                        self._save_bot_comments()
-                        return str(comment_id)
-                    else:
-                        logger.error(f"评论发布失败: API返回结果无效，result: {result}")
-                        # 记录详细的错误信息
-                        if result:
-                            logger.error(f"评论发布失败详情: code={result.get('code')}, message={result.get('message')}, data={result.get('data')}")
-                        return None
-                except ResponseCodeException as e:
-                    error_str = str(e)
-                    error_code = None
-                    error_data = None
-                    
-                    # 尝试提取错误代码和数据
-                    try:
-                        if hasattr(e, 'code'):
-                            error_code = e.code
-                        if hasattr(e, 'raw'):
-                            error_data = e.raw
-                    except:
-                        pass
-                    
-                    # 【关键优化】处理验证码错误（12015）
-                    if error_code == 12015 or '12015' in error_str or '验证码' in error_str:
-                        logger.warning(f"[验证码错误] 新评论发布失败：需要验证码验证（错误代码12015）")
-                        if error_data and isinstance(error_data, dict):
-                            captcha_url = error_data.get('data', {}).get('url', '')
-                            if captcha_url:
-                                logger.warning(f"[验证码错误] 验证码URL: {captcha_url}")
-                                logger.warning(f"[验证码错误] 请手动访问该URL完成验证码验证，或等待一段时间后重试")
-                        logger.warning(f"[验证码错误] 检测到验证码错误，建议增加回复间隔或降低回复频率")
-                        return None
-                    
-                    logger.error(f"发布评论失败: {e}")
-                    import traceback
-                    logger.debug(traceback.format_exc())
-                    return None
-                except Exception as e:
-                    logger.error(f"发布评论失败: {e}")
-                    import traceback
-                    logger.debug(traceback.format_exc())
-                    return None
+            # 【已移除】不再允许发送顶级评论，只允许回复评论
                 
         except ResponseCodeException as e:
             error_str = str(e)

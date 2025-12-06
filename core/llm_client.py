@@ -48,9 +48,9 @@ def timer(func):
         result = await func(*args, **kwargs)  # 执行函数
         end_time = time.perf_counter()  # 结束时间
 
-        # 计算并打印执行时间
+        # 计算并记录执行时间到日志
         execution_time = end_time - start_time
-        print(f"函数 {func.__name__} 执行耗时: {execution_time:.4f} 秒")
+        llm_logger.debug(f"函数 {func.__name__} 执行耗时: {execution_time:.4f} 秒")
 
         return result
 
@@ -117,7 +117,7 @@ class LLMClient:
                 response = await self.client.chat.completions.create(
                     model=model,
                     messages=messages,
-                    max_tokens=300,  # 限制最大token数，加快响应速度
+                    max_tokens=1000,  # 增加token限制，给LLM更多思考空间
                 )
                 if response.choices:
                     message = response.choices[0].message
@@ -140,21 +140,25 @@ class LLMClient:
             raw_msg = copy.deepcopy(user_message)
             raw_msg[0] = {"role": "system", "content": tool_system_prompt}
 
+            # 给LLM足够的时间思考，避免回复太快导致理解不充分
+            # 之前的版本需要5-7秒才能生成精确回复，这里增加延迟确保有足够思考时间
+            await asyncio.sleep(5)
+            
             # 直接使用 main_llm 进行工具判断和回复生成（一次调用完成）
             llm_logger.info(f"checking tools and generating response using {DEFAULT_LLM} from {MAIN_PROVIDER}")
             try:
                 resp1 = await asyncio.wait_for(
-                    self.client.chat.completions.create(
-                        model=DEFAULT_LLM,
-                        messages=raw_msg,
-                        tools=self.tools_definitions if self.tools_definitions else None,
-                        max_tokens=300,  # 限制最大token数，加快响应速度
-                    ),
-                    timeout=60.0  # 60秒超时
-                )
+                        self.client.chat.completions.create(
+                            model=DEFAULT_LLM,
+                            messages=raw_msg,
+                            tools=self.tools_definitions if self.tools_definitions else None,
+                            max_tokens=1000,  # 增加token限制，给LLM更多思考空间
+                        ),
+                        timeout=120.0  # 增加超时时间到120秒，给LLM更多思考时间
+                    )
                 llm_logger.info(f"LLM第一次调用成功，响应token数: {resp1.usage.total_tokens if hasattr(resp1, 'usage') and resp1.usage else 'unknown'}")
             except asyncio.TimeoutError:
-                llm_logger.error(f"LLM第一次调用超时（60秒），模型: {DEFAULT_LLM}, provider: {MAIN_PROVIDER}")
+                llm_logger.error(f"LLM第一次调用超时（120秒），模型: {DEFAULT_LLM}, provider: {MAIN_PROVIDER}")
                 raise
             except Exception as e:
                 llm_logger.error(f"LLM第一次调用失败: {e}")
@@ -191,20 +195,24 @@ class LLMClient:
                 user_message.extend(tool_messages)
 
                 try:
+                    # 给LLM足够的时间思考，避免回复太快导致理解不充分
+                    # 之前的版本需要5-7秒才能生成精确回复，这里增加延迟确保有足够思考时间
+                    await asyncio.sleep(5)
+                    
                     llm_logger.info(f"generating response after tool calls using {DEFAULT_LLM} from {MAIN_PROVIDER}")
                     resp2 = await asyncio.wait_for(
                         self.client.chat.completions.create(
                             model=DEFAULT_LLM,
                             messages=user_message,
-                            max_tokens=300,  # 限制最大token数，加快响应速度
+                            max_tokens=1000,  # 增加token限制，给LLM更多思考空间
                         ),
-                        timeout=60.0  # 60秒超时
+                        timeout=120.0  # 增加超时时间到120秒，给LLM更多思考时间
                     )
                     llm_logger.info(f"LLM第二次调用成功，响应token数: {resp2.usage.total_tokens if hasattr(resp2, 'usage') and resp2.usage else 'unknown'}")
 
                     return resp2.choices[0].message.content, tool_messages
                 except asyncio.TimeoutError:
-                    llm_logger.error(f"LLM第二次调用超时（60秒），模型: {DEFAULT_LLM}, provider: {MAIN_PROVIDER}")
+                    llm_logger.error(f"LLM第二次调用超时（120秒），模型: {DEFAULT_LLM}, provider: {MAIN_PROVIDER}")
                     return None, None
                 except Exception as e:
                     llm_logger.error(f"LLM第二次调用失败: {e}")
