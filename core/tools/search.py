@@ -22,7 +22,11 @@ class TavilySearchTool(BaseTool):
         cfg = configparser.RawConfigParser()
         cfg_path = Path("core/tools/tavily.ini")
         cfg.read(cfg_path, encoding="utf-8")
-        self._key = cfg.get("tavily", "key")
+        self._key = cfg.get("tavily", "key", fallback="").strip()
+        
+        # 如果 API key 为空，抛出异常让工具管理器跳过注册此工具
+        if not self._key:
+            raise ValueError("Tavily API key 未配置，跳过注册搜索工具")
 
     async def execute(self, keyword: str) -> str:
         client = TavilyClient(self._key)

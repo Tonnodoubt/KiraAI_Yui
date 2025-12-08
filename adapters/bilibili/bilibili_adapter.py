@@ -986,7 +986,7 @@ class BilibiliAdapter(IMAdapter):
         # 【简化逻辑】逐条检查并回复光秃秃的评论
         # 每次检查10条评论
         batch_size = 10
-        reply_rate = 0.8  # 80%回复率
+        reply_rate = 1.0  # 100%回复率（回复所有通过意愿筛选的评论）
         import math
         
         # 分批处理评论
@@ -1046,16 +1046,16 @@ class BilibiliAdapter(IMAdapter):
                     await asyncio.sleep(2)
                 continue
             
-            # 计算80%的回复率（向上取整）
+            # 计算回复率（向上取整）
             target_reply_count = math.ceil(len(comments_to_reply) * reply_rate)
             comments_to_reply = comments_to_reply[:target_reply_count]
             
-            logger.info(f"[新评论检查] 本批筛选出 {len(comments_to_reply)} 条符合条件的评论（目标回复率80%），开始回复...")
+            logger.info(f"[新评论检查] 本批筛选出 {len(comments_to_reply)} 条符合条件的评论（目标回复率{int(reply_rate*100)}%），开始回复...")
             
             # 计算合理的回复间隔：确保8条评论都能回复
             # 假设每小时最多回复20条，那么每条评论间隔至少 3600/20 = 180秒
             # 【优化】增加间隔到至少30秒，避免触发验证码风控
-            min_interval = max(self.reply_interval, 60)  # 至少60秒间隔，给LLM更多思考时间，降低触发验证码的概率
+            min_interval = max(self.reply_interval, 30)  # 至少30秒间隔，避免触发验证码风控
             
             # 处理筛选后的评论
             replied_count = 0
@@ -2010,6 +2010,10 @@ class BilibiliAdapter(IMAdapter):
                         
                         # 记录回复内容到文件
                         self._log_reply(reply_to_rpid, reply_id, text_content)
+                        
+                        # 更新频率限制和最后回复时间
+                        self._update_rate_limit()
+                        self.last_reply_time['comment'] = time.time()
                         
                         # 日志：显示回复的用户、评论内容和结果，不同回复之间换行
                         logger.info(f"\n{'='*80}\n[✓回复成功]\n回复用户: {user_name}\n回复评论ID: {reply_to_rpid}\n原评论内容: {comment_content[:100]}\n回复内容: {text_content[:200]}\n新回复ID: {reply_id}\n{'='*80}\n")
