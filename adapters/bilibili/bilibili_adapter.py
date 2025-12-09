@@ -65,6 +65,10 @@ class BilibiliAdapter(IMAdapter):
         self.reply_interval = int(config.get('reply_interval', '5'))
         self.max_replies_per_hour = int(config.get('max_replies_per_hour', '20'))
         
+        # 验证码错误冷却期（秒），默认2小时
+        self.captcha_cooldown_seconds = int(config.get('captcha_cooldown_seconds', '7200'))
+        self.last_captcha_error_time: Optional[float] = None
+        
         # 评论检查配置
         self.max_comments_per_check = int(config.get('max_comments_per_check', '30'))  # 每次检查的评论数量
         self.comment_time_window_minutes = int(config.get('comment_time_window_minutes', '20'))  # 时间窗口（分钟）
@@ -166,6 +170,11 @@ class BilibiliAdapter(IMAdapter):
         self.bot_comments_log_file = os.path.join(self.data_dir, "bot_sent_comments.log")
         # 评论和回复记录文件
         self.comments_log_file = os.path.join(self.data_dir, "comments_log.txt")
+        # 验证码错误时间戳文件
+        self.captcha_error_file = os.path.join(self.data_dir, "captcha_error_time.json")
+        
+        # 加载验证码错误时间戳
+        self._load_captcha_error_time()
         
         # 确保数据目录存在
         os.makedirs(self.data_dir, exist_ok=True)
@@ -271,6 +280,57 @@ class BilibiliAdapter(IMAdapter):
             logger.debug(f"[日志] 已记录bot_sent_comments到日志文件: {self.bot_comments_log_file}")
         except Exception as e:
             logger.error(f"[日志] 记录bot_sent_comments到日志文件失败: {e}")
+    
+    def _load_captcha_error_time(self):
+        """从文件加载验证码错误时间戳"""
+        try:
+            if os.path.exists(self.captcha_error_file):
+                with open(self.captcha_error_file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    if isinstance(data, dict) and 'timestamp' in data:
+                        self.last_captcha_error_time = float(data['timestamp'])
+                        elapsed = time.time() - self.last_captcha_error_time
+                        if elapsed < self.captcha_cooldown_seconds:
+                            remaining = self.captcha_cooldown_seconds - elapsed
+                            logger.warning(f"[验证码冷却] 检测到未过期的验证码错误记录，剩余冷却时间: {remaining/60:.1f} 分钟")
+                        else:
+                            logger.info(f"[验证码冷却] 验证码错误记录已过期（{elapsed/3600:.1f} 小时前），可以正常回复")
+                            self.last_captcha_error_time = None
+                    else:
+                        self.last_captcha_error_time = None
+            else:
+                self.last_captcha_error_time = None
+        except Exception as e:
+            logger.error(f"[持久化] 加载验证码错误时间戳失败: {e}")
+            self.last_captcha_error_time = None
+    
+    def _save_captcha_error_time(self):
+        """保存验证码错误时间戳到文件"""
+        try:
+            data = {
+                'timestamp': self.last_captcha_error_time,
+                'cooldown_seconds': self.captcha_cooldown_seconds
+            }
+            with open(self.captcha_error_file, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            logger.info(f"[持久化] 已保存验证码错误时间戳到文件")
+        except Exception as e:
+            logger.error(f"[持久化] 保存验证码错误时间戳失败: {e}")
+    
+    def _is_in_captcha_cooldown(self) -> bool:
+        """检查是否在验证码错误冷却期内"""
+        if self.last_captcha_error_time is None:
+            return False
+        
+        elapsed = time.time() - self.last_captcha_error_time
+        if elapsed >= self.captcha_cooldown_seconds:
+            # 冷却期已过，清除记录
+            logger.info(f"[验证码冷却] 冷却期已过（{elapsed/3600:.1f} 小时），恢复正常回复")
+            self.last_captcha_error_time = None
+            self._save_captcha_error_time()
+            return False
+        
+        return True
     
     def _save_replied_comments(self):
         """保存已回复的评论ID到文件"""
@@ -388,6 +448,14 @@ class BilibiliAdapter(IMAdapter):
         
         while self.running:
             try:
+                # 【验证码冷却检查】如果处于验证码错误冷却期，跳过私信处理
+                if self._is_in_captcha_cooldown():
+                    remaining = self.captcha_cooldown_seconds - (time.time() - self.last_captcha_error_time)
+                    wait_minutes = min(remaining / 60, 10)  # 最多等待10分钟再检查一次
+                    logger.warning(f"[验证码冷却] 当前在验证码错误冷却期内，暂停私信处理。剩余时间: {remaining/60:.1f} 分钟，{wait_minutes:.1f} 分钟后重新检查冷却期状态")
+                    await asyncio.sleep(wait_minutes * 60)
+                    continue  # 跳过本次循环，重新检查冷却期状态
+                
                 # 获取会话列表
                 sessions = await get_sessions(credential=self.credential)
                 
@@ -488,6 +556,10 @@ class BilibiliAdapter(IMAdapter):
             all_comments: 所有评论列表
             video_aid: 视频AID
         """
+        # 【验证码冷却检查】如果处于验证码错误冷却期，跳过回复处理
+        if self._is_in_captcha_cooldown():
+            return
+        
         # 构建机器人发送的评论ID集合（用于检查回复）
         # 【重要】从bot_sent_comments构建，确保包含所有机器人发送的评论（即使API没有返回）
         bot_comment_ids = set(self.bot_sent_comments) if self.bot_sent_comments else set()
@@ -928,6 +1000,12 @@ class BilibiliAdapter(IMAdapter):
             all_comments: 所有评论列表
             video_aid: 视频AID
         """
+        # 【验证码冷却检查】如果处于验证码错误冷却期，跳过所有回复
+        if self._is_in_captcha_cooldown():
+            remaining = self.captcha_cooldown_seconds - (time.time() - self.last_captcha_error_time)
+            logger.warning(f"[验证码冷却] 当前在验证码错误冷却期内，跳过评论检查。剩余时间: {remaining/60:.1f} 分钟")
+            return
+        
         # 【简化逻辑】只检查三个条件：
         # 1. 是顶级评论（parent=0且root=0）
         # 2. 是光秃秃的评论（没有任何回复）
@@ -1424,10 +1502,24 @@ class BilibiliAdapter(IMAdapter):
         
         while self.running:
             try:
+                # 【验证码冷却检查】如果处于验证码错误冷却期，跳过所有评论处理
+                if self._is_in_captcha_cooldown():
+                    remaining = self.captcha_cooldown_seconds - (time.time() - self.last_captcha_error_time)
+                    wait_minutes = min(remaining / 60, 10)  # 最多等待10分钟再检查一次
+                    logger.warning(f"[验证码冷却] 当前在验证码错误冷却期内，暂停所有评论检查和回复。剩余时间: {remaining/60:.1f} 分钟，{wait_minutes:.1f} 分钟后重新检查冷却期状态")
+                    await asyncio.sleep(wait_minutes * 60)
+                    continue  # 跳过本次循环，重新检查冷却期状态
+                
                 # 监听视频评论
                 for video_id in self.monitor_video_ids:
                     if not self.running:
                         break
+                    
+                    # 【验证码冷却检查】在获取评论前再次检查冷却期状态
+                    if self._is_in_captcha_cooldown():
+                        remaining = self.captcha_cooldown_seconds - (time.time() - self.last_captcha_error_time)
+                        logger.warning(f"[验证码冷却] 在获取评论前检测到冷却期，跳过视频 {video_id}。剩余时间: {remaining/60:.1f} 分钟")
+                        break  # 跳出视频循环，回到主循环等待
                     
                     try:
                         # 检查video_id格式
@@ -1454,6 +1546,12 @@ class BilibiliAdapter(IMAdapter):
                             await self._load_initial_comments(video_id, video_aid)
                             # 不再自动回复最早的评论，改为按从新到旧的顺序逐步回复
                             first_run = False
+                        
+                        # 【验证码冷却检查】在获取评论前再次检查冷却期状态
+                        if self._is_in_captcha_cooldown():
+                            remaining = self.captcha_cooldown_seconds - (time.time() - self.last_captcha_error_time)
+                            logger.warning(f"[验证码冷却] 在获取评论前检测到冷却期，跳过视频 {video_id} 的评论获取。剩余时间: {remaining/60:.1f} 分钟")
+                            break  # 跳出视频循环，回到主循环等待
                         
                         # 分批获取评论：每次获取200条，处理完后等待10分钟
                         # 简化日志：轮询开始不记录
@@ -1664,6 +1762,15 @@ class BilibiliAdapter(IMAdapter):
                         except Exception:
                             pass
                         
+                        # 【验证码冷却检查】在处理评论前再次检查冷却期状态
+                        if self._is_in_captcha_cooldown():
+                            remaining = self.captcha_cooldown_seconds - (time.time() - self.last_captcha_error_time)
+                            logger.warning(f"[验证码冷却] 在处理评论前检测到冷却期，跳过评论处理。剩余时间: {remaining/60:.1f} 分钟")
+                            # 跳过评论处理，直接等待
+                            wait_seconds = min(self.batch_wait_minutes * 60, 60)
+                            await asyncio.sleep(wait_seconds)
+                            continue
+                        
                         # ========== 第一条线：检查回复机器人的评论 ==========
                         await self._check_and_process_replies_to_bot(all_comments, video_aid)
                         
@@ -1728,6 +1835,12 @@ class BilibiliAdapter(IMAdapter):
     
     async def _process_comment_dict(self, comment_data: Dict, video_aid: int):
         """处理评论字典数据，发布到事件总线"""
+        # 【验证码冷却检查】如果处于验证码错误冷却期，直接返回，不处理评论
+        if self._is_in_captcha_cooldown():
+            remaining = self.captcha_cooldown_seconds - (time.time() - self.last_captcha_error_time)
+            logger.warning(f"[验证码冷却] 在处理评论时检测到冷却期，跳过评论处理。剩余时间: {remaining/60:.1f} 分钟")
+            return
+        
         try:
             comment_id = comment_data.get('rpid')
             if not comment_id:
@@ -1970,6 +2083,12 @@ class BilibiliAdapter(IMAdapter):
                 logger.warning(f"[评论发送] 没有回复目标，禁止发送顶级评论。视频AID: {video_aid}，内容: {text_content[:50]}")
                 return None
             
+            # 【验证码冷却检查】检查是否在验证码错误冷却期内
+            if self._is_in_captcha_cooldown():
+                remaining = self.captcha_cooldown_seconds - (time.time() - self.last_captcha_error_time)
+                logger.warning(f"[验证码冷却] 当前在验证码错误冷却期内，暂停回复。剩余时间: {remaining/60:.1f} 分钟")
+                return None
+            
             # 如果有回复目标，使用回复API
             if reply_to_rpid:
                 # 【优化】获取被回复评论的用户信息
@@ -2047,9 +2166,11 @@ class BilibiliAdapter(IMAdapter):
                                 logger.warning(f"[验证码错误] 验证码URL: {captcha_url}")
                                 logger.warning(f"[验证码错误] 请手动访问该URL完成验证码验证，或等待一段时间后重试")
                         
-                        # 【简化】不再操作replied_comments
-                        # 增加回复间隔，避免继续触发验证码
-                        logger.warning(f"[验证码错误] 检测到验证码错误，建议增加回复间隔或降低回复频率")
+                        # 【验证码冷却】记录验证码错误时间，进入冷却期
+                        self.last_captcha_error_time = time.time()
+                        self._save_captcha_error_time()
+                        cooldown_hours = self.captcha_cooldown_seconds / 3600
+                        logger.warning(f"[验证码错误] 已记录验证码错误时间，进入冷却期 {cooldown_hours:.1f} 小时。在此期间将暂停所有回复")
                         return None
                     
                     logger.error(f"\n{'='*80}\n[✗回复失败]\n回复用户: {user_name}\n回复评论ID: {reply_to_rpid}\n原评论内容: {comment_content[:100]}\n错误: {error_str}\n{'='*80}\n")
@@ -2087,7 +2208,12 @@ class BilibiliAdapter(IMAdapter):
                     if captcha_url:
                         logger.warning(f"[验证码错误] 验证码URL: {captcha_url}")
                         logger.warning(f"[验证码错误] 请手动访问该URL完成验证码验证，或等待一段时间后重试")
-                logger.warning(f"[验证码错误] 检测到验证码错误，建议增加回复间隔或降低回复频率")
+                
+                # 【验证码冷却】记录验证码错误时间，进入冷却期
+                self.last_captcha_error_time = time.time()
+                self._save_captcha_error_time()
+                cooldown_hours = self.captcha_cooldown_seconds / 3600
+                logger.warning(f"[验证码错误] 已记录验证码错误时间，进入冷却期 {cooldown_hours:.1f} 小时。在此期间将暂停所有回复")
                 return None
             
             logger.error(f"B站API错误: {e}")
