@@ -118,6 +118,7 @@ class LLMClient:
                     model=model,
                     messages=messages,
                     max_tokens=300,  # 限制最大token数，加快响应速度
+                    temperature=0.8,  # 提高创造性，让回复更自然活泼（0.7-0.9之间比较合适）
                 )
                 if response.choices:
                     message = response.choices[0].message
@@ -149,6 +150,7 @@ class LLMClient:
                         messages=raw_msg,
                         tools=self.tools_definitions if self.tools_definitions else None,
                         max_tokens=300,  # 限制最大token数，加快响应速度
+                        temperature=0.8,  # 提高创造性，让回复更自然活泼
                     ),
                     timeout=60.0  # 60秒超时
                 )
@@ -197,6 +199,7 @@ class LLMClient:
                             model=DEFAULT_LLM,
                             messages=user_message,
                             max_tokens=300,  # 限制最大token数，加快响应速度
+                            temperature=0.8,  # 提高创造性，让回复更自然活泼
                         ),
                         timeout=60.0  # 60秒超时
                     )

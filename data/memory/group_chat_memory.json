@@ -107,46 +107,6 @@
         [
             {
                 "role": "user",
-                "content": "[received_time: Dec 05 2025 18:44 Fri message_id: 282517117073] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 咩咩咩嘛嘛嘛, user_id: 44316695] | 期待\n"
-            },
-            {
-                "role": "assistant",
-                "content": "<msg message_id=\"282517286417\">\n    <text>期待什么呢？是不是有什么特别的事情要发生？喵～</text>\n</msg>"
-            }
-        ],
-        [
-            {
-                "role": "user",
-                "content": "[received_time: Dec 05 2025 18:47 Fri message_id: 282517448945] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 咩咩咩嘛嘛嘛, user_id: 44316695] | 期待\n"
-            },
-            {
-                "role": "tool",
-                "tool_call_id": "019aee1f62358ae6438a6e22611a4a89",
-                "content": "Core memory updated"
-            },
-            {
-                "role": "tool",
-                "tool_call_id": "019aee1f62358ae6438a6e22611a4a8a",
-                "content": "{'error': '工具 msg 未实现'}"
-            },
-            {
-                "role": "assistant",
-                "content": "<msg message_id=\"282517404929\">\n    <text>期待什么呢？是不是有什么特别的事情要发生？喵～</text>\n</msg>"
-            }
-        ],
-        [
-            {
-                "role": "user",
-                "content": "[received_time: Dec 05 2025 18:49 Fri message_id: 282517592657] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 咩咩咩嘛嘛嘛, user_id: 44316695] | 期待期待\n"
-            },
-            {
-                "role": "assistant",
-                "content": "<msg message_id=\"282517700721\">\n    <text>喵～看起来你非常期待一些事情呢，是不是有什么特别的计划或事件要发生？喵～</text>\n</msg>"
-            }
-        ],
-        [
-            {
-                "role": "user",
                 "content": "[received_time: Dec 05 2025 18:54 Fri message_id: 282518132001] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 咩咩咩嘛嘛嘛, user_id: 44316695] | 期待期待\n"
             },
             {
@@ -162,6 +122,36 @@
             {
                 "role": "assistant",
                 "content": "<msg message_id=\"282518605041\">\n    <text>感谢对「猫娘计划」的支持喵～期待是动力，我会继续努力的！喵～</text>\n</msg>"
+            }
+        ],
+        [
+            {
+                "role": "user",
+                "content": "[received_time: Dec 07 2025 18:43 Sun message_id: 282726546129] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 咩咩咩嘛嘛嘛, user_id: 44316695] | 什么时候公开？\n"
+            },
+            {
+                "role": "assistant",
+                "content": "<msg message_id=\"282726606113\">\n    <text>「猫娘计划」目前处于创意工坊时代，项目的早期开发进展已经在Steam上公开喵～未来的发展计划，比如独立平台和猫娘网络时代的推出时间，可以在「猫娘计划」的官方公告中看到详细信息喵～</text>\n</msg>"
+            }
+        ],
+        [
+            {
+                "role": "user",
+                "content": "[received_time: Dec 07 2025 18:49 Sun message_id: 282727132257] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 咩咩咩嘛嘛嘛, user_id: 44316695] | 什么时候公开\n"
+            },
+            {
+                "role": "assistant",
+                "content": "<msg message_id=\"282727207441\">\n    <text>关于「猫娘计划」的更多公开信息和更新，可以关注我们的Steam页面和官方社交媒体喵～我们会及时发布最新进展和公告喵～</text>\n</msg>"
+            }
+        ],
+        [
+            {
+                "role": "user",
+                "content": "[received_time: Dec 07 2025 20:36 Sun message_id: 284396147296] [group_name: 视频115586898068890 group_id: 115586898068890 user_nickname: 明天好像没什么, user_id: 3461563319060537] | 回复 @林悠怡Yui :emm~要不今天中午喵？\n"
+            },
+            {
+                "role": "assistant",
+                "content": "<msg message_id=\"282737776369\">\n    <text>emm~今天中午喵？听起来像是个不错的提议喵~是有什么特别的事情吗喵？</text>\n</msg>"
             }
         ]
     ],
